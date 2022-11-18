@@ -4,7 +4,7 @@
   "license": "MIT",
   "scripts": {
     "start": "nx run-many --target=serve --projects=client,server",
-    "build": "nx build task-manager --prod",
+    "build": "nx run-many --target=build --projects=client,server",
     "test": "nx run-many --target=test --projects=client,server",
     "lint": "nx run-many --target=lint --projects=client,server"
   },
