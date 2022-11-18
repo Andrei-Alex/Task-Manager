@@ -17,7 +17,7 @@ describe('AppController', () => {
     it('should return "Welcome to server!"', () => {
       const appController = app.get<AppController>(AppController);
       expect(appController.getData()).toEqual({
-        message: 'Welcome to seasdsdrver!',
+        message: 'Welcome to server!',
       });
     });
   });
