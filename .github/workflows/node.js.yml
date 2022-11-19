@@ -18,14 +18,30 @@ jobs:
 
     steps:
     - uses: actions/checkout@v3
+    - uses: dorny/paths-filter@v2
     - name: Use Node.js ${{ matrix.node-version }}
       uses: actions/setup-node@v3
+      id: filter
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
+        filters: |
+          backend:
+            - 'server/**'
+          frontend:
+            - 'client/**'
     - run: npm ci
     - run: npm run build --if-present
-    - run: npm test
+    # run only if 'backend' files were changed
+    - name: backend tests
+      if: steps.filter.outputs.server == 'true'
+    - run: npm run backend-test
+    - run: npm run backend-test:e2e
+    # run only if 'frontend' files were changed
+    - name: frontend tests
+      if: steps.filter.outputs.client == 'true'
+      run:  npm run front-end-test
+
     
   Run-Lint:
 
