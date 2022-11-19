@@ -6,7 +6,11 @@
     "start": "nx run-many --target=serve --projects=client,server",
     "build": "nx run-many --target=build --projects=client,server",
     "test": "nx run-many --target=test --projects=client,server",
-    "lint": "nx run-many --target=lint --projects=client,server"
+    "front-end-test": "nx test client",
+    "back-end-test": "nx test server",
+    "lint": "nx run-many --target=lint --projects=client,server",
+    "front-end-lint": "nx lint client",
+    "back-end-lint": "nx lint client"
   },
   "private": true,
   "dependencies": {
