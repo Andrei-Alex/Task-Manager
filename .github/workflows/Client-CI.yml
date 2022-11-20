@@ -1,13 +1,15 @@
-name: Node.js CI
+name: Client CI
 
 on:
   push:
     branches: [ "main" ]
+    paths: [ "client/**"] 
   pull_request:
     branches: [ "main" ]
+ 
 
 jobs:
-  Run-Test:
+  Run-Client-Test:
 
     runs-on: ubuntu-latest
 
@@ -23,9 +25,11 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
+        
     - run: npm ci
     - run: npm run build --if-present
-    - run: npm test
+    - run: npm run front-end-test
+
     
   Run-Lint:
 
@@ -43,6 +47,7 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
+        
     - run: npm ci
     - run: npm run build --if-present
-    - run: npm run lint
+    - run: npm run front-end-lint
