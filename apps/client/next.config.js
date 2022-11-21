@@ -12,6 +12,14 @@ const nextConfig = {
     // See: https://github.com/gregberge/svgr
     svgr: false,
   },
+  async rewrites() {
+    return [
+      {
+        source: '/api/health',
+        destination: 'http://localhost:3333/api/health',
+      },
+    ];
+  },
 };
 
 module.exports = withNx(nextConfig);
