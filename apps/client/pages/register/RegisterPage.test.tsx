@@ -1,13 +1,13 @@
 import { render, screen } from '@testing-library/react';
-import Login from '../pages/login';
+import Register from '.';
 import { RouterContext } from 'next/dist/shared/lib/router-context';
-import { routerMock } from '../__MOCK__';
+import { routerMock } from '../../__MOCK__';
 
-const path = 'Login';
-it('renders LoginPage', () => {
+const path = 'Register';
+it('renders RegisterPage', () => {
   render(
     <RouterContext.Provider value={routerMock({ pathname: path })}>
-      <Login />
+      <Register />
     </RouterContext.Provider>
   );
 
