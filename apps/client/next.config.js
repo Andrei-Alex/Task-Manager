@@ -18,6 +18,10 @@ const nextConfig = {
         source: '/api/health',
         destination: 'http://localhost:3333/api/health',
       },
+      {
+        source: '/',
+        destination: '/home',
+      },
     ];
   },
 };
