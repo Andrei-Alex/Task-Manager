@@ -7,7 +7,7 @@ const Login: NextPage = () => {
     <>
       <Head>
         <title>Login</title>
-        <meta name="description" content="Registration page" />
+        <meta name="description" content="Login page" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
       <div>
