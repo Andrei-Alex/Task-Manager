@@ -1,5 +1,5 @@
 import styles from './DisplayHealth.module.scss';
-import { HealthResponse } from 'apps/client/services';
+import { HealthResponse } from '../../services';
 
 /**
  * Display status of health point.
