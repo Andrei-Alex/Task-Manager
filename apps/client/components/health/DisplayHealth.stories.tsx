@@ -1,4 +1,5 @@
 import type { ComponentStory, ComponentMeta } from '@storybook/react';
+import React from 'react';
 import DisplayHealth from './DisplayHealth';
 
 const Story: ComponentMeta<typeof DisplayHealth> = {

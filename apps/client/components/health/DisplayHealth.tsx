@@ -4,15 +4,14 @@ import { HealthResponse } from '../../services';
 /**
  * Display status of health point.
  *
- * ## usage
+ * ## Usage
  * ```jsx
  * <div>
  *  <p>Status</p>
  * </div>
  * ```
- * @param {string} text - Button text
- * @param {string} id - id
- * @return {JSX}
+ * @param {string} status - Fetched status as string
+ * @return {JSX} Display text in JSX elements
  */
 export const DisplayHealth = ({ status }: HealthResponse) => {
   return (
