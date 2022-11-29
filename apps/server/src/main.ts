@@ -18,16 +18,17 @@ async function bootstrap() {
 
   app.enableCors({
     origin: [
-      configService.get('ALLOWED_ORIGIN1'),
-      configService.get('ALLOWED_ORIGIN2'),
+      configService.get('ALLOWED_ORIGIN_SERVER'),
+      configService.get('ALLOWED_ORIGIN_CLIENT'),
     ],
     methods: ['POST', 'PUT', 'DELETE', 'GET'],
   }),
     app.setGlobalPrefix(globalPrefix);
-  const port = process.env.PORT || 3333;
-  await app.listen(port);
+
+  await app.listen(configService.get('PORT'));
   Logger.log(
-    `🚀 Application is running on: http://localhost:${port}/${globalPrefix}`
+    `🚀 Application is running on: 
+    ${configService.get('ALLOWED_ORIGIN_SERVER')}/${globalPrefix}`
   );
 }
 

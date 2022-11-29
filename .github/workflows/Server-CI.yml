@@ -1,16 +1,11 @@
 name: Server CI
 
 on:
-  push:
-    branches: [ "main" ]
-    paths: [ "server/**"] 
-  pull_request:
-    branches: [ "main" ]
- 
+  paths:
+    - apps/server/**
 
 jobs:
   Run-Client-Test:
-
     runs-on: ubuntu-latest
 
     strategy:
@@ -19,19 +14,17 @@ jobs:
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
-    - uses: actions/checkout@v3
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v3
-      with:
-        node-version: ${{ matrix.node-version }}
-        cache: 'npm'
-        
-    - run: npm ci --force
-    - run: npm run back-end-test
+      - uses: actions/checkout@v3
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: 'npm'
 
-    
+      - run: npm ci --force
+      - run: npm run back-end-test
+
   Run-Lint:
-
     runs-on: ubuntu-latest
 
     strategy:
@@ -40,13 +33,13 @@ jobs:
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
-    - uses: actions/checkout@v3
-    - name: Use Node.js ${{ matrix.node-version }}
-      uses: actions/setup-node@v3
-      with:
-        node-version: ${{ matrix.node-version }}
-        cache: 'npm'
-        
-    - run: npm i --force
-    - run: npm run build --if-present
-    - run: npm run back-end-lint
+      - uses: actions/checkout@v3
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: 'npm'
+
+      - run: npm i --force
+      - run: npm run build --if-present
+      - run: npm run back-end-lint
