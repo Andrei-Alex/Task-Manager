@@ -3,6 +3,7 @@ import { DataSourceOptions } from 'typeorm';
 import { config } from 'dotenv';
 config();
 const configService = new ConfigService();
+
 export default registerAs('database', () => {
   return {
     type: 'postgres',

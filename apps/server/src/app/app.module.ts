@@ -11,7 +11,7 @@ import { AppService } from './app.service';
     HealthModule,
     ConfigModule.forRoot({
       isGlobal: true,
-      envFilePath: '../.env',
+      envFilePath: '../../.env',
       load: [dbConfiguration],
     }),
     TypeOrmModule.forRootAsync({

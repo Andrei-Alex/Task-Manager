@@ -12,7 +12,13 @@
     "front-end-lint": "nx lint client",
     "back-end-lint": "nx lint client",
     "storybook:atoms": "nx run atoms:storybook",
-    "storybook:client": "nx run client:storybook"
+    "storybook:client": "nx run client:storybook",
+    "typeormSrc": "typeorm-ts-node-esm -d ./apps/server/src/typeOrm.config.ts",
+    "typeorm": "typeorm-ts-node-esm ",
+    "typeorm:run-migrations": "npm run typeormSrc migration:run",
+    "typeorm:generate-migration": "npm run typeormSrc migration:generate",
+    "typeorm:create-migration": "npm run typeorm -- migration:create",
+    "typeorm:revert-migration": "npm run typeormSrc migration:revert"
   },
   "private": true,
   "dependencies": {
@@ -89,7 +95,7 @@
     "storybook-addon-next": "^1.6.6",
     "storybook-addon-swc": "^1.1.7",
     "ts-jest": "28.0.5",
-    "ts-node": "10.9.1",
+    "ts-node": "^10.9.1",
     "typescript": "~4.8.2",
     "url-loader": "^3.0.0"
   }
