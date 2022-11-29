@@ -1,8 +1,9 @@
 name: Client CI
 
 on:
-  paths:
-    - apps/client/**
+  push:
+    paths:
+      - folder1/**
 
 jobs:
   Run-Client-Test:
