@@ -4,6 +4,16 @@ on:
   push:
     paths:
       - apps/server/**
+      
+env:
+  PORT: 3333
+  ALLOWED_ORIGIN_CLIENT: "http://localhost:3333"
+  ALLOWED_ORIGIN_Server: "http://localhost:4200"
+  DB_HOST: 'localhost'
+  DB_PORT: 5432
+  DB_PASSWORD: 'postgres'
+  DB_DATABASE: 'postgres'
+  DB_USER: 'postgres'
 
 jobs:
   Run-Client-Test:
