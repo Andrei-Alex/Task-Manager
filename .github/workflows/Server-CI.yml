@@ -1,8 +1,9 @@
 name: Server CI
 
 on:
-  paths:
-    - apps/server/**
+  push:
+    paths:
+      - apps/server/**
 
 jobs:
   Run-Client-Test:
