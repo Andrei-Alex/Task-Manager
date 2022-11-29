@@ -2,10 +2,8 @@ name: Server CI
 
 on:
   push:
-    branches: [ "main" ]
-    paths: [ "server/**"] 
-  pull_request:
-    branches: [ "main" ]
+    paths:
+      - apps/server/**
  
 
 jobs:
