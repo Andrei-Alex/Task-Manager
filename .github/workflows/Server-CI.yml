@@ -9,20 +9,35 @@ env:
   PORT: 3333
   ALLOWED_ORIGIN_CLIENT: "http://localhost:3333"
   ALLOWED_ORIGIN_Server: "http://localhost:4200"
-  DB_HOST: 'localhost'
+  DB_HOST: 'postgres'
   DB_PORT: 5432
   DB_PASSWORD: 'postgres'
   DB_DATABASE: 'postgres'
   DB_USER: 'postgres'
 
 jobs:
-  Run-Client-Test:
+  # Label of the container job
+  container-job:
+    # Containers must run in Linux based operating systems
     runs-on: ubuntu-latest
+    # Docker Hub image that `container-job` executes in
+    container: node:latest
 
-    strategy:
-      matrix:
-        node-version: [14.x, 16.x, 18.x]
-        # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
+    # Service containers to run with `container-job`
+    services:
+      # Label used to access the service container
+      postgres:
+        # Docker Hub image
+        image: postgres
+        # Provide the password for postgres
+        env:
+          POSTGRES_PASSWORD: postgres
+        # Set health checks to wait until postgres has started
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
 
     steps:
       - uses: actions/checkout@v3

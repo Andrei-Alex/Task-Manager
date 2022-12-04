@@ -47,6 +47,38 @@
         "lintFilePatterns": ["apps/server/**/*.ts"]
       }
     },
+    "run-migrations": {
+      "executor": "@nrwl/workspace:run-commands",
+      "outputs": [],
+      "options": {
+        "command": "npm run typeormSrc migration:run",
+        "cwd": "apps/server"
+      }
+    },
+    "generate-migrations": {
+      "executor": "@nrwl/workspace:run-commands",
+      "outputs": [],
+      "options": {
+        "command": "npm run typeormSrc migration:generate",
+        "cwd": "apps/server"
+      }
+    },
+    "create-migrations": {
+      "executor": "@nrwl/workspace:run-commands",
+      "outputs": [],
+      "options": {
+        "command": "npm run typeorm -- migration:create",
+        "cwd": "apps/server"
+      }
+    },
+    "revert-migrations": {
+      "executor": "@nrwl/workspace:run-commands",
+      "outputs": [],
+      "options": {
+        "command": "npm run typeormSrc migration:revertt",
+        "cwd": "apps/server"
+      }
+    },
     "test": {
       "executor": "@nrwl/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],

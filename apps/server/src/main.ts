@@ -7,6 +7,7 @@ import { AppModule } from './app/app.module';
 async function bootstrap() {
   const app = await NestFactory.create(AppModule, { cors: true });
   const configService = app.get(ConfigService);
+
   const globalPrefix = 'api';
   app.use(helmet());
   app.use(

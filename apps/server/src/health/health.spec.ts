@@ -17,6 +17,11 @@ describe('HealthController', () => {
   it('/health  (GET)', () => {
     return request(app.getHttpServer())
       .get('/health')
-      .expect({"status":"ok","info":{"nestjs-docs":{"status":"up"}},"error":{},"details":{"nestjs-docs":{"status":"up"}}});
+      .expect({
+        status: 'ok',
+        info: { postgres: { status: 'up' } },
+        error: {},
+        details: { postgres: { status: 'up' } },
+      });
   });
 });
