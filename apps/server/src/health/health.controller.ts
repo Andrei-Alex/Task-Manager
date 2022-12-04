@@ -12,7 +12,6 @@ const configService = new ConfigService();
 export class HealthController {
   constructor(
     private health: HealthCheckService,
-    private http: HttpHealthIndicator,
     private db: TypeOrmHealthIndicator
   ) {}
 

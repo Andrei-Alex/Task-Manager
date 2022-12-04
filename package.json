@@ -13,12 +13,8 @@
     "back-end-lint": "nx lint client",
     "storybook:atoms": "nx run atoms:storybook",
     "storybook:client": "nx run client:storybook",
-    "typeormSrc": "typeorm-ts-node-esm -d ./apps/server/src/typeOrm.config.ts",
-    "typeorm": "typeorm-ts-node-esm ",
-    "typeorm:run-migrations": "npm run typeormSrc migration:run",
-    "typeorm:generate-migration": "npm run typeormSrc migration:generate",
-    "typeorm:create-migration": "npm run typeorm -- migration:create",
-    "typeorm:revert-migration": "npm run typeormSrc migration:revert"
+    "typeormSrc": "typeorm-ts-node-esm -d ./apps/server/src/app/typeOrm.config.ts",
+    "typeorm": "typeorm-ts-node-esm "
   },
   "private": true,
   "dependencies": {

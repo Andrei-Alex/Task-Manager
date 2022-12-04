@@ -1,11 +1,10 @@
 import { DataSource } from 'typeorm';
-
-import { ConfigModule, ConfigService } from '@nestjs/config';
-import dbConfiguration from '../db.config';
+import { ConfigModule } from '@nestjs/config';
+import dbConfiguration from './db.config';
 
 ConfigModule.forRoot({
   isGlobal: true,
-  envFilePath: '../.env',
+  envFilePath: '/.env',
   load: [dbConfiguration],
 });
 

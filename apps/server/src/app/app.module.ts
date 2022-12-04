@@ -1,6 +1,6 @@
 import { Module } from '@nestjs/common';
 import { HealthModule } from '../health/health.module';
-import dbConfiguration from '../../db.config';
+import dbConfiguration from './db.config';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { AppController } from './app.controller';
