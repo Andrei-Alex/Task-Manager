@@ -2,7 +2,7 @@ import { ConfigService, registerAs } from '@nestjs/config';
 import { DataSourceOptions } from 'typeorm';
 
 const configService = new ConfigService();
-console.log(`${__dirname}`);
+console.log(configService.get('DB_HOST'));
 export default registerAs('database', () => {
   return {
     type: 'postgres',
