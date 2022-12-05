@@ -9,7 +9,7 @@
     "../../../node_modules/@nrwl/react/typings/cssmodule.d.ts",
     "../../../node_modules/@nrwl/react/typings/image.d.ts",
     "../../../.storybook/main.ts",
-    "../components/health/DisplayHealth.tsx"
+    "../src/components/health/DisplayHealth.tsx"
   ],
 
   "exclude": [
