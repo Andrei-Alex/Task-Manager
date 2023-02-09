@@ -1,1 +1,1 @@
-export * from './lib/Presentation/atoms';
+export * from './lib/Presentation/Presentation';

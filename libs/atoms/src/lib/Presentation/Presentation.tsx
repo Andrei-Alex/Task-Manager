@@ -1,9 +1,9 @@
-import styles from './atoms.module.scss';
+import styles from './Presentation.module.scss';
 
 /* eslint-disable-next-line */
 export interface AtomsProps {}
 
-export function Atoms(props: AtomsProps) {
+export function Presentation(props: AtomsProps) {
   return (
     <div className={styles['container']}>
       <h1>Welcome to Atoms Lib!</h1>
@@ -12,4 +12,4 @@ export function Atoms(props: AtomsProps) {
   );
 }
 
-export default Atoms;
+export default Presentation;
