@@ -6,7 +6,8 @@ export interface AtomsProps {}
 export function Atoms(props: AtomsProps) {
   return (
     <div className={styles['container']}>
-      <h1>Welcome to Atoms!</h1>
+      <h1>Welcome to Atoms Lib!</h1>
+      <p>This lib is created for practice and will include only Atoms and presentation Components such as color or fonts.</p>
     </div>
   );
 }

@@ -24,7 +24,7 @@ jobs:
 
       - run: npm ci --force
       - run: npm run build --if-present
-      - run: npm run front-end-test
+      - run: npm run front-end-Presentation
 
   Run-Lint:
     runs-on: ubuntu-latest

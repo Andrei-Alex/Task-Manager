@@ -4,7 +4,7 @@ on:
   push:
     paths:
       - apps/server/**
-      
+
 env:
   PORT: 3333
   ALLOWED_ORIGIN_CLIENT: "http://localhost:3333"
@@ -48,7 +48,7 @@ jobs:
           cache: 'npm'
 
       - run: npm ci --force
-      - run: npm run back-end-test
+      - run: npm run back-end-Presentation
 
   Run-Lint:
     runs-on: ubuntu-latest
