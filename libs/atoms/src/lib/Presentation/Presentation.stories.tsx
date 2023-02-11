@@ -1,9 +1,10 @@
 import type { ComponentStory, ComponentMeta } from '@storybook/react';
-import {Presentation, defaultPresentation} from ".";
+import Presentation from "./Presentation";
+import { defaultPresentation} from ".";
 
 const Story: ComponentMeta<typeof Presentation> = {
   component: Presentation,
-  title: 'Atoms/Presentation',
+  title: 'Presentation/Lib Presentation',
   argTypes: {
     presentation: {
       name: 'Presentation',

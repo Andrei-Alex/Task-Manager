@@ -1,6 +1,6 @@
 import { render } from '@testing-library/react';
-
-import {Presentation, defaultPresentation} from '.';
+import Presentation from "./Presentation"
+import {defaultPresentation} from '.';
 
 describe('Presentation', () => {
   it('should render successfully', () => {

@@ -4,9 +4,9 @@ export interface Ipresentation {
     description: string;
     version: string;
     listTitle: string;
-    listElements: string[][];
+    listElements: {id : string, title:string, content: string}[];
     techTitle: string;
-    techList: string[]
+    techList: {id: string, value: string}[]
   }
 
 }
