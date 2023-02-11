@@ -18,7 +18,6 @@
     "build-storybook": "nx run-many --target=build-storybook --projects=atoms,client ",
     "deployAtoms": "npx chromatic --project-token=9636c4759bd6",
     "chromatic": "deployAtom --exit-zero-on-changes"
-  }
   },
   "private": true,
   "dependencies": {
