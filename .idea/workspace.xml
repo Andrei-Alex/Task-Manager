@@ -5,23 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="02795241-3c82-418b-bbbb-57070ab018eb" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/libs/atoms/src/lib/Color/Color.spec.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libs/atoms/src/lib/Color/Color.stories.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libs/atoms/src/lib/Color/Color.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libs/atoms/src/lib/Color/defaultData.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libs/atoms/src/lib/Color/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libs/atoms/src/lib/Color/types.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libs/atoms/src/lib/Presentation/styles.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/libs/atoms/src/lib/index.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libs/atoms/src/index.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/libs/atoms/src/lib/Presentation/Presentation.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/libs/atoms/src/lib/Color/styles.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libs/atoms/src/lib/Presentation/Presentation.spec.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/libs/atoms/src/lib/Presentation/Presentation.spec.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libs/atoms/src/lib/Presentation/Presentation.stories.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/libs/atoms/src/lib/Presentation/Presentation.stories.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libs/atoms/src/lib/Presentation/Presentation.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/libs/atoms/src/lib/Presentation/Presentation.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libs/atoms/src/lib/Presentation/defaultData.ts" beforeDir="false" afterPath="$PROJECT_DIR$/libs/atoms/src/lib/Presentation/defaultData.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libs/atoms/src/lib/Presentation/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/libs/atoms/src/lib/Presentation/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/libs/atoms/src/lib/Presentation/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/libs/atoms/src/lib/Presentation/types.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -39,22 +24,22 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/Andrei/Projects/GitHub/Task-Manager/libs/atoms/src/lib/Color",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "prettierjs.PrettierConfiguration.Package": "D:\\Andrei\\Projects\\GitHub\\Task-Manager\\node_modules\\prettier",
-    "ts.external.directory.path": "D:\\Andrei\\Projects\\GitHub\\Task-Manager\\node_modules\\typescript\\lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Andrei/Projects/GitHub/Task-Manager/libs/atoms/src/lib/Color&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;D:\\Andrei\\Projects\\GitHub\\Task-Manager\\node_modules\\prettier&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;D:\\Andrei\\Projects\\GitHub\\Task-Manager\\node_modules\\typescript\\lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Andrei\Projects\GitHub\Task-Manager\libs\atoms\src\lib\Color" />
