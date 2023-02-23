@@ -1,0 +1,11 @@
+.container {
+  padding: 25px;
+  font-family: sans-serif;
+  display: flex;
+  flex-direction: column;
+  div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}

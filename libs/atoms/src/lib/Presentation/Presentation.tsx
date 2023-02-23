@@ -1,13 +1,34 @@
-import styles from './Presentation.module.scss';
+import React from "react"
+import {styles, defaultPresentation, Ipresentation} from ".";
 
-/* eslint-disable-next-line */
-export interface AtomsProps {}
+/**
+ * Presentation
+ * @param {Object} presentation - Object with main text content
+ * @return {JSX} Display text in JSX elements
+ */
 
-export function Presentation(props: AtomsProps) {
+const Presentation: React.FC<Ipresentation> = ({presentation = defaultPresentation}) => {
   return (
     <div className={styles['container']}>
-      <h1>Welcome to Atoms Lib!</h1>
-      <p>This lib is created for practice and will include only Atoms and presentation Components such as color or fonts.</p>
+      <div>
+        <h1>{presentation.title}</h1>
+        <h2>{presentation.version}</h2>
+      </div>
+      <p>{presentation.description}</p>
+      <h3>{presentation.listTitle}</h3>
+      <ul>
+      {presentation.listElements.map((listElement)=> (
+        <li key={listElement.id}>
+          <strong>{listElement.title}</strong> {listElement.content}
+       </li>
+      ))}
+      </ul>
+      <h3>{presentation.techTitle}</h3>
+      <ul>
+        {presentation.techList.map((listElement)=> (
+          <li key={listElement.id}>{listElement.value}</li>
+        ))}
+      </ul>
     </div>
   );
 }
