@@ -2,6 +2,7 @@ import helmet from 'helmet';
 import { ConfigService } from '@nestjs/config';
 import { Logger } from '@nestjs/common';
 import { NestFactory } from '@nestjs/core';
+import { SwaggerModule, DocumentBuilder } from "@nestjs/swagger";
 import { AppModule } from './app/app.module';
 
 async function bootstrap() {
@@ -13,6 +14,7 @@ async function bootstrap() {
   app.use(
     helmet({
       crossOriginEmbedderPolicy: false,
+      contentSecurityPolicy: false,
     })
   );
   app.use(helmet.frameguard({ action: 'deny' }));
@@ -26,9 +28,18 @@ async function bootstrap() {
   }),
     app.setGlobalPrefix(globalPrefix);
 
+  const config = new DocumentBuilder()
+    .setTitle('Task Manager API')
+    .setDescription('It\'s so Swagger...')
+    .setVersion('0.0.1')
+    .build();
+
+  const document = SwaggerModule.createDocument(app, config);
+  SwaggerModule.setup('api', app, document,  );
+
   await app.listen(configService.get('PORT'));
   Logger.log(
-    `🚀 Application is running on: 
+    `🚀 Application is running on:
     ${configService.get('ALLOWED_ORIGIN_SERVER')}/${globalPrefix}`
   );
 }
