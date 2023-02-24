@@ -23,5 +23,6 @@ jobs:
         # Chromatic GitHub Action options
         with:
           # 👇 Chromatic projectToken, refer to the manage page to obtain it.
+          workingDir: ../../
           projectToken: ${{ secrets.CHROMATIC_TASKMANAGER_ATOMS_TOKEN }}
           exitZeroOnChanges: true
