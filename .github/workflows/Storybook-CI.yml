@@ -6,10 +6,6 @@ name: 'AtomChromatic'
 # Event for the workflow
 on: push
 
-defaults:
-  run:
-    working-directory: workspace
-
 # List of jobs
 jobs:
   chromatic-deployment:
@@ -17,17 +13,15 @@ jobs:
     runs-on: ubuntu-latest
     # Job steps
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v3
-        with:
-          fetch-depth: 0
-      - name: Install dependencies and build
-        run: |
-          npm ci
-          npm run build-buoy
+      - uses: actions/checkout@v1
+      - name: Install dependencies
+        # 👇 Install dependencies with the same package manager used in the project (replace it as needed), e.g. yarn, npm, pnpm
+        run: npm ci --force
+        # 👇 Adds Chromatic as a step in the workflow
       - name: Publish to Chromatic
         uses: chromaui/action@v1
+        # Chromatic GitHub Action options
         with:
-          workingDir: workspace
-          projectToken: ${{ secrets.CHROMATIC_PROJECT_TOKEN }}
+          # 👇 Chromatic projectToken, refer to the manage page to obtain it.
+          projectToken: ${{ secrets.CHROMATIC_TASKMANAGER_ATOMS_TOKEN }}
           exitZeroOnChanges: true
