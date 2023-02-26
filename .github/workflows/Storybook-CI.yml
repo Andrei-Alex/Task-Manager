@@ -11,9 +11,17 @@ jobs:
   chromatic-deployment:
     # Operating System
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [16.x]
     # Job steps
     steps:
       - uses: actions/checkout@v1
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: 'npm'
       - name: Install dependencies
         # 👇 Install dependencies with the same package manager used in the project (replace it as needed), e.g. yarn, npm, pnpm
         run: npm ci --force
