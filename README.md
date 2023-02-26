@@ -43,8 +43,9 @@
   <summary>Table of Contents</summary>
   <ol>
     <li><a href="#about-the-project">About The Project</a></li>
+    <li><a href="#getting-started">Getting Started</a></li>
     <li><a href="#built-with">Built With</a></li> 
-   <li><a href="#license">License</a></li>
+    <li><a href="#license">License</a></li>
     <li><a href="#contact">Contact</a></li>
   </ol>
 </details>
@@ -61,6 +62,41 @@ Here's why:
 
 
 
+
+<!-- GETTING STARTED -->
+## Getting Started
+
+To get a local copy up and running follow these simple example steps.
+
+### Prerequisites
+
+* Git
+  ```sh
+  git clone 
+  ```
+
+* NPM <= 16.x
+  ```sh
+  npm install npm -g
+  ```
+
+* Setup env file
+
+* Docker
+  ```sh
+  docker-compose up
+  ```
+### Commands
+
+* Run dev
+  ```sh
+  npm run dev (run API and Client)
+  ```
+* Storybooks
+  ```sh
+  npm run storybook:atoms
+  npm run storybook:client
+  ```
 
 ### Built With
 
