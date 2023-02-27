@@ -3,8 +3,11 @@
 # Workflow name
 name: 'AtomChromatic'
 
-# Event for the workflow
-on: push
+
+on:
+  push:
+   paths:
+    - apps/client/**
 
 # List of jobs
 jobs:
