@@ -5,13 +5,38 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="02795241-3c82-418b-bbbb-57070ab018eb" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/apps/server/.env.exemple" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/server/src/app/ValidationPipes.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/server/src/auth/auth.service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/server/src/auth/encryption.service.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/server/src/auth/jwt-auth.guard.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/server/src/auth/jwt.strategy.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/server/src/auth/local-auth.guard.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/server/src/auth/local.strategy.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/server/src/constants/globals.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/server/src/constants/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/server/src/user/user.DTO.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/server/src/user/user.controller.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/server/src/user/user.module.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/server/src/user/user.repository.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/apps/server/src/user/user.service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/server/.env.exemple" beforeDir="false" afterPath="$PROJECT_DIR$/apps/server/.env.exemple" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/server/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/server/src/app/app.module.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/server/src/app/db.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/server/src/app/db.config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/server/src/app/typeOrm.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/server/src/app/typeOrm.config.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/server/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/server/src/main.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/server/src/migrations/1670173571238-test.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/server/src/migrations/1670173571238-test.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/server/src/user/user.entity.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/server/src/user/user.entity.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ComposerSettings">
+    <execution />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -26,18 +51,25 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenDatabaseViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Andrei/Projects/GitHub/Task-Manager/libs/atoms/src/lib/Color&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Andrei/Projects/GitHub/Task-Manager&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
     &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
     &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;D:\\Andrei\\Projects\\GitHub\\Task-Manager\\node_modules\\prettier&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;Docker&quot;,
     &quot;ts.external.directory.path&quot;: &quot;D:\\Andrei\\Projects\\GitHub\\Task-Manager\\node_modules\\typescript\\lib&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;postgresql&quot;
+    ]
   }
 }</component>
   <component name="RecentsManager">
@@ -45,6 +77,7 @@
       <recent name="D:\Andrei\Projects\GitHub\Task-Manager\libs\atoms\src\lib\Color" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Andrei\Projects\GitHub\Task-Manager\apps\server\src\user" />
       <recent name="D:\Andrei\Projects\GitHub\Task-Manager\libs\atoms\src\lib" />
     </key>
   </component>
@@ -61,11 +94,20 @@
       <workItem from="1677419866000" duration="3474000" />
       <workItem from="1677424491993" duration="1058000" />
       <workItem from="1677435335966" duration="1253000" />
-      <workItem from="1677522235029" duration="448000" />
+      <workItem from="1677522235029" duration="2217000" />
+      <workItem from="1677612115801" duration="809000" />
+      <workItem from="1677782723739" duration="5410000" />
+      <workItem from="1677876288282" duration="1096000" />
+      <workItem from="1677877632698" duration="4000" />
+      <workItem from="1677932960634" duration="6027000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>

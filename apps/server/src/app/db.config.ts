@@ -2,15 +2,15 @@ import { ConfigService, registerAs } from '@nestjs/config';
 import { DataSourceOptions } from 'typeorm';
 
 const configService = new ConfigService();
-
+console.log(String(configService.get('DB_USER')))
 export default registerAs('database', () => {
   return {
     type: 'postgres',
     host: configService.get('DB_HOST'),
     loggin: true,
     port: Number(configService.get('DB_PORT')),
-    username: configService.get('DB_DATABASE'),
-    password: configService.get('DB_PASSWORD'),
+    username: configService.get('DB_USER'),
+    password: String(configService.get('DB_PASSWORD')),
     database: configService.get('DB_DATABASE'),
     synchronize: false,
     migrationsRun: true,

@@ -4,7 +4,7 @@ import dbConfiguration from './db.config';
 
 ConfigModule.forRoot({
   isGlobal: true,
-  envFilePath: '/.env',
+  envFilePath: '../.env',
   load: [dbConfiguration],
 });
 
