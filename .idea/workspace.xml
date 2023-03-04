@@ -5,29 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="02795241-3c82-418b-bbbb-57070ab018eb" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/apps/server/src/app/ValidationPipes.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/server/src/auth/auth.service.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/server/src/auth/encryption.service.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/server/src/auth/jwt-auth.guard.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/server/src/auth/jwt.strategy.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/server/src/auth/local-auth.guard.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/server/src/auth/local.strategy.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/server/src/constants/globals.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/server/src/constants/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/server/src/user/user.DTO.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/server/src/user/user.controller.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/server/src/user/user.module.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/server/src/user/user.repository.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/apps/server/src/user/user.service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/server/.env.exemple" beforeDir="false" afterPath="$PROJECT_DIR$/apps/server/.env.exemple" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/server/src/app/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/server/src/app/app.module.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/server/src/app/db.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/server/src/app/db.config.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/server/src/app/typeOrm.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/server/src/app/typeOrm.config.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/server/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/server/src/main.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/server/src/migrations/1670173571238-test.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/server/src/migrations/1670173571238-test.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/server/src/user/user.entity.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/server/src/user/user.entity.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -77,6 +57,7 @@
       <recent name="D:\Andrei\Projects\GitHub\Task-Manager\libs\atoms\src\lib\Color" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Andrei\Projects\GitHub\Task-Manager\apps" />
       <recent name="D:\Andrei\Projects\GitHub\Task-Manager\apps\server\src\user" />
       <recent name="D:\Andrei\Projects\GitHub\Task-Manager\libs\atoms\src\lib" />
     </key>

@@ -1,11 +1,15 @@
 import { DataSource } from 'typeorm';
-import { ConfigModule } from '@nestjs/config';
-import dbConfiguration from './db.config';
 
-ConfigModule.forRoot({
-  isGlobal: true,
-  envFilePath: '../.env',
-  load: [dbConfiguration],
+// TODO: Import from ENV
+export const dataSource = new DataSource({
+  type: 'postgres',
+  host:  'localhost',
+  port:  5432,
+  username:  'postgres',
+  password:  'postgres',
+  database:  'postgres',
+  synchronize: false,
+  migrationsRun: true,
+  entities: [`${__dirname}/**/*.entity.ts`],
+  migrations: [`${__dirname}/../migrations/*{.ts,.js}`],
 });
-
-export const AppDataSource = new DataSource(dbConfiguration());
