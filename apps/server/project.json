@@ -75,7 +75,7 @@
       "executor": "@nrwl/workspace:run-commands",
       "outputs": [],
       "options": {
-        "command": "npm run typeormSrc migration:revertt",
+        "command": "npm run typeormSrc migration:revert",
         "cwd": "apps/server"
       }
     },

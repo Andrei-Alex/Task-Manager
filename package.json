@@ -15,6 +15,9 @@
     "storybook:client": "nx run client:storybook",
     "typeormSrc": "typeorm-ts-node-esm -d ./apps/server/src/app/typeOrm.config.ts",
     "typeorm": "typeorm-ts-node-esm",
+    "run-migration": "nx run server:run-migrations",
+    "generate-migration": "nx run server:generate-migrations",
+    "create-migration": "nx run server:create-migrations",
     "build-storybook": "nx run-many --target=build-storybook --projects=atoms,client",
     "deployAtoms": "npx chromatic --project-token=9636c4759bd6",
     "chromatic": "deployAtoms --exit-zero-on-changes"
