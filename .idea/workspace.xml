@@ -5,16 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="02795241-3c82-418b-bbbb-57070ab018eb" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/apps/server/src/1678037721870-migrations.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/0817adb8-e278-4654-ab2b-11a28f07b44b.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/0817adb8-e278-4654-ab2b-11a28f07b44b.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/0817adb8-e278-4654-ab2b-11a28f07b44b/storage_v2/_src_/database/postgres.edMnLQ/schema/pg_catalog.0S1ZNQ.meta" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/0817adb8-e278-4654-ab2b-11a28f07b44b/storage_v2/_src_/database/postgres.edMnLQ/schema/pg_catalog.0S1ZNQ.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/0817adb8-e278-4654-ab2b-11a28f07b44b/storage_v2/_src_/database/postgres.edMnLQ/schema/pg_catalog.0S1ZNQ.zip" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/0817adb8-e278-4654-ab2b-11a28f07b44b/storage_v2/_src_/database/postgres.edMnLQ/schema/pg_catalog.0S1ZNQ.zip" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/server/project.json" beforeDir="false" afterPath="$PROJECT_DIR$/apps/server/project.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/apps/server/src/app/db.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/server/src/app/db.config.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/server/src/app/typeOrm.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/server/src/app/typeOrm.config.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/apps/server/src/migrations/1670173571238-test.ts" beforeDir="false" afterPath="$PROJECT_DIR$/apps/server/src/migrations/1670173571238-Users.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/server/tsconfig.app.json" beforeDir="false" afterPath="$PROJECT_DIR$/apps/server/tsconfig.app.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/server/tsconfig.json" beforeDir="false" afterPath="$PROJECT_DIR$/apps/server/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/apps/server/tsconfig.spec.json" beforeDir="false" afterPath="$PROJECT_DIR$/apps/server/tsconfig.spec.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tools/tsconfig.tools.json" beforeDir="false" afterPath="$PROJECT_DIR$/tools/tsconfig.tools.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tsconfig.base.json" beforeDir="false" afterPath="$PROJECT_DIR$/tsconfig.base.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -41,15 +39,15 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/Andrei/Projects/GitHub/Task-Manager/apps/server/src",
+    "last_opened_file_path": "D:/Andrei/Projects/GitHub/Task-Manager/apps",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "npm",
     "prettierjs.PrettierConfiguration.Package": "D:\\Andrei\\Projects\\GitHub\\Task-Manager\\node_modules\\prettier",
-    "settings.editor.selected.configurable": "Docker",
-    "ts.external.directory.path": "D:\\Andrei\\Projects\\GitHub\\Task-Manager\\node_modules\\typescript\\lib",
+    "settings.editor.selected.configurable": "settings.javascript.linters.tslint",
+    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\WebStorm 2022.3.2\\plugins\\javascript-impl\\jsLanguageServicesImpl\\external",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -60,6 +58,8 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Andrei\Projects\GitHub\Task-Manager" />
+      <recent name="D:\Andrei\Projects\GitHub\Task-Manager\apps\server" />
       <recent name="D:\Andrei\Projects\GitHub\Task-Manager\apps\server\src" />
       <recent name="D:\Andrei\Projects\GitHub\Task-Manager\libs\atoms\src\lib\Color" />
     </key>
@@ -90,7 +90,12 @@
       <workItem from="1677876288282" duration="1096000" />
       <workItem from="1677877632698" duration="4000" />
       <workItem from="1677932960634" duration="6027000" />
-      <workItem from="1678021140052" duration="13408000" />
+      <workItem from="1678021140052" duration="15657000" />
+      <workItem from="1678043745298" duration="687000" />
+      <workItem from="1678128824465" duration="722000" />
+      <workItem from="1678129650847" duration="75000" />
+      <workItem from="1678129752099" duration="105000" />
+      <workItem from="1678129881877" duration="1391000" />
     </task>
     <servers />
   </component>

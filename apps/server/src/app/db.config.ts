@@ -1,5 +1,6 @@
 import { ConfigService, registerAs } from '@nestjs/config';
 import { DataSourceOptions } from 'typeorm';
+import {User} from "../user/user.entity"
 
 const configService = new ConfigService();
 console.log(__dirname)
@@ -15,10 +16,10 @@ export default registerAs('database', () => {
     synchronize: false,
     migrationsRun: true,
     autoLoadEntities: true,
-    entities: [`${__dirname}/**/*.entity.ts`],
+    entities: [User],
     migrations: [`${__dirname}/**/*{.ts,.js}`],
     cli: {
-      migrationsDir: 'server/src/migrations/',
+      migrationsDir: 'src/migrations/',
     },
   } as DataSourceOptions;
 });
