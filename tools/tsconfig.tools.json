@@ -6,7 +6,10 @@
     "module": "commonjs",
     "target": "es5",
     "types": ["node"],
-    "importHelpers": false
+    "importHelpers": false,
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "strictPropertyInitialization": false
   },
   "include": ["**/*.ts"]
 }
