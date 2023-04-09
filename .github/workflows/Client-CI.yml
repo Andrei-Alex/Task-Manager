@@ -22,9 +22,9 @@ jobs:
           node-version: ${{ matrix.node-version }}
           cache: 'npm'
 
-      - run: npm ci --force
-      - run: npm run build --if-present
-      - run: npm run front-end-test
+      - run: yarn
+      - run: lerna run build --if-present
+      - run: lerna run lint --scope=client
 
   Run-Lint:
     runs-on: ubuntu-latest
@@ -42,6 +42,6 @@ jobs:
           node-version: ${{ matrix.node-version }}
           cache: 'npm'
 
-      - run: npm ci --force
-      - run: npm run build --if-present
-      - run: npm run front-end-lint
+      - run: yarn
+      - run: lerna run build --if-present
+      - run: lerna run lint lint --scope=client
