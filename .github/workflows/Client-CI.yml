@@ -3,7 +3,7 @@ name: Client CI
 on:
   push:
     paths:
-      - apps/client/**
+      - packages/client/**
 
 jobs:
   Run-Client-Test:
