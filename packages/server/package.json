@@ -23,7 +23,7 @@
     "run-migration": "yarn typeormSrc -- migration:run",
     "generate-migration": "yarn typeormSrc migration:generate",
     "show-migration": "yarn typeormSrc migration:show",
-    "create-migration": "yarn typeorm -- migration:create ./src/migrations/mig",
+    "create-migration": "yarn typeorm -- migration:create ./src/migrations/mig"
 
   },
   "dependencies": {
