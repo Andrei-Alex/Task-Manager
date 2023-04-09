@@ -1,70 +1,70 @@
-import type { ComponentStory, ComponentMeta } from '@storybook/react';
-import React from 'react';
-import Button from './Button';
+import type { Meta, StoryObj } from "@storybook/react";
+import React from "react";
+import Button from "./Button";
 
-const Story: ComponentMeta<typeof Button> = {
+const meta: Meta<typeof Button> = {
   component: Button,
-  title: 'Button',
-  tags: ['autodocs'],
+  title: "Button",
+  tags: ["autodocs"],
   argTypes: {
     text: {
-      name: 'Button text',
+      name: "Button text",
       type: {
-        name: 'string',
+        name: "string",
         required: false,
       },
-      defaultValue: 'Click',
-      description: 'Display text',
+      defaultValue: "Click",
+      description: "Display text",
       control: {
-        type: 'text',
+        type: "text",
       },
     },
     background: {
-      name: 'Background color',
+      name: "Background color",
       type: {
-        name: 'string',
+        name: "string",
         required: false,
       },
-      defaultValue: 'green',
-      description: 'Background color',
+      defaultValue: "green",
+      description: "Background color",
       control: {
-        type: 'text',
+        type: "text",
       },
     },
     color: {
-      name: 'Text color',
+      name: "Text color",
       type: {
-        name: 'string',
+        name: "string",
         required: false,
       },
-      defaultValue: 'white',
-      description: 'Text color',
+      defaultValue: "white",
+      description: "Text color",
       control: {
-        type: 'text',
+        type: "text",
       },
     },
     additionalText: {
-      name: 'Additional text',
+      name: "Additional text",
       type: {
-        name: 'string',
+        name: "string",
         required: false,
       },
       defaultValue: false,
-      description: 'Display additional Text',
+      description: "Display additional Text",
       control: {
-        type: 'boolean',
+        type: "boolean",
       },
     },
   },
 };
-export default Story;
+export default meta;
+type Story = StoryObj<typeof Button>;
 
-const Template: ComponentStory<typeof Button> = args => <Button {...args} />;
-
-export const ClickButton = Template.bind({});
-ClickButton.args = {
-  text: 'Click',
-  background: 'green',
-  color: 'white',
-  additionalText: false,
+export const Primary: Story = {
+  args: {
+    text: "Click",
+    background: "green",
+    color: "white",
+    additionalText: false,
+  },
 };
