@@ -77,7 +77,8 @@ To get a local copy up and running follow these simple example steps.
 
 * NPM <= 16.x
   ```sh
-  npm install npm -g
+  yarn
+  
   ```
 
 * Setup env file
@@ -90,12 +91,11 @@ To get a local copy up and running follow these simple example steps.
 
 * Run dev
   ```sh
-  npm run dev (run API and Client)
+  npx lerna run dev
   ```
 * Storybooks
   ```sh
-  npm run storybook:atoms
-  npm run storybook:client
+  lerna run storybook
   ```
 
 ### Built With
