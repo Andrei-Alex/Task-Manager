@@ -10,7 +10,7 @@
     "storybook": "storybook dev -p 6006",
     "build-storybook": "storybook build",
     "deployStorybook": "npx chromatic --project-token=9636c4759bd6",
-    "chromatic": "deployAtoms --exit-zero-on-changes"
+    "chromatic": "deployStorybook --exit-zero-on-changes"
   },
   "dependencies": {
     "@types/node": "18.15.11",
