@@ -7,8 +7,8 @@ on:
 
 env:
   PORT: 3333
-  ALLOWED_ORIGIN_CLIENT: "http://localhost:3333"
-  ALLOWED_ORIGIN_Server: "http://localhost:4200"
+  ALLOWED_ORIGIN_CLIENT: "http://localhost:3000"
+  ALLOWED_ORIGIN_Server: "http://localhost:3333"
   DB_HOST: 'postgres'
   DB_PORT: 5432
   DB_PASSWORD: 'postgres'
@@ -47,14 +47,14 @@ jobs:
           node-version: ${{ matrix.node-version }}
           cache: 'npm'
 
-      - run: npm ci --force
+      - run: yarn
 
   Run-Lint:
     runs-on: ubuntu-latest
 
     strategy:
       matrix:
-        node-version: [14.x, 16.x, 18.x]
+        node-version: [16.x, 18.x]
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
@@ -65,6 +65,6 @@ jobs:
           node-version: ${{ matrix.node-version }}
           cache: 'npm'
 
-      - run: npm i --force
-      - run: npm run build --if-present
-      - run: npm run back-end-lint
+      - run: yarn
+      - run: npx lerna run build --scope=server
+      - run: npx lerna run lint --scope=server

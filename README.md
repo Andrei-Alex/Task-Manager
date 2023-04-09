@@ -54,10 +54,9 @@
 ## About The Project
 
 Practice project built for training, refactoring, try or discover new frameworks/libraries
-Here's why:
-* Your time should be focused on creating something amazing. A project that solves a problem and helps others
-* You shouldn't be doing the same tasks over and over like creating a README from scratch
-* You should implement DRY principles to the rest of your life :smile:
+
+* DRY
+* KISS
 
 
 
@@ -77,7 +76,8 @@ To get a local copy up and running follow these simple example steps.
 
 * NPM <= 16.x
   ```sh
-  npm install npm -g
+  yarn
+  
   ```
 
 * Setup env file
@@ -90,12 +90,11 @@ To get a local copy up and running follow these simple example steps.
 
 * Run dev
   ```sh
-  npm run dev (run API and Client)
+  npx lerna run dev
   ```
 * Storybooks
   ```sh
-  npm run storybook:atoms
-  npm run storybook:client
+  lerna run storybook
   ```
 
 ### Built With

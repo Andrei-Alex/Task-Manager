@@ -3,7 +3,7 @@ name: Client CI
 on:
   push:
     paths:
-      - apps/client/**
+      - packages/client/**
 
 jobs:
   Run-Client-Test:
@@ -11,7 +11,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [14.x, 16.x, 18.x]
+        node-version: [16.x, 18.x]
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
@@ -22,16 +22,16 @@ jobs:
           node-version: ${{ matrix.node-version }}
           cache: 'npm'
 
-      - run: npm ci --force
-      - run: npm run build --if-present
-      - run: npm run front-end-test
+      - run: yarn
+      - run: npx lerna run build --scope=client
+      - run: npx lerna run lint --scope=client
 
   Run-Lint:
     runs-on: ubuntu-latest
 
     strategy:
       matrix:
-        node-version: [14.x, 16.x, 18.x]
+        node-version: [16.x, 18.x]
         # See supported Node.js release schedule at https://nodejs.org/en/about/releases/
 
     steps:
@@ -42,6 +42,6 @@ jobs:
           node-version: ${{ matrix.node-version }}
           cache: 'npm'
 
-      - run: npm ci --force
-      - run: npm run build --if-present
-      - run: npm run front-end-lint
+      - run: yarn
+      - run: npx lerna run build --scope=client
+      - run: npx lerna run lint --scope=client
