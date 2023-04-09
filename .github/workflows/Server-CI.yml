@@ -3,7 +3,7 @@ name: Server CI
 on:
   push:
     paths:
-      - apps/server/**
+      - packages/server/**
 
 env:
   PORT: 3333

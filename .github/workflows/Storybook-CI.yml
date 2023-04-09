@@ -7,7 +7,7 @@ name: 'AtomChromatic'
 on:
   push:
    paths:
-    - apps/client/**
+    - packages/client/**
 
 # List of jobs
 jobs:
