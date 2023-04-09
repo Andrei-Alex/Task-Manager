@@ -1,16 +1,14 @@
 import { DataSource } from 'typeorm';
 import {config} from 'dotenv'
+import {ConfigModule} from '@nestjs/config';
+import dbConfiguration from './db.config';
 
 config()
 
-import {ConfigModule} from '@nestjs/config';
-import dbConfiguration from './db.config';
-import {User} from "./user/User.entity";
 
 ConfigModule.forRoot({
   isGlobal: true,
   envFilePath: '../.env',
-
   load: [dbConfiguration],
 
 });

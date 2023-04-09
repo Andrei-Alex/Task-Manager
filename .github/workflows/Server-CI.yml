@@ -66,5 +66,5 @@ jobs:
           cache: 'npm'
 
       - run: yarn
-      - run: npx lerna build --scope=server
-      - run: npx lerna lint --scope=server
+      - run: npx lerna run build --scope=server
+      - run: npx lerna run lint --scope=server
