@@ -47,7 +47,7 @@ jobs:
           node-version: ${{ matrix.node-version }}
           cache: 'npm'
 
-      - run: npm ci --force
+      - run: yarn
 
   Run-Lint:
     runs-on: ubuntu-latest
@@ -65,6 +65,6 @@ jobs:
           node-version: ${{ matrix.node-version }}
           cache: 'npm'
 
-      - run: npm i --force
-      - run: npm run build --if-present
-      - run: npm run back-end-lint
+      - run: yarn
+      - run: npx lerna build --if-present
+      - run: npx lerna lint --scope=server
