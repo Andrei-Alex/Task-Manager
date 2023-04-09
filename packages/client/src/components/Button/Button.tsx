@@ -28,7 +28,7 @@ export const Button = ({
     >
       <p style={{ color: color }}>
         {text}
-        {additionalText ? ' Here !' : ''}
+        {additionalText ? ' Here !!' : ''}
       </p>
     </div>
   );
