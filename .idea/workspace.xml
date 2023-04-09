@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7fc99d8f-e859-4df4-9a6d-4912281852fe" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.github/workflows/Server-CI.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/Server-CI.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -33,10 +32,14 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
     "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.standard": "true",
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.standard": "",
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "yarn",
+    "prettierjs.PrettierConfiguration.Package": "D:\\Andrei\\Projects\\GitHub\\Task-Manager\\packages\\server\\node_modules\\prettier",
+    "settings.editor.selected.configurable": "settings.javascript.prettier",
     "ts.external.directory.path": "D:\\Andrei\\Projects\\GitHub\\Task-Manager\\node_modules\\typescript\\lib",
     "vue.rearranger.settings.migration": "true"
   },
@@ -56,11 +59,15 @@
       <updated>1681041529267</updated>
       <workItem from="1681041532281" duration="6959000" />
       <workItem from="1681050977984" duration="4010000" />
-      <workItem from="1681058333204" duration="1748000" />
+      <workItem from="1681058333204" duration="1950000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
