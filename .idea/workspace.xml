@@ -5,42 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7fc99d8f-e859-4df4-9a6d-4912281852fe" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/client/.env" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/client/src/__MOCK__/axios/axiosMock.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/client/src/__MOCK__/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/client/src/__MOCK__/router/routerMock.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/client/src/components/Button/Button.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/client/src/components/Button/Button.stories.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/client/src/components/Button/Button.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/client/src/components/Button/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/client/src/components/Button/types.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/client/src/components/health/DisplayHealth.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/client/src/components/health/DisplayHealth.stories.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/client/src/components/health/DisplayHealth.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/client/src/components/health/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/client/src/components/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/client/src/pages/_app.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/client/src/pages/health/index.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/client/src/pages/health/index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/client/src/pages/home/index.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/client/src/pages/home/index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/client/src/pages/login/Styles.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/client/src/pages/login/index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/client/src/pages/register/Styles.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/client/src/pages/register/index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/client/src/services/health/getHealth.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/client/src/services/health/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/client/src/services/health/types.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/client/src/services/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/client/src/specs/LoginPage.test.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/client/src/specs/RegisterPage.test.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/client/src/specs/index.spec.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/client/src/styles/Global.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/client/src/styles/_variables.scss" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/packages/server/src/1670173571238-Users.ts" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/packages/server/src/migrations/1670173571238-Users.ts" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/packages/server/tsconfig.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,7 +51,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1681041529267</updated>
-      <workItem from="1681041532281" duration="1660000" />
+      <workItem from="1681041532281" duration="2079000" />
     </task>
     <servers />
   </component>
