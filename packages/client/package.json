@@ -36,8 +36,6 @@
     "sass": "^1.61.0",
     "sass-loader": "^13.2.2",
     "storybook": "7.0.2",
-    "eslint": "~8.15.0",
-    "eslint-config-next": "13.0.0",
     "eslint-config-prettier": "8.1.0",
     "eslint-plugin-cypress": "^2.10.3",
     "eslint-plugin-import": "2.26.0",
