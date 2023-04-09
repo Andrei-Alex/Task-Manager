@@ -27,12 +27,8 @@ jobs:
         # 👇 Install dependencies with the same package manager used in the project (replace it as needed), e.g. yarn, npm, pnpm
         run: yarn
         # 👇 Change folder
-      - name: Target folder
-        run: cd packages/client
-        # 👇 Adds Chromatic as a step in the workflow
-      - name: Publish to Chromatic
-        uses: chromaui/action@v1
-        # Chromatic GitHub Action options
+      - name: run chromatic
+        run: lerna run chromatic
         with:
           # 👇 Chromatic projectToken, refer to the manage page to obtain it.
           projectToken: ${{ secrets.CHROMATIC_TASKMANAGER_ATOMS_TOKEN }}

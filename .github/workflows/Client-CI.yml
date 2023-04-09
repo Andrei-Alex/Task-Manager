@@ -23,7 +23,7 @@ jobs:
           cache: 'npm'
 
       - run: yarn
-      - run: npx lerna run build
+      - run: npx lerna run build --scope=client
       - run: npx lerna run lint --scope=client
 
   Run-Lint:
@@ -43,5 +43,5 @@ jobs:
           cache: 'npm'
 
       - run: yarn
-      - run: npx lerna run build
-      - run: npx lerna run lint lint --scope=client
+      - run: npx lerna run build --scope=client
+      - run: npx lerna run lint --scope=client
