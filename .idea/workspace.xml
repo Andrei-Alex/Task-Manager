@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7fc99d8f-e859-4df4-9a6d-4912281852fe" name="Changes" comment="" />
+    <list default="true" id="7fc99d8f-e859-4df4-9a6d-4912281852fe" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/packages/client/src/__MOCK__/router/routerMock.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/client/src/__MOCK__/router/routerMock.ts" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -47,7 +49,7 @@
       <option name="presentableId" value="Default" />
       <updated>1681041529267</updated>
       <workItem from="1681041532281" duration="6959000" />
-      <workItem from="1681050977984" duration="2593000" />
+      <workItem from="1681050977984" duration="2979000" />
     </task>
     <servers />
   </component>

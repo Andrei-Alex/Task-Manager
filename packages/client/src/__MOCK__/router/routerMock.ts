@@ -1,6 +1,6 @@
 import { NextRouter } from 'next/router';
 
-export function routerMock(router: Partial<NextRouter>): NextRouter {
+export function routerMock(router: Partial<NextRouter>){
   return {
     basePath: '',
     pathname: '/',
