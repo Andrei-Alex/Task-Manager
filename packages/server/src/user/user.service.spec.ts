@@ -12,6 +12,7 @@ import { ConfigService } from '@nestjs/config';
 const configService = new ConfigService();
 import { getRepositoryToken } from '@nestjs/typeorm';
 
+// TODO: Change DB connection to DataSource
 describe('UserService', () => {
   let repository: Repository<User>;
   let service: UserService;
@@ -67,7 +68,7 @@ describe('UserService', () => {
     expect(user).toMatchObject(payload);
   });
 
-  // Default migration user
+  // TODO: Create user and then search
   it('should find user', async () => {
     const user: User[] = await service.findByMail('john@mail.com');
     expect(user[0].full_name).toBe('john');

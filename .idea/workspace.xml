@@ -5,25 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7fc99d8f-e859-4df4-9a6d-4912281852fe" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/packages/server/src/user/user.service.spec.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/server/.env.exemple" beforeDir="false" afterPath="$PROJECT_DIR$/packages/server/.env.exemple" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/server/jest.config.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/server/src/app.controller.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/server/src/app.controller.spec.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/server/src/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/server/src/app.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/server/src/auth/auth.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/server/src/auth/auth.service.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/server/src/auth/encryption.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/server/src/auth/encryption.service.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/server/src/db.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/server/src/db.config.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/server/src/health/health.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/server/src/health/health.spec.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/server/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/server/src/main.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/server/src/migrations/1670173571238-Users.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/server/src/migrations/1670173571238-Users.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/server/src/typeOrm.config.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/server/src/typeOrm.config.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/server/src/user/User.entity.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/server/src/user/User.entity.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/server/src/user/user.DTO.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/server/src/user/user.DTO.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/server/src/user/user.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/server/src/user/user.controller.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/server/src/user/user.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/server/src/user/user.module.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/server/src/user/user.repository.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/server/src/user/user.repository.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/server/src/user/user.service.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/server/src/user/user.service.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/server/src/user/user.service.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/server/src/user/user.service.spec.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,7 +69,8 @@
       <workItem from="1681499512704" duration="99000" />
       <workItem from="1681538411829" duration="1836000" />
       <workItem from="1681545724182" duration="4549000" />
-      <workItem from="1681552222607" duration="4376000" />
+      <workItem from="1681552222607" duration="4691000" />
+      <workItem from="1681565325842" duration="162000" />
     </task>
     <servers />
   </component>

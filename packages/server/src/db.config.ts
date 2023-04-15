@@ -16,6 +16,7 @@ export default registerAs('database', () => {
     synchronize: false,
     migrationsRun: true,
     autoLoadEntities: true,
+    // TODO: Change entities and migrations imports
     entities: [User],
     migrations: [migrations1668411426720],
     cli: {
