@@ -1,7 +1,7 @@
 import { ConfigService, registerAs } from '@nestjs/config';
 import { DataSourceOptions } from 'typeorm';
-import {migrations1668411426720} from "./migrations/1670173571238-Users"
-import {User} from "./user/User.entity";
+import { migrations1668411426720 } from './migrations/1670173571238-Users';
+import { User } from './user/User.entity';
 const configService = new ConfigService();
 
 export default registerAs('database', () => {

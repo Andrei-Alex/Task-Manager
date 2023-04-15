@@ -15,7 +15,7 @@ import { InjectRepository } from '@nestjs/typeorm';
 import { AuthService } from '../auth/auth.service';
 import { LocalAuthGuard } from '../auth/local-auth.guard';
 import { EncryptionService } from '../auth/encryption.service';
-import {JwtAuthGuard} from "../auth/jwt-auth.guard";
+import { JwtAuthGuard } from '../auth/jwt-auth.guard';
 @Controller('auth')
 export class UserController {
   constructor(
@@ -35,13 +35,11 @@ export class UserController {
       createUserDto.email,
     );
     const user = new User();
-
     user.full_name = createUserDto.full_name;
-    user.email = createUserDto.email;
     user.password = await this.encriptionService.hashPassword(
       createUserDto.password,
     );
-
+    user.email = createUserDto.email;
     await this.userRepository.save(user);
     return {
       email: user.email,
@@ -50,7 +48,7 @@ export class UserController {
   }
 
   @UseGuards(LocalAuthGuard)
-  @Post('login')
+  @Post('/login')
   async login(@Request() req) {
     return this.authService.login(req.user);
   }

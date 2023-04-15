@@ -5,7 +5,7 @@ import { ConfigModule, ConfigService } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
-import {UserModule} from "./user/user.module";
+import { UserModule } from './user/user.module';
 
 @Module({
   imports: [
@@ -15,7 +15,6 @@ import {UserModule} from "./user/user.module";
       isGlobal: true,
       envFilePath: '../../.env',
       load: [dbConfiguration],
-
     }),
     TypeOrmModule.forRootAsync({
       imports: [ConfigModule],
