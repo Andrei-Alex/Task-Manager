@@ -2,7 +2,12 @@ import helmet from 'helmet';
 import { ConfigService } from '@nestjs/config';
 import { Logger, ValidationPipe } from '@nestjs/common';
 import { NestFactory } from '@nestjs/core';
-import { SwaggerModule, DocumentBuilder } from '@nestjs/swagger';
+import {
+  SwaggerModule,
+  DocumentBuilder,
+  SwaggerDocumentOptions,
+  SwaggerCustomOptions,
+} from '@nestjs/swagger';
 import { AppModule } from './app.module';
 async function bootstrap() {
   const app = await NestFactory.create(AppModule, { cors: true });
@@ -27,6 +32,10 @@ async function bootstrap() {
   }),
     app.setGlobalPrefix(globalPrefix);
 
+  const options: SwaggerDocumentOptions = {
+    operationIdFactory: (controllerKey: string, methodKey: string) => methodKey,
+  };
+
   const config = new DocumentBuilder()
     .setTitle('Task Manager API')
     .setDescription("It's so Swagger...")
@@ -34,6 +43,7 @@ async function bootstrap() {
     .build();
 
   const document = SwaggerModule.createDocument(app, config);
+
   SwaggerModule.setup('api', app, document);
 
   app.useGlobalPipes(new ValidationPipe());
