@@ -15,33 +15,56 @@ import { InjectRepository } from '@nestjs/typeorm';
 import { AuthService } from '../auth/auth.service';
 import { LocalAuthGuard } from '../auth/local-auth.guard';
 import { EncryptionService } from '../auth/encryption.service';
-import {JwtAuthGuard} from "../auth/jwt-auth.guard";
+import { JwtAuthGuard } from '../auth/jwt-auth.guard';
+import {
+  ApiBearerAuth,
+  ApiCreatedResponse,
+  ApiForbiddenResponse,
+  ApiHeader,
+  ApiOperation,
+  ApiParam,
+  ApiResponse,
+  ApiTags,
+  ApiUnprocessableEntityResponse,
+} from '@nestjs/swagger';
+@ApiTags('Auth')
 @Controller('auth')
 export class UserController {
   constructor(
     private authService: AuthService,
     private encriptionService: EncryptionService,
     private userService: UserService,
-
     @InjectRepository(User)
     private readonly userRepository: Repository<User>,
   ) {}
-
+  @ApiCreatedResponse({ description: 'Created Successfully' })
+  @ApiUnprocessableEntityResponse({ description: 'Bad Request' })
+  @ApiOperation({ summary: 'Register new user' })
+  @ApiTags('Auth')
+  @ApiResponse({
+    status: 201,
+    description: 'User created',
+    type: User,
+  })
   @Post('/register')
-  async createUser(@Body() createUserDto: CreateUserDto) {
+  async createUser(
+    @Param('full_name') full_name: string,
+    @Param('password') password: string,
+    @Param('email') email: string,
+    @Body()
+    createUserDto: CreateUserDto,
+  ) {
     this.userService.create(
       createUserDto.full_name,
       createUserDto.password,
       createUserDto.email,
     );
     const user = new User();
-
     user.full_name = createUserDto.full_name;
-    user.email = createUserDto.email;
     user.password = await this.encriptionService.hashPassword(
       createUserDto.password,
     );
-
+    user.email = createUserDto.email;
     await this.userRepository.save(user);
     return {
       email: user.email,
@@ -50,7 +73,7 @@ export class UserController {
   }
 
   @UseGuards(LocalAuthGuard)
-  @Post('login')
+  @Post('/login')
   async login(@Request() req) {
     return this.authService.login(req.user);
   }
