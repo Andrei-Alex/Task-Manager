@@ -20,19 +20,22 @@ import {
   ApiBearerAuth,
   ApiCreatedResponse,
   ApiForbiddenResponse,
+  ApiUnauthorizedResponse,
   ApiHeader,
   ApiOperation,
   ApiParam,
   ApiResponse,
   ApiTags,
   ApiUnprocessableEntityResponse,
+  ApiProperty,
+  ApiBody,
 } from '@nestjs/swagger';
 @ApiTags('Auth')
 @Controller('auth')
 export class UserController {
   constructor(
     private authService: AuthService,
-    private encriptionService: EncryptionService,
+    private encryptionService: EncryptionService,
     private userService: UserService,
     @InjectRepository(User)
     private readonly userRepository: Repository<User>,
@@ -61,7 +64,7 @@ export class UserController {
     );
     const user = new User();
     user.full_name = createUserDto.full_name;
-    user.password = await this.encriptionService.hashPassword(
+    user.password = await this.encryptionService.hashPassword(
       createUserDto.password,
     );
     user.email = createUserDto.email;
@@ -72,10 +75,28 @@ export class UserController {
     };
   }
 
+  @ApiResponse({
+    status: 201,
+    description:
+      '"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2ODE5Mjg3MjcsImV4cCI6MTY4MTkyODc4N30.3_aNTK_XfuUCXJR0SnJ1wielXKX3erkJh6lKj90NYZE"',
+  })
+  @ApiBody({
+    description: 'Username (email), password',
+    schema: {
+      properties: {
+        username: { type: 'string' },
+        password: { type: 'string' },
+      },
+    },
+  })
+  @ApiUnauthorizedResponse({ description: 'Unauthorized' })
+  @ApiUnprocessableEntityResponse({ description: 'Bad Request' })
+  @ApiOperation({ summary: 'Login with username and password ' })
   @UseGuards(LocalAuthGuard)
-  @Post('/login')
+  @Post('login')
   async login(@Request() req) {
-    return this.authService.login(req.user);
+    console.log(req.body);
+    return this.authService.login(req.body);
   }
 
   @UseGuards(JwtAuthGuard)
