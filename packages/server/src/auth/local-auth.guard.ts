@@ -8,7 +8,6 @@ import { AuthGuard } from '@nestjs/passport';
 @Injectable()
 export class LocalAuthGuard extends AuthGuard('local') {
   handleRequest(err, user, info) {
-    console.log(user);
     if (info?.message === 'Missing credentials') {
       throw new BadRequestException();
     }

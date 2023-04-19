@@ -13,10 +13,6 @@ export class AuthService {
 
   async validateUser(email: string, password: string) {
     const [user] = await this.userService.findByMail(email);
-    console.log('ss');
-    console.log(email);
-    console.log(password);
-    console.log(user);
     if (
       user &&
       (await this.encryptionService.decryptPassword(
