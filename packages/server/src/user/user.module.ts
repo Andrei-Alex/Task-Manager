@@ -19,7 +19,7 @@ import { EncryptionService } from '../auth/encryption.service';
       imports: [ConfigModule],
       useFactory: async (configService: ConfigService) => ({
         secret: configService.get('SECRET_KEY'),
-        signOptions: { expiresIn: '60s' },
+        signOptions: { expiresIn: '1d' },
       }),
       inject: [ConfigService],
     }),
