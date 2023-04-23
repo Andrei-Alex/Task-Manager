@@ -6,9 +6,9 @@ import {
   SwaggerModule,
   DocumentBuilder,
   SwaggerDocumentOptions,
-  SwaggerCustomOptions,
 } from '@nestjs/swagger';
 import { AppModule } from './app.module';
+import { swaggerDescription, projectVersion } from './constants';
 async function bootstrap() {
   const app = await NestFactory.create(AppModule, { cors: true });
   const configService = app.get(ConfigService);
@@ -37,9 +37,10 @@ async function bootstrap() {
   };
 
   const config = new DocumentBuilder()
+    .addBearerAuth()
     .setTitle('Task Manager API')
-    .setDescription("It's so Swagger...")
-    .setVersion('0.0.1')
+    .setDescription(swaggerDescription)
+    .setVersion(projectVersion)
     .build();
 
   const document = SwaggerModule.createDocument(app, config);

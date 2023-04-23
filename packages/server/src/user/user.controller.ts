@@ -19,15 +19,11 @@ import { JwtAuthGuard } from '../auth/jwt-auth.guard';
 import {
   ApiBearerAuth,
   ApiCreatedResponse,
-  ApiForbiddenResponse,
   ApiUnauthorizedResponse,
-  ApiHeader,
   ApiOperation,
-  ApiParam,
   ApiResponse,
   ApiTags,
   ApiUnprocessableEntityResponse,
-  ApiProperty,
   ApiBody,
 } from '@nestjs/swagger';
 @ApiTags('Auth')
@@ -77,8 +73,7 @@ export class UserController {
 
   @ApiResponse({
     status: 201,
-    description:
-      '"access_token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpYXQiOjE2ODE5Mjg3MjcsImV4cCI6MTY4MTkyODc4N30.3_aNTK_XfuUCXJR0SnJ1wielXKX3erkJh6lKj90NYZE"',
+    description: 'Access token',
   })
   @ApiBody({
     description: 'Username (email), password',
@@ -97,14 +92,17 @@ export class UserController {
   async login(@Request() req) {
     return this.authService.login(req.body);
   }
-
+  @ApiOperation({ summary: 'Get user profile' })
   @UseGuards(JwtAuthGuard)
+  @ApiBearerAuth()
   @Get('profile')
   getProfile(@Request() req) {
     return req.user;
   }
 
+  @ApiOperation({ summary: 'Get users by name' })
   @UseGuards(JwtAuthGuard)
+  @ApiBearerAuth()
   @Get('users/:full_name?')
   getUsers(@Request() req, @Param('full_name') full_name: string) {
     if (!full_name) {
