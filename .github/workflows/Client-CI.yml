@@ -24,7 +24,7 @@ jobs:
 
       - run: yarn
       - run: npx lerna run build --scope=client
-      - run: npx lerna run lint --scope=client
+      - run: npx lerna run test --scope=client
 
   Run-Lint:
     runs-on: ubuntu-latest
