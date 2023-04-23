@@ -101,8 +101,8 @@ To get a local copy up and running follow these simple example steps.
 
 <H2>Project Tech :</h2>
 
-- Nx as monorepo framework
-- GitHub CI/CD and repository
+- Lerna Nx as monorepo framework
+- GitHub Actions
 - Docker
 
 
