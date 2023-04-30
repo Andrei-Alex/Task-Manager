@@ -1,4 +1,4 @@
-import { styles, IButton } from '.';
+import { styles, IButton } from ".";
 
 /**
  * Simple Button.
@@ -10,7 +10,7 @@ import { styles, IButton } from '.';
  * </div>
  * ```
  * @param {string} text - Button text
- * @param {boolean} additionalText - Toogle Display text
+ * @param {boolean} additionalText - Toggle Display text
  * @param {string} background - Background color
  * @param {string} color - Text color
  * @return {JSX} Display text in JSX elements
@@ -18,17 +18,17 @@ import { styles, IButton } from '.';
 export const Button = ({
   text,
   additionalText = false,
-  background = 'green',
+  background = "green",
   color,
 }: IButton) => {
   return (
     <div
       style={{ backgroundColor: background }}
-      className={styles['container']}
+      className={styles["container"]}
     >
       <p style={{ color: color }}>
         {text}
-        {additionalText ? ' Here !!' : ''}
+        {additionalText ? " Here !!" : ""}
       </p>
     </div>
   );

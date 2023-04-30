@@ -1,0 +1,26 @@
+@import '../../styles/_variables';
+
+.container {
+  display: flex;
+  flex-direction: column;
+  font-family: $fontPrimary;
+}
+.labelContainer{
+ display: flex;
+  margin-bottom: 15px;
+}
+.label {
+  color: $darkGray;
+}
+.input {
+  height: 40px;
+  border-radius: 5px;
+  border: 2px solid $mediumGray;
+  padding-left: 20px;
+  font-family: $fontPrimary;
+  font-size: 16px;
+  font
+  &:focus {
+    outline-color: $mediumGray;
+  }
+}
