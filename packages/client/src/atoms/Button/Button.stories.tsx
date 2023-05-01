@@ -4,7 +4,7 @@ import Button from "./Button";
 
 const meta: Meta<typeof Button> = {
   component: Button,
-  title: "Button",
+  title: "Atoms/Button",
   tags: ["autodocs"],
   argTypes: {
     text: {
@@ -19,19 +19,19 @@ const meta: Meta<typeof Button> = {
         type: "text",
       },
     },
-    background: {
+    backgroundColor: {
       name: "Background color",
       type: {
         name: "string",
         required: false,
       },
-      defaultValue: "green",
+      defaultValue: "#828FA3",
       description: "Background color",
       control: {
         type: "text",
       },
     },
-    color: {
+    textColor: {
       name: "Text color",
       type: {
         name: "string",
@@ -43,28 +43,22 @@ const meta: Meta<typeof Button> = {
         type: "text",
       },
     },
-    additionalText: {
-      name: "Additional text",
+    callback: {
+      name: "CallBack",
       type: {
-        name: "string",
+        name: "function",
         required: false,
       },
-      defaultValue: false,
-      description: "Display additional Text",
-      control: {
-        type: "boolean",
-      },
+      description: "onClick callback function",
     },
   },
 };
 export default meta;
 type Story = StoryObj<typeof Button>;
 
-export const Primary: Story = {
+export const Default: Story = {
   args: {
-    text: "Click",
-    background: "green",
-    color: "white",
-    additionalText: false,
+    text: "Click me",
+    textColor: "white",
   },
 };

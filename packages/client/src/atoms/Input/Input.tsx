@@ -12,6 +12,8 @@ import { styles, IInput } from ".";
  * @param {string} label - Text label
  * @param {boolean} required - If true add *
  * @param {number} width - If true add *
+ * @param {number} placeholder - Add placeholder text
+ * @param {number} id - Add id (label and htmlFor)
  * @return {JSX} Display Label with conditional * and Input
  */
 export const Input: React.FC<IInput> = ({
