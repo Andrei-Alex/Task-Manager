@@ -19,14 +19,17 @@ export const Input: React.FC<IInput> = ({
   required = false,
   width = 415,
   placeholder = "Ex. Placeholder",
+  id,
 }) => {
   return (
     <div className={styles.container} style={{ width: `${width}px` }}>
       <div className={styles.labelContainer}>
-        <text className={styles.label}>{label}</text>
-        <text> {required && " *"}</text>
+        <label className={styles.label} htmlFor={id}>
+          {label}
+        </label>
+        <p> {required && " *"}</p>
       </div>
-      <input className={styles.input} placeholder={placeholder} />
+      <input className={styles.input} placeholder={placeholder} id={id} />
     </div>
   );
 };
