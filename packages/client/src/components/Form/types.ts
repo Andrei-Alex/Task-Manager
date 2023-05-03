@@ -8,4 +8,5 @@ export interface IInputs {
 export interface IForm {
   inputs: IInputs[];
   submitHandler: () => void;
+  title: string;
 }

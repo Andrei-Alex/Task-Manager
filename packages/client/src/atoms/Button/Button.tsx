@@ -18,7 +18,7 @@ import { styles, IButton } from "./index";
  * @return {JSX} Display Button
  */
 export const Button: React.FC<IButton> = ({
-  width = "300",
+  width = "415",
   text,
   backgroundColor = "#828FA3",
   textColor,

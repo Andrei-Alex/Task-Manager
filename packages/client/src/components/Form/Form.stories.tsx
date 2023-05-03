@@ -40,6 +40,7 @@ type Story = StoryObj<typeof Form>;
 export const Default: Story = {
   args: {
     inputs: inputs,
+    title: "Login",
     submitHandler: () => null,
   },
 };

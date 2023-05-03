@@ -28,7 +28,7 @@ describe("Input", () => {
   });
   it("should display *", () => {
     render(<Input label={"Required label"} id={"Required"} required={true} />);
-    const label = screen.getByText("*");
+    const label = screen.getByText("Required label *");
     expect(label).toBeInTheDocument();
   });
 });

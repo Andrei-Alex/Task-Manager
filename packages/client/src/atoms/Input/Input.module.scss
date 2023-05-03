@@ -6,21 +6,22 @@
   font-family: $fontPrimary;
 }
 .labelContainer{
+ margin-bottom: 10px;
  display: flex;
-  margin-bottom: 15px;
+
 }
 .label {
   color: $darkGray;
 }
 .input {
   height: 40px;
-  border-radius: 5px;
-  border: 2px solid $mediumGray;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid $mediumGray;
   padding-left: 20px;
   font-family: $fontPrimary;
   font-size: 16px;
-  font
   &:focus {
-    outline-color: $mediumGray;
+    outline-color: transparent;
   }
 }

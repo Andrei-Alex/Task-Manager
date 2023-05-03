@@ -1,0 +1,19 @@
+@import '../../styles/_variables';
+
+.container {
+  width: 420px;
+  padding: 25px;
+  padding-top: 5px;
+  border: 2px solid;
+  border-color: #635FC750;
+  box-shadow: 1px 5px 5px #635FC740;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+
+}
+.title {
+  align-self: center;
+  font-family: $fontPrimary;
+  color: $purple
+}

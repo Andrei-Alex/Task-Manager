@@ -14,6 +14,7 @@ import { styles, IInput } from ".";
  * @param {number} width - If true add *
  * @param {number} placeholder - Add placeholder text
  * @param {number} id - Add id (label and htmlFor)
+ * @param {objectr} containerStyle - style object
  * @return {JSX} Display Label with conditional * and Input
  */
 export const Input: React.FC<IInput> = ({
@@ -22,14 +23,18 @@ export const Input: React.FC<IInput> = ({
   width = 415,
   placeholder = "Ex. Placeholder",
   id,
+  containerStyle,
 }) => {
   return (
-    <div className={styles.container} style={{ width: `${width}px` }}>
+    <div
+      className={styles.container}
+      style={{ width: `${width}px`, ...containerStyle }}
+    >
       <div className={styles.labelContainer}>
         <label className={styles.label} htmlFor={id}>
           {label}
+          {required && " *"}
         </label>
-        <p> {required && " *"}</p>
       </div>
       <input className={styles.input} placeholder={placeholder} id={id} />
     </div>
