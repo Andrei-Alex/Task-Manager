@@ -5,19 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7fc99d8f-e859-4df4-9a6d-4912281852fe" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/packages/client/src/components/Form/Form.module.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/client/src/atoms/Button/Button.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/packages/client/src/atoms/Button/Button.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/client/src/atoms/Button/Button.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/client/src/atoms/Button/Button.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/client/package.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/client/src/atoms/Input/Input.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/packages/client/src/atoms/Input/Input.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/client/src/atoms/Input/Input.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/client/src/atoms/Input/Input.test.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/client/src/atoms/Input/Input.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/client/src/atoms/Input/Input.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/client/src/atoms/Input/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/client/src/atoms/Input/types.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/client/src/components/Form/Form.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/packages/client/src/components/Form/Form.module.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/client/src/components/Form/Form.stories.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/client/src/components/Form/Form.stories.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/client/src/components/Form/Form.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/client/src/components/Form/Form.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/client/src/components/Form/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/client/src/components/Form/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/client/src/components/Form/data.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/client/src/components/Form/data.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/client/src/components/Form/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/client/src/components/Form/types.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/client/src/styles/_variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/packages/client/src/styles/_variables.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -103,7 +100,8 @@
       <workItem from="1682879969707" duration="1502000" />
       <workItem from="1682942890387" duration="11292000" />
       <workItem from="1683047928987" duration="2962000" />
-      <workItem from="1683136588845" duration="3803000" />
+      <workItem from="1683136588845" duration="3870000" />
+      <workItem from="1683378757866" duration="8707000" />
     </task>
     <servers />
   </component>

@@ -8,13 +8,11 @@
 .labelContainer{
  margin-bottom: 10px;
  display: flex;
-
 }
 .label {
   color: $darkGray;
 }
 .input {
-  height: 40px;
   border: none;
   outline: none;
   border-bottom: 1px solid $mediumGray;
@@ -24,4 +22,8 @@
   &:focus {
     outline-color: transparent;
   }
+}
+.alert {
+  transform: translateY(-15px);
+  color: red;
 }

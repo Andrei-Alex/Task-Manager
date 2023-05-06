@@ -10,10 +10,12 @@
   border-radius: 12px;
   display: flex;
   flex-direction: column;
-
 }
 .title {
   align-self: center;
   font-family: $fontPrimary;
   color: $purple
+}
+.alert {
+  color: red;
 }
