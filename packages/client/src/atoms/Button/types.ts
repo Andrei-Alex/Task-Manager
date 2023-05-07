@@ -1,3 +1,5 @@
+import { CustomStyles } from "../../../../libs/sharedTypes/styles";
+
 export interface IButton {
   text: string;
   backgroundColor?: string;
@@ -5,4 +7,5 @@ export interface IButton {
   callback?: Function;
   width?: number;
   buttonType: "submit" | "button" | "reset" | undefined;
+  containerStyle?: CustomStyles;
 }

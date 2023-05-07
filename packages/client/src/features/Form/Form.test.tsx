@@ -2,7 +2,7 @@ import React from "react";
 import { fireEvent, render } from "@testing-library/react";
 import { screen } from "@testing-library/dom";
 import Form from "./Form";
-import { inputs, schema } from ".";
+import { inputs, schema } from "./index";
 
 describe("Input", () => {
   it("Should render form", () => {

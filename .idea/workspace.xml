@@ -5,14 +5,33 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7fc99d8f-e859-4df4-9a6d-4912281852fe" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/packages/client/src/components/Form/Form.test.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/client/src/atoms/Icon/Icon.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/client/src/atoms/Icon/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/client/src/atoms/Icon/types.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/client/src/features/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/client/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/client/src/atoms/Button/Button.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/packages/client/src/atoms/Button/Button.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/client/src/atoms/Button/Button.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/client/src/atoms/Button/Button.test.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/client/src/atoms/Button/Button.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/client/src/atoms/Button/Button.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/client/src/atoms/Button/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/client/src/atoms/Button/types.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/client/src/atoms/Input/Input.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/client/src/atoms/Input/Input.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/client/src/atoms/Input/Input.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/client/src/atoms/Input/Input.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/client/src/atoms/Input/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/client/src/atoms/Input/types.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/client/src/components/Form/Form.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/client/src/components/Form/Form.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/client/src/atoms/Input/Input.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/packages/client/src/components/Input/Input.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/client/src/atoms/Input/Input.stories.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/client/src/components/Input/Input.stories.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/client/src/atoms/Input/Input.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/client/src/components/Input/Input.test.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/client/src/atoms/Input/Input.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/client/src/components/Input/Input.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/client/src/atoms/Input/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/client/src/components/Input/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/client/src/atoms/Input/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/client/src/components/Input/types.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/client/src/atoms/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/client/src/atoms/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/client/src/components/Form/Form.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/packages/client/src/features/Form/Form.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/client/src/components/Form/Form.stories.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/client/src/features/Form/Form.stories.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/client/src/components/Form/Form.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/client/src/features/Form/Form.test.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/client/src/components/Form/Form.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/client/src/features/Form/Form.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/client/src/components/Form/data.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/client/src/features/Form/data.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/client/src/components/Form/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/client/src/features/Form/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/client/src/components/Form/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/client/src/features/Form/types.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/client/src/components/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/client/src/components/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,6 +83,8 @@
       <recent name="D:\Andrei\Projects\GitHub\Task-Manager\packages\client\src\atoms\Input" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Andrei\Projects\GitHub\Task-Manager\packages\client\src\components" />
+      <recent name="D:\Andrei\Projects\GitHub\Task-Manager\packages\client\src\features" />
       <recent name="D:\Andrei\Projects\GitHub\Task-Manager\packages\client\src\atoms" />
     </key>
   </component>
@@ -100,7 +121,8 @@
       <workItem from="1683047928987" duration="2962000" />
       <workItem from="1683136588845" duration="3870000" />
       <workItem from="1683378757866" duration="8758000" />
-      <workItem from="1683438211155" duration="3817000" />
+      <workItem from="1683438211155" duration="13515000" />
+      <workItem from="1683455020036" duration="4171000" />
     </task>
     <servers />
   </component>
@@ -111,6 +133,16 @@
     <ignored-roots>
       <path value="$PROJECT_DIR$/packages/server" />
     </ignored-roots>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/packages/client/src/features/Form/types.ts</url>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

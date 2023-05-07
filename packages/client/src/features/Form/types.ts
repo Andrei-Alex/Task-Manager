@@ -1,14 +1,8 @@
 import { AnyObject, ObjectSchema } from "yup";
-
-export interface IInputs {
-  label: string;
-  placeholder: string;
-  required: boolean;
-  id: string;
-}
+import type { IInput } from "@/components/Input";
 
 export interface IForm {
-  inputs: IInputs[];
+  inputs: IInput[];
   submitHandler: () => void;
   title: string;
   resolverSchema: ObjectSchema<any, AnyObject, any, "">;

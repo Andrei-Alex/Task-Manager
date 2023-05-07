@@ -20,24 +20,27 @@ import { styles, IButton } from "./index";
 export const Button: React.FC<IButton> = ({
   width = "415",
   buttonType = "submit",
+  containerStyle,
   text,
   backgroundColor = "#828FA3",
   textColor,
   callback = () => null,
 }) => {
   return (
-    <button
-      type={buttonType}
-      onClick={() => callback()}
-      className={styles.container}
-      style={{
-        width: `${width}px`,
-        backgroundColor: backgroundColor,
-        color: textColor,
-      }}
-    >
-      {text}
-    </button>
+    <div style={{ ...containerStyle }}>
+      <button
+        type={buttonType}
+        onClick={() => callback()}
+        className={styles.button}
+        style={{
+          width: `${width}px`,
+          backgroundColor: backgroundColor,
+          color: textColor,
+        }}
+      >
+        {text}
+      </button>
+    </div>
   );
 };
 

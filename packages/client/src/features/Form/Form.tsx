@@ -1,6 +1,8 @@
 import React from "react";
-import { Button, Input } from "../../atoms";
-import { IForm, IInputs, styles } from ".";
+import { Button } from "../../atoms";
+import { Input } from "../../components";
+import { IInput } from "../../components/Input";
+import { IForm, styles } from "./index";
 import { useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 
@@ -42,23 +44,32 @@ export const Form: React.FC<IForm> = ({
   return (
     <div className={styles.container}>
       <h2 className={styles.title}>{title}</h2>
-      <form onSubmit={handleSubmit(onSubmitHandler)}>
-        {inputs.map((input: IInputs) => (
-          <div key={input.id}>
-            <Input
-              register={{ ...register(input.id) }}
-              label={input.label}
-              placeholder={input.placeholder}
-              required={input.required}
-              id={input.id}
-              containerStyle={{ marginTop: "20px", marginBottom: "20px" }}
-            />
-            <p className={styles.alert}>
-              {errors[input.id]?.message as string}
-            </p>
-          </div>
-        ))}
-        <Button buttonType={"submit"} text={"Submit"} />
+      <form className={styles.form} onSubmit={handleSubmit(onSubmitHandler)}>
+        <div>
+          {inputs.map((input: IInput) => (
+            <div key={input.id}>
+              <Input
+                width={input.width}
+                icon={input.icon}
+                register={{ ...register(input.id) }}
+                label={input.label}
+                placeholder={input.placeholder}
+                required={input.required}
+                id={input.id}
+                containerStyle={{
+                  marginTop: "20px",
+                  marginBottom: "20px",
+                }}
+              />
+              <p className={styles.alert}>
+                {errors[input.id]?.message as string}
+              </p>
+            </div>
+          ))}
+        </div>
+        <div>
+          <Button buttonType={"submit"} text={"Submit"} />
+        </div>
       </form>
     </div>
   );

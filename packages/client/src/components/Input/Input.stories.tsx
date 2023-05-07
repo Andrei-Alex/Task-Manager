@@ -4,7 +4,7 @@ import Input from "./Input";
 
 const meta: Meta<typeof Input> = {
   component: Input,
-  title: "atoms/Input",
+  title: "Components/Input",
   tags: ["autodocs"],
   argTypes: {
     label: {
@@ -77,5 +77,6 @@ export const Default: Story = {
   args: {
     label: "Label",
     required: false,
+    icon: "HiMail",
   },
 };

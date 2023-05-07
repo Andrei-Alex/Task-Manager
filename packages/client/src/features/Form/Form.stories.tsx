@@ -5,7 +5,7 @@ import { inputs, schema } from ".";
 
 const meta: Meta<typeof Form> = {
   component: Form,
-  title: "Components/Form",
+  title: "Features/Form",
   tags: ["autodocs"],
   argTypes: {
     inputs: {
