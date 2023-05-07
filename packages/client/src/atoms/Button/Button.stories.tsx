@@ -43,8 +43,8 @@ const meta: Meta<typeof Button> = {
         type: "text",
       },
     },
-    callback: {
-      name: "CallBack",
+    onClick: {
+      name: "onClick",
       type: {
         name: "function",
         required: false,
