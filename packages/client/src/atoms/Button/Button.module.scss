@@ -1,15 +1,15 @@
-@import '../../styles/_variables';
+@import '../../styles/variables';
 
-.container {
+.button {
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 40px;
-  width: 200px;
-  height: 40px;
+  border-radius: 12px;
+  height: 50px;
   font-size: 1.2rem;
   font-weight: 700;
-  background-color: $blue;
   color: white;
+  background-color: $mediumGray;
   font-family: $fontPrimary;
+  border: none;
 }

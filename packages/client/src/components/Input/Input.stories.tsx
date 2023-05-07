@@ -4,14 +4,14 @@ import Input from "./Input";
 
 const meta: Meta<typeof Input> = {
   component: Input,
-  title: "atoms/Input",
+  title: "Components/Input",
   tags: ["autodocs"],
   argTypes: {
     label: {
       name: "Label",
       type: {
         name: "string",
-        required: false,
+        required: true,
       },
       defaultValue: "Default input",
       description: "Display text",
@@ -49,10 +49,21 @@ const meta: Meta<typeof Input> = {
       name: "Placeholder",
       type: {
         name: "string",
-        required: true,
+        required: false,
       },
       defaultValue: "Default input",
       description: "Set placeholder",
+      control: {
+        type: "text",
+      },
+    },
+    id: {
+      name: "id",
+      type: {
+        name: "string",
+        required: true,
+      },
+      description: "Input ID",
       control: {
         type: "text",
       },
@@ -62,9 +73,10 @@ const meta: Meta<typeof Input> = {
 export default meta;
 type Story = StoryObj<typeof Input>;
 
-export const Primary: Story = {
+export const Default: Story = {
   args: {
     label: "Label",
     required: false,
+    icon: "HiMail",
   },
 };

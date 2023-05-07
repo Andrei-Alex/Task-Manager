@@ -1,2 +1,2 @@
-export { getHealthFromFrontEndAPI } from './health/getHealth';
-export * from './health';
+export * from "./health";
+export * from "./authentication";

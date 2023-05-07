@@ -1,0 +1,38 @@
+@import '../../styles/variables';
+
+.container {
+  display: flex;
+  flex-direction: column;
+  font-family: $fontPrimary;
+}
+.labelContainer{
+ display: flex;
+  height: 25px;
+}
+.label {
+  color: $darkGray;
+}
+.inputContainer {
+  position: relative;
+}
+.input {
+  background-color: white;
+  border: none;
+  outline: none;
+  border-bottom: 1px solid $mediumGray;
+  padding-left: 25px;
+  padding-bottom: 10px;
+  font-family: $fontPrimary;
+  font-size: 16px;
+  &:focus {
+    outline-color: transparent;
+  }
+}
+.iconContainer {
+  position: absolute;
+  z-index: 1;
+}
+.alert {
+  transform: translateY(-15px);
+  color: red;
+}
