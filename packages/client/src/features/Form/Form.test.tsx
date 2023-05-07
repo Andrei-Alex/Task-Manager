@@ -2,14 +2,14 @@ import React from "react";
 import { fireEvent, render } from "@testing-library/react";
 import { screen } from "@testing-library/dom";
 import Form from "./Form";
-import { inputs, schema } from "./index";
+import { inputs, loginSchema } from "./index";
 
 describe("Input", () => {
   it("Should render form", () => {
     render(
       <Form
         inputs={inputs}
-        resolverSchema={schema}
+        resolverSchema={loginSchema}
         submitHandler={() => console.log("test")}
         title={"Login Form"}
       />

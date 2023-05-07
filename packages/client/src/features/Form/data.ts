@@ -1,10 +1,9 @@
 import * as yup from "yup";
-import { IIcon } from "@/atoms/Icon";
 import { IInput } from "@/components/Input";
-export const schema = yup.object().shape({
+export const loginSchema = yup.object().shape({
   email: yup
     .string()
-    .email("Must be a vaild email")
+    .email("Must be a valid email")
     .required("Email is required"),
   password: yup
     .string()

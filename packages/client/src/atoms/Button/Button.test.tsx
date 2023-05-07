@@ -1,11 +1,17 @@
 import React from "react";
-import { fireEvent, getByText, render } from "@testing-library/react";
+import { fireEvent, render } from "@testing-library/react";
 import { screen } from "@testing-library/dom";
 import Button from "./Button";
-import { userEvent } from "@storybook/testing-library";
+import renderer from "react-test-renderer";
 
 const handleClick = jest.fn();
 describe("Button", () => {
+  it("renders correctly", () => {
+    const tree = renderer
+      .create(<Button text={"Click here"} buttonType={"button"} />)
+      .toJSON();
+    expect(tree).toMatchSnapshot();
+  });
   it("should display Click here", () => {
     render(<Button text={"Click here"} buttonType={"button"} />);
     const button = screen.getByText("Click here");

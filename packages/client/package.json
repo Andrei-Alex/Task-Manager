@@ -26,6 +26,7 @@
     "react-dom": "18.2.0",
     "react-hook-form": "^7.43.9",
     "react-icons": "^4.8.0",
+    "react-test-renderer": "^18.2.0",
     "typescript": "5.0.4",
     "yup": "^1.1.1"
   },
@@ -42,6 +43,7 @@
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "13.4.0",
     "@types/jest": "^28.1.8",
+    "@types/react-test-renderer": "^18.0.0",
     "babel-jest": "28.1.1",
     "babel-loader": "8.1.0",
     "chromatic": "^6.17.3",

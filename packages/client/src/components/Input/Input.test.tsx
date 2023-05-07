@@ -2,18 +2,28 @@ import React from "react";
 import { fireEvent, render } from "@testing-library/react";
 import { screen } from "@testing-library/dom";
 import Input from "./Input";
+import renderer from "react-test-renderer";
+import Icon from "../../atoms/Icon/Icon";
 const setup = () => {
-  const utils = render(
+  const renderInput = render(
     <Input label={"Label"} id={"label"} placeholder={"My Placeholder"} />
   );
   const input: HTMLInputElement = screen.getByLabelText("Label");
   return {
     input,
-    ...utils,
+    ...renderInput,
   };
 };
 
 describe("Input", () => {
+  it("renders correctly", () => {
+    const tree = renderer
+      .create(
+        <Input label={"Label"} id={"label"} placeholder={"My Placeholder"} />
+      )
+      .toJSON();
+    expect(tree).toMatchSnapshot();
+  });
   it("should have value", () => {
     const { input } = setup();
     fireEvent.change(input, { target: { value: "Jest" } });

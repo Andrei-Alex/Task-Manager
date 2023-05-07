@@ -12,9 +12,14 @@ export const Icon: React.FC<IIcon> = ({
   const icon = (() => {
     switch (iconName as Icons) {
       case "HiMail":
-        return <HiMail size="small" color={color} />;
+        return <HiMail size="small" color={color} data-testid="HiMail-icon" />;
       case "MdOutlinePassword":
-        return <MdOutlinePassword color={color} />;
+        return (
+          <MdOutlinePassword
+            color={color}
+            data-testid="MdOutlinePassword-icon"
+          />
+        );
       default:
         return null;
     }

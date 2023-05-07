@@ -20,7 +20,7 @@ import { yupResolver } from "@hookform/resolvers/yup";
  * @param {array} inputs map array to display inputs
  * @param {function} submitHandler On submit handler
  * @param {string} title On submit handler
- * @param {object} resolverSchema Yup resolver schema
+ * @param {object} resolverSchema Yup resolver loginSchema
  * @return {JSX} Display inputs and submit Button
  */
 export const Form: React.FC<IForm> = ({
