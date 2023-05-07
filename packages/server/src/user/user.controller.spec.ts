@@ -20,7 +20,7 @@ describe('AuthController (e2e)', () => {
     await app.init();
   });
 
-  describe('auth/login (POST)', () => {
+  describe('authentication/login (POST)', () => {
     it('it should not log in nor return a JWT for an unregistered user', () => {
       return request(app.getHttpServer())
         .post('/auth/login')

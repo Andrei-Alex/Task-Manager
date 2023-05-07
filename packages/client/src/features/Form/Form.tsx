@@ -1,9 +1,9 @@
 import React from "react";
 import { Button } from "../../atoms";
 import { Input } from "../../components";
-import { IInput } from "../../components/Input";
+import { IInput } from "@/components/Input";
 import { IForm, styles } from "./index";
-import { useForm } from "react-hook-form";
+import { FieldValues, useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 
 /**
@@ -36,9 +36,8 @@ export const Form: React.FC<IForm> = ({
     reset,
   } = useForm({ resolver: yupResolver(resolverSchema) });
 
-  const onSubmitHandler = (data: any) => {
-    console.log({ data });
-    submitHandler();
+  const onSubmitHandler = (data: FieldValues) => {
+    submitHandler(data);
     reset();
   };
   return (

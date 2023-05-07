@@ -29,11 +29,7 @@ describe("Button", () => {
   });
   it("should call onClick function", async () => {
     render(
-      <Button
-        text={"Click here"}
-        callback={handleClick}
-        buttonType={"button"}
-      />
+      <Button text={"Click here"} onClick={handleClick} buttonType={"button"} />
     );
     const button = screen.getByText("Click here");
     fireEvent.click(button);
