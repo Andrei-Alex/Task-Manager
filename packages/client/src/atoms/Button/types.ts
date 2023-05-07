@@ -4,4 +4,5 @@ export interface IButton {
   textColor?: string;
   callback?: Function;
   width?: number;
+  buttonType: "submit" | "button" | "reset" | undefined;
 }

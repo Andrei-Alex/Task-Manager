@@ -1,4 +1,5 @@
 import { CustomStyles } from "../../../../libs/sharedTypes/styles";
+import { UseFormRegisterReturn } from "react-hook-form";
 
 export interface IInput {
   label: string;
@@ -7,4 +8,5 @@ export interface IInput {
   placeholder?: string;
   id: string;
   containerStyle?: CustomStyles;
+  register: UseFormRegisterReturn<string>;
 }

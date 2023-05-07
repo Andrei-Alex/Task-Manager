@@ -24,6 +24,7 @@ export const Input: React.FC<IInput> = ({
   placeholder = "Ex. Placeholder",
   id,
   containerStyle,
+  register,
 }) => {
   return (
     <div
@@ -36,7 +37,12 @@ export const Input: React.FC<IInput> = ({
         </label>
         <p className={styles.alert}> {required && " *"}</p>
       </div>
-      <input className={styles.input} placeholder={placeholder} id={id} />
+      <input
+        className={styles.input}
+        placeholder={placeholder}
+        id={id}
+        {...register}
+      />
     </div>
   );
 };

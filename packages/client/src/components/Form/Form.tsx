@@ -6,7 +6,7 @@ import { yupResolver } from "@hookform/resolvers/yup";
 
 /**
  * Reusable Form.
- * With yupResolver
+ * With yupResolver and react-hook-form
  *
  * ## Usage
  * ```jsx
@@ -36,6 +36,7 @@ export const Form: React.FC<IForm> = ({
 
   const onSubmitHandler = (data: any) => {
     console.log({ data });
+    submitHandler();
     reset();
   };
   return (
@@ -43,20 +44,21 @@ export const Form: React.FC<IForm> = ({
       <h2 className={styles.title}>{title}</h2>
       <form onSubmit={handleSubmit(onSubmitHandler)}>
         {inputs.map((input: IInputs) => (
-          <>
+          <div key={input.id}>
             <Input
-              key={input.id}
+              register={{ ...register(input.id) }}
               label={input.label}
               placeholder={input.placeholder}
               required={input.required}
               id={input.id}
               containerStyle={{ marginTop: "20px", marginBottom: "20px" }}
-              {...register(input.id)}
             />
-            <p className={styles.alert}>{errors.email?.message as string}</p>
-          </>
+            <p className={styles.alert}>
+              {errors[input.id]?.message as string}
+            </p>
+          </div>
         ))}
-        <Button text={"Submit"} callback={submitHandler} />
+        <Button buttonType={"submit"} text={"Submit"} />
       </form>
     </div>
   );
