@@ -50,7 +50,7 @@ describe('UserService', () => {
   });
 
   const payload = {
-    full_name: 'jest',
+    full_name: 'Jest',
     password: 'unit-test',
     email: `jest@mail.com`,
   };
