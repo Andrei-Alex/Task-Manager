@@ -7,13 +7,13 @@ on:
 
 env:
   PORT: 3333
-  ALLOWED_ORIGIN_CLIENT: "http://localhost:3000"
-  ALLOWED_ORIGIN_Server: "http://localhost:3333"
-  DB_HOST: 'postgres'
+  ALLOWED_ORIGIN_CLIENT: http://localhost:3000
+  ALLOWED_ORIGIN_Server: http://localhost:3333
+  DB_HOST: postgres
   DB_PORT: 5432
-  DB_PASSWORD: 'postgres'
-  DB_DATABASE: 'postgres'
-  DB_USER: 'postgres'
+  DB_PASSWORD: postgres
+  DB_DATABASE: postgres
+  DB_USER: postgres
   SECRET_KEY: SECRET
   BCRYPT_ROUNDS: 10
 
@@ -35,11 +35,11 @@ jobs:
         env:
           POSTGRES_USER: postgres
           POSTGRES_PASSWORD: postgres
-          DB_HOST: 'postgres'
+          DB_HOST: postgres
           DB_PORT: 5432
-          DB_PASSWORD: 'postgres'
-          DB_DATABASE: 'postgres'
-          DB_USER: 'postgres'
+          DB_PASSWORD: postgres
+          DB_DATABASE: postgres
+          DB_USER: postgres
         # Set health checks to wait until postgres has started
         options: >-
           --health-cmd pg_isready
