@@ -25,7 +25,7 @@ describe('AuthController (e2e)', () => {
       return request(app.getHttpServer())
         .post('/auth/login')
         .set('Content-Type', 'application/json')
-        .send({ username: 'John', password: 'badpass' })
+        .send({ username: 'Johny', password: 'badpass' })
         .expect((response: request.Response) => {
           const { token }: { token: string } = response.body;
           expect(token).toBeUndefined();
