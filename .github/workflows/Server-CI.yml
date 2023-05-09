@@ -1,4 +1,4 @@
-name: Server CI
+name: Server Test CI
 
 on:
   push:
@@ -54,5 +54,4 @@ jobs:
 
       - run: yarn
       - run: npx lerna run build --scope=server
-      - run: npx lerna run run-migration
       - run: npx lerna run test --scope=server
