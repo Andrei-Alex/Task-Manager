@@ -53,5 +53,6 @@ jobs:
           cache: 'npm'
 
       - run: yarn
+      - run: npx lerna run run-migration --scope=server
       - run: npx lerna run build --scope=server
       - run: npx lerna run test --scope=server
