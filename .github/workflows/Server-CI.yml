@@ -4,7 +4,7 @@ on:
   push:
     paths:
       - packages/server/**
-      - .github/workflows/server-CI.yml
+      - .github/workflows/Server-CI.yml
 
 env:
   PORT: 3333
