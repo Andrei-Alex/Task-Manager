@@ -5,8 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7fc99d8f-e859-4df4-9a6d-4912281852fe" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/server/src/user/user.controller.spec.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/server/src/user/user.controller.spec.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.github/workflows/Server-CI.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/ServerTest-CI.yml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -101,7 +100,7 @@
       <workItem from="1683464754444" duration="11918000" />
       <workItem from="1683567657949" duration="213000" />
       <workItem from="1683649974601" duration="5463000" />
-      <workItem from="1683739607002" duration="1530000" />
+      <workItem from="1683739607002" duration="1893000" />
     </task>
     <servers />
   </component>
