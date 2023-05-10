@@ -1,9 +1,10 @@
-name: Server CI
+name: Server Test CI
 
 on:
   push:
     paths:
       - packages/server/**
+      - .github/workflows/Server-CI.yml
 
 env:
   PORT: 3333
@@ -53,6 +54,6 @@ jobs:
           cache: 'npm'
 
       - run: yarn
+      - run: npx lerna run run-migration --scope=server
       - run: npx lerna run build --scope=server
-      - run: npx lerna run run-migration
       - run: npx lerna run test --scope=server
