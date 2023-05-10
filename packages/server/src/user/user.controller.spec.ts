@@ -8,11 +8,11 @@ import * as jwt from 'jsonwebtoken';
 import { ConfigService } from '@nestjs/config';
 
 const configService = new ConfigService();
-
+const random = Math.floor(Math.random() * 1283);
 describe('AuthController (e2e)', () => {
   let app: INestApplication;
 
-  beforeEach(async () => {
+  beforeAll(async () => {
     const moduleFixture: TestingModule = await Test.createTestingModule({
       imports: [AppModule],
     }).compile();
@@ -35,7 +35,7 @@ describe('AuthController (e2e)', () => {
         .set('Content-Type', 'application/json')
         .send({
           full_name: 'Johny BeGood',
-          email: 'johnyBeGood@mail.com',
+          email: `johnyBeGood${random}@mail.com`,
           password: 'changeMe',
         })
         .expect(HttpStatus.CREATED);
