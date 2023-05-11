@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { Button } from "../../atoms";
 import { Input } from "../../components";
 import { IInput } from "@/components/Input";
@@ -28,6 +28,7 @@ export const Form: React.FC<IForm> = ({
   submitHandler,
   title,
   resolverSchema,
+  message,
 }) => {
   const {
     register,
@@ -67,6 +68,7 @@ export const Form: React.FC<IForm> = ({
           ))}
         </div>
         <div>
+          <p style={{ color: "red" }}>{message && message}</p>
           <Button buttonType={"submit"} text={"Submit"} />
         </div>
       </form>

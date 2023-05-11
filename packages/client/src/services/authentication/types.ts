@@ -3,9 +3,9 @@ export interface IAuthResponse {
   email: string;
   access_token?: string;
 }
-export interface IToken {
+export type Token = {
   access_token: string;
-}
+};
 export interface IAuthRequest {
   password: string;
   email: string;

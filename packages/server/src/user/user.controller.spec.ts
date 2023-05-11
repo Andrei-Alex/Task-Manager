@@ -8,24 +8,44 @@ import * as jwt from 'jsonwebtoken';
 import { ConfigService } from '@nestjs/config';
 
 const configService = new ConfigService();
-
+const random = Math.floor(Math.random() * 1283);
 describe('AuthController (e2e)', () => {
   let app: INestApplication;
 
-  beforeEach(async () => {
+  beforeAll(async () => {
     const moduleFixture: TestingModule = await Test.createTestingModule({
       imports: [AppModule],
     }).compile();
     app = moduleFixture.createNestApplication();
     await app.init();
+    return request(app.getHttpServer())
+      .post('/auth/register')
+      .set('Content-Type', 'application/json')
+      .send({
+        full_name: 'JohnyJohny',
+        email: 'johnyJohny@mail.com',
+        password: 'changeMe',
+      });
   });
 
   describe('authentication/login (POST)', () => {
-    it('it should not log in nor return a JWT for an unregistered user', () => {
+    it('should create new user', () => {
+      return request(app.getHttpServer())
+        .post('/auth/register')
+        .set('Content-Type', 'application/json')
+        .send({
+          full_name: 'Johny BeGood',
+          email: `johnyBeGood${random}@mail.com`,
+          password: 'changeMe',
+        })
+        .expect(HttpStatus.CREATED);
+    });
+
+    it('should not log in nor return a JWT for an unregistered user', () => {
       return request(app.getHttpServer())
         .post('/auth/login')
         .set('Content-Type', 'application/json')
-        .send({ username: 'John', password: 'badpass' })
+        .send({ username: 'JohnyJohny', password: 'badpass' })
         .expect((response: request.Response) => {
           const { token }: { token: string } = response.body;
           expect(token).toBeUndefined();
@@ -33,11 +53,11 @@ describe('AuthController (e2e)', () => {
         .expect(HttpStatus.UNAUTHORIZED);
     });
 
-    it('it should not log in nor return a JWT for an unregistered user', () => {
+    it('should not log in nor return a JWT for an unregistered user', () => {
       return request(app.getHttpServer())
         .post('/auth/login')
         .set('Content-Type', 'application/json')
-        .send({ username: 'john' })
+        .send({ username: 'John' })
         .expect((response: request.Response) => {
           const { token }: { token: string } = response.body;
           expect(token).toBeUndefined();
@@ -45,11 +65,11 @@ describe('AuthController (e2e)', () => {
         .expect(HttpStatus.BAD_REQUEST);
     });
 
-    it('it should log in and return a JWT for a registered user', () => {
+    it('should log in and return a JWT for a registered user', () => {
       return request(app.getHttpServer())
         .post('/auth/login')
         .set('Content-Type', 'application/json')
-        .send({ username: 'john@mail.com', password: 'changeme' })
+        .send({ username: 'johnyJohny@mail.com', password: 'changeMe' })
         .expect((response: request.Response) => {
           const token = response.body.access_token;
           expect(

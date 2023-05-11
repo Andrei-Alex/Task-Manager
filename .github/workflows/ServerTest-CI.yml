@@ -1,0 +1,58 @@
+name: Server Test CI
+
+on:
+  push:
+    paths:
+      - packages/server/**
+      - .github/workflows/ServerTest-CI.yml
+
+env:
+  PORT: 3333
+  ALLOWED_ORIGIN_CLIENT: http://localhost:3000
+  ALLOWED_ORIGIN_Server: http://localhost:3333
+  DB_HOST: postgres
+  DB_PORT: 5432
+  DB_PASSWORD: postgres
+  DB_DATABASE: postgres
+  DB_USER: postgres
+  SECRET_KEY: SECRET
+  BCRYPT_ROUNDS: 10
+
+jobs:
+  # Label of the container job
+  container-job:
+    # Containers must run in Linux based operating systems
+    runs-on: ubuntu-latest
+    # Docker Hub image that `container-job` executes in
+    container: node:latest
+     # Service containers to run with `container-job`
+    services:
+      # Label used to access the service container
+      postgres:
+        # Docker Hub image
+        image: postgres
+        # Provide the password for postgres
+        env:
+          POSTGRES_PASSWORD: postgres
+          POSTGRES_USER: postgres
+          POSTGRES_DB: postgres
+
+        options: >-
+          --health-cmd pg_isready
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+        ports:
+          - 5432:5432
+
+    steps:
+      - uses: actions/checkout@v3
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: 'npm'
+
+      - run: yarn
+      - run: npx lerna run build --scope=server
+      - run: npx lerna run test --scope=server
