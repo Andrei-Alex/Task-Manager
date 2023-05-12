@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ConfirmMessage renders correctly 1`] = `
+<div>
+  <p
+    className="success"
+  >
+    Success !!!
+  </p>
+</div>
+`;
