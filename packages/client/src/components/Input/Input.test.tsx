@@ -3,7 +3,7 @@ import { fireEvent, render } from "@testing-library/react";
 import { screen } from "@testing-library/dom";
 import Input from "./Input";
 import renderer from "react-test-renderer";
-import Icon from "../../atoms/Icon/Icon";
+
 const setup = () => {
   const renderInput = render(
     <Input label={"Label"} id={"label"} placeholder={"My Placeholder"} />

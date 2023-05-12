@@ -4,12 +4,13 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9fc628b4-6acc-4626-b898-1214b7ca3d38" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/bash/dev.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bash/jest-BE.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bash/jest-FE.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bash/storybook.sh" afterDir="false" />
+    <list default="true" id="9fc628b4-6acc-4626-b898-1214b7ca3d38" name="Changes" comment="merge">
+      <change afterPath="$PROJECT_DIR$/packages/client/src/components/ConfirmMessage/ConfirmMessage.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/client/src/components/ConfirmMessage/ConfirmMessage.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/client/src/components/ConfirmMessage/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/client/src/components/ConfirmMessage/types.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/client/src/components/Input/Input.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/client/src/components/Input/Input.test.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -22,11 +23,11 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
-  "lastFilter": {
-    "state": "OPEN"
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;
   }
-}]]></component>
+}</component>
   <component name="GithubPullRequestsUISettings">
     <option name="selectedUrlAndAccountId">
       <UrlAndAccount>
@@ -49,7 +50,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/Andrei/Projects/GitHub/Task-Manager/bash",
+    "last_opened_file_path": "D:/Andrei/Projects/GitHub/Task-Manager/packages/client/src/components/ConfirmMessage",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.standard": "true",
     "node.js.detected.package.tslint": "true",
@@ -70,6 +71,7 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Andrei\Projects\GitHub\Task-Manager\packages\client\src\components\ConfirmMessage" />
       <recent name="D:\Andrei\Projects\GitHub\Task-Manager\bash" />
       <recent name="D:\Andrei\Projects\GitHub\Task-Manager\packages\client\src\components\Form" />
       <recent name="D:\Andrei\Projects\GitHub\Task-Manager\packages\client\src\atoms\Input" />
@@ -83,7 +85,7 @@
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="7fc99d8f-e859-4df4-9a6d-4912281852fe" name="Changes" comment="" />
+      <changelist id="9fc628b4-6acc-4626-b898-1214b7ca3d38" name="Changes" comment="merge" />
       <created>1681041529267</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -120,6 +122,7 @@
       <workItem from="1683649974601" duration="5463000" />
       <workItem from="1683739607002" duration="2342000" />
       <workItem from="1683823766395" duration="4562000" />
+      <workItem from="1683915134531" duration="1621000" />
     </task>
     <servers />
   </component>
