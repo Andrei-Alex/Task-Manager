@@ -5,12 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9fc628b4-6acc-4626-b898-1214b7ca3d38" name="Changes" comment="merge">
-      <change afterPath="$PROJECT_DIR$/packages/client/src/components/ConfirmMessage/ConfirmMessage.module.scss" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/client/src/components/ConfirmMessage/ConfirmMessage.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/client/src/components/ConfirmMessage/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/client/src/components/ConfirmMessage/types.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/client/src/components/ConfirmMessage/ConfirmMessage.test.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/client/src/components/Input/Input.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/client/src/components/Input/Input.test.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/client/src/components/ConfirmMessage/ConfirmMessage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/client/src/components/ConfirmMessage/ConfirmMessage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/client/src/components/ConfirmMessage/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/client/src/components/ConfirmMessage/types.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -122,7 +120,7 @@
       <workItem from="1683649974601" duration="5463000" />
       <workItem from="1683739607002" duration="2342000" />
       <workItem from="1683823766395" duration="4562000" />
-      <workItem from="1683915134531" duration="1621000" />
+      <workItem from="1683915134531" duration="2905000" />
     </task>
     <servers />
   </component>

@@ -4,7 +4,7 @@ const ConfirmMessage: React.FC<IConfirmMessage> = ({ success, error }) => {
   return (
     <div>
       {success ? (
-        <p className={styles.success}>success</p>
+        <p className={styles.success}>{success}</p>
       ) : error ? (
         <p className={styles.error}>{error}</p>
       ) : null}

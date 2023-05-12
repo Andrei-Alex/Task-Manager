@@ -1,4 +1,4 @@
 export interface IConfirmMessage {
-  success: string;
-  error: string;
+  success?: string;
+  error?: string;
 }
