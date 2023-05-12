@@ -11,7 +11,6 @@ describe("ConfirmMessage", () => {
       .toJSON();
     expect(tree).toMatchSnapshot();
   });
-
   it("should display success", () => {
     render(<ConfirmMessage success={"Success !!!"} />);
     const message = screen.getByText("Success !!!");
