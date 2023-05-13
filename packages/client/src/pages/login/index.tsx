@@ -22,13 +22,8 @@ const Login: NextPage = () => {
           inputs={inputs}
           resolverSchema={loginSchema}
           submitHandler={login}
-          message={
-            error
-              ? error.message
-              : data?.access_token
-              ? "Logged successfully"
-              : null
-          }
+          successMsg={data?.access_token ? "Logged successfully" : ""}
+          errorMsg={error ? error.message : ""}
         />
       </main>
     </>

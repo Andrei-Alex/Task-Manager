@@ -7,5 +7,6 @@ export interface IForm {
   submitHandler: (values: FieldValue<FieldValues>) => void;
   title: string;
   resolverSchema: ObjectSchema<any, AnyObject, any, "">;
-  message: string | null;
+  successMsg: string;
+  errorMsg: string;
 }

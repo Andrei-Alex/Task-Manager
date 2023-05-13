@@ -5,7 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9fc628b4-6acc-4626-b898-1214b7ca3d38" name="Changes" comment="merge">
-      <change beforePath="$PROJECT_DIR$/packages/client/src/components/ConfirmMessage/ConfirmMessage.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/client/src/components/ConfirmMessage/ConfirmMessage.test.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/client/src/components/Input/Input.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/client/src/components/Input/Input.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/client/src/components/Input/__snapshots__/Input.test.tsx.snap" beforeDir="false" afterPath="$PROJECT_DIR$/packages/client/src/components/Input/__snapshots__/Input.test.tsx.snap" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/client/src/components/Input/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/client/src/components/Input/types.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/client/src/components/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/client/src/components/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/client/src/features/Form/Form.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/client/src/features/Form/Form.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/client/src/features/Form/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/client/src/features/Form/types.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/client/src/pages/login/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/client/src/pages/login/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,30 +47,30 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/Andrei/Projects/GitHub/Task-Manager/packages/client/src/components/ConfirmMessage",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.standard": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.standard": "",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "yarn",
-    "prettierjs.PrettierConfiguration.Package": "D:\\Andrei\\Projects\\GitHub\\Task-Manager\\packages\\server\\node_modules\\prettier",
-    "settings.editor.selected.configurable": "actions.on.save",
-    "ts.external.directory.path": "D:\\Andrei\\Projects\\GitHub\\Task-Manager\\node_modules\\typescript\\lib",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Andrei/Projects/GitHub/Task-Manager/packages/client/src/components/ConfirmMessage&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;yarn&quot;,
+    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;D:\\Andrei\\Projects\\GitHub\\Task-Manager\\packages\\server\\node_modules\\prettier&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;actions.on.save&quot;,
+    &quot;ts.external.directory.path&quot;: &quot;D:\\Andrei\\Projects\\GitHub\\Task-Manager\\node_modules\\typescript\\lib&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "DatabaseDriversLRU": [
-      "postgresql"
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;postgresql&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Andrei\Projects\GitHub\Task-Manager\packages\client\src\components\ConfirmMessage" />
@@ -117,7 +124,8 @@
       <workItem from="1683649974601" duration="5463000" />
       <workItem from="1683739607002" duration="2342000" />
       <workItem from="1683823766395" duration="4562000" />
-      <workItem from="1683915134531" duration="3287000" />
+      <workItem from="1683915134531" duration="4114000" />
+      <workItem from="1683994592703" duration="5576000" />
     </task>
     <servers />
   </component>

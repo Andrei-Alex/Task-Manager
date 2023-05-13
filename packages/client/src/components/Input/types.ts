@@ -10,4 +10,5 @@ export interface IInput {
   containerStyle?: CustomStyles;
   register?: UseFormRegisterReturn<string>;
   icon?: Icons;
+  onChangeHandler: () => void;
 }

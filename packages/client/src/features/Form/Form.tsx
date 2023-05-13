@@ -1,10 +1,11 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { Button } from "../../atoms";
 import { Input } from "../../components";
 import { IInput } from "@/components/Input";
 import { IForm, styles } from "./index";
 import { FieldValues, useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
+import { ConfirmMessage } from "@/components";
 
 /**
  * Reusable Form.
@@ -21,6 +22,8 @@ import { yupResolver } from "@hookform/resolvers/yup";
  * @param {function} submitHandler On submit handler
  * @param {string} title On submit handler
  * @param {object} resolverSchema Yup resolver loginSchema
+ * @param {string} successMsg Success message on logged in
+ * @param {string} errorMsg Error message on bad credentials
  * @return {JSX} Display inputs and submit Button
  */
 export const Form: React.FC<IForm> = ({
@@ -28,19 +31,23 @@ export const Form: React.FC<IForm> = ({
   submitHandler,
   title,
   resolverSchema,
-  message,
+  successMsg,
+  errorMsg,
 }) => {
+  const [successMessage, setSuccessMessage] = useState(successMsg);
+  const [errorMessage, setErrorMessage] = useState(errorMsg);
   const {
     register,
     handleSubmit,
     formState: { errors },
     reset,
   } = useForm({ resolver: yupResolver(resolverSchema) });
-
+  console.log(errorMsg);
   const onSubmitHandler = (data: FieldValues) => {
     submitHandler(data);
     reset();
   };
+  console.log(successMsg);
   return (
     <div className={styles.container}>
       <h2 className={styles.title}>{title}</h2>
@@ -49,6 +56,10 @@ export const Form: React.FC<IForm> = ({
           {inputs.map((input: IInput) => (
             <div key={input.id}>
               <Input
+                onChangeHandler={() => {
+                  setSuccessMessage("");
+                  setErrorMessage("");
+                }}
                 width={input.width}
                 icon={input.icon}
                 register={{ ...register(input.id) }}
@@ -68,8 +79,16 @@ export const Form: React.FC<IForm> = ({
           ))}
         </div>
         <div>
-          <p style={{ color: "red" }}>{message && message}</p>
-          <Button buttonType={"submit"} text={"Submit"} />
+          <ConfirmMessage success={successMessage} error={errorMessage} />
+          <Button
+            buttonType={"submit"}
+            text={"Submit"}
+            onClick={() => {
+              console.log("test");
+              setSuccessMessage(successMsg);
+              setErrorMessage(errorMsg);
+            }}
+          />
         </div>
       </form>
     </div>

@@ -26,6 +26,7 @@ exports[`Input renders correctly 1`] = `
     <input
       className="input"
       id="label"
+      onKeyDown={[Function]}
       placeholder="My Placeholder"
       style={
         Object {
