@@ -5,14 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9fc628b4-6acc-4626-b898-1214b7ca3d38" name="Changes" comment="merge">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/client/src/components/Input/Input.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/client/src/components/Input/Input.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/client/src/components/Input/__snapshots__/Input.test.tsx.snap" beforeDir="false" afterPath="$PROJECT_DIR$/packages/client/src/components/Input/__snapshots__/Input.test.tsx.snap" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/client/src/components/Input/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/client/src/components/Input/types.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/client/src/components/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/client/src/components/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/client/src/features/Form/Form.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/client/src/features/Form/Form.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/client/src/features/Form/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/client/src/features/Form/types.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/client/src/pages/login/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/client/src/pages/login/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -126,6 +119,7 @@
       <workItem from="1683823766395" duration="4562000" />
       <workItem from="1683915134531" duration="4114000" />
       <workItem from="1683994592703" duration="5576000" />
+      <workItem from="1684000337633" duration="190000" />
     </task>
     <servers />
   </component>
