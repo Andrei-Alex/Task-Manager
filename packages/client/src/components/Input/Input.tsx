@@ -48,7 +48,9 @@ export const Input: React.FC<IInput> = ({
         ) : null}
         <input
           onKeyDown={() => {
-            onChangeHandler();
+            if (onChangeHandler) {
+              onChangeHandler();
+            }
           }}
           className={styles.input}
           style={{ width: width }}
