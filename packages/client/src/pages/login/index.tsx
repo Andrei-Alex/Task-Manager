@@ -9,6 +9,7 @@ const Login: NextPage = () => {
   const { data, error, login } = useLogin(
     `http://${process.env.NEXT_PUBLIC_SERVER}/api/auth/login`
   );
+
   return (
     <>
       <Head>
@@ -22,13 +23,8 @@ const Login: NextPage = () => {
           inputs={inputs}
           resolverSchema={loginSchema}
           submitHandler={login}
-          message={
-            error
-              ? error.message
-              : data?.access_token
-              ? "Logged successfully"
-              : null
-          }
+          successMsg={data?.access_token ? "Logged successfully" : null}
+          errorMsg={error ? error.message : null}
         />
       </main>
     </>

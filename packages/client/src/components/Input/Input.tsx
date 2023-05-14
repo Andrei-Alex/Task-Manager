@@ -18,6 +18,7 @@ import { Icon } from "../../atoms";
  * @param {number} id Add id (label and htmlFor)
  * @param {object} containerStyle style object
  * @param {object} register react-hook-form object
+ * @param {function} onChangeHandler onChange handler
  * @return {JSX} Display Label with conditional * and Input
  */
 export const Input: React.FC<IInput> = ({
@@ -29,6 +30,7 @@ export const Input: React.FC<IInput> = ({
   id,
   containerStyle,
   register,
+  onChangeHandler,
 }) => {
   return (
     <div className={styles.container} style={{ ...containerStyle }}>
@@ -45,6 +47,11 @@ export const Input: React.FC<IInput> = ({
           </i>
         ) : null}
         <input
+          onKeyDown={() => {
+            if (onChangeHandler) {
+              onChangeHandler();
+            }
+          }}
           className={styles.input}
           style={{ width: width }}
           placeholder={placeholder}
