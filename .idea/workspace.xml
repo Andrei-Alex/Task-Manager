@@ -6,10 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="9fc628b4-6acc-4626-b898-1214b7ca3d38" name="Changes" comment="merge">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/client/src/components/ConfirmMessage/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/client/src/components/ConfirmMessage/types.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/client/src/features/Form/Form.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/client/src/features/Form/Form.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/client/src/features/Form/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/client/src/features/Form/types.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/client/src/hooks/authentication/useLogin.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/client/src/hooks/authentication/useLogin.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/client/src/pages/login/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/client/src/pages/login/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -77,6 +73,7 @@
       <recent name="D:\Andrei\Projects\GitHub\Task-Manager\packages\client\src\atoms\Input" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Andrei\Projects\GitHub\Task-Manager\packages\client\src\hooks\authentication" />
       <recent name="D:\Andrei\Projects\GitHub\Task-Manager\packages\client\src\components" />
       <recent name="D:\Andrei\Projects\GitHub\Task-Manager\packages\client\src\features" />
       <recent name="D:\Andrei\Projects\GitHub\Task-Manager\packages\client\src\atoms" />
@@ -126,7 +123,7 @@
       <workItem from="1683994592703" duration="5576000" />
       <workItem from="1684000337633" duration="1778000" />
       <workItem from="1684045817189" duration="7076000" />
-      <workItem from="1684068228224" duration="8342000" />
+      <workItem from="1684068228224" duration="12914000" />
     </task>
     <servers />
   </component>

@@ -31,8 +31,8 @@ export const Form: React.FC<IForm> = ({
   submitHandler,
   title,
   resolverSchema,
-  successMsg,
-  errorMsg,
+  confirmMessage,
+  confirmMessageHandler,
 }) => {
   const {
     register,
@@ -54,6 +54,9 @@ export const Form: React.FC<IForm> = ({
           {inputs.map((input: IInput) => (
             <div key={input.id}>
               <Input
+                onChangeHandler={() => {
+                  confirmMessageHandler({ successMsg: null, errorMsg: null });
+                }}
                 width={input.width}
                 icon={input.icon}
                 register={{ ...register(input.id) }}
@@ -73,7 +76,10 @@ export const Form: React.FC<IForm> = ({
           ))}
         </div>
         <div>
-          <ConfirmMessage success={successMsg} error={errorMsg} />
+          <ConfirmMessage
+            success={confirmMessage?.successMsg}
+            error={confirmMessage?.errorMsg}
+          />
           <Button buttonType={"submit"} text={"Submit"} />
         </div>
       </form>
