@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Button } from "../../atoms";
 import { Input } from "../../components";
 import { IInput } from "../../components/Input";
@@ -34,20 +34,18 @@ export const Form: React.FC<IForm> = ({
   successMsg,
   errorMsg,
 }) => {
-  const [successMessage, setSuccessMessage] = useState(successMsg);
-  const [errorMessage, setErrorMessage] = useState(errorMsg);
   const {
     register,
     handleSubmit,
     formState: { errors },
     reset,
   } = useForm({ resolver: yupResolver(resolverSchema) });
-  console.log(errorMsg);
+
   const onSubmitHandler = (data: FieldValues) => {
-    submitHandler(data);
     reset();
+    submitHandler(data);
   };
-  console.log(successMsg);
+
   return (
     <div className={styles.container}>
       <h2 className={styles.title}>{title}</h2>
@@ -56,10 +54,6 @@ export const Form: React.FC<IForm> = ({
           {inputs.map((input: IInput) => (
             <div key={input.id}>
               <Input
-                onChangeHandler={() => {
-                  setSuccessMessage("");
-                  setErrorMessage("");
-                }}
                 width={input.width}
                 icon={input.icon}
                 register={{ ...register(input.id) }}
@@ -79,16 +73,8 @@ export const Form: React.FC<IForm> = ({
           ))}
         </div>
         <div>
-          <ConfirmMessage success={successMessage} error={errorMessage} />
-          <Button
-            buttonType={"submit"}
-            text={"Submit"}
-            onClick={() => {
-              console.log("test");
-              setSuccessMessage(successMsg);
-              setErrorMessage(errorMsg);
-            }}
-          />
+          <ConfirmMessage success={successMsg} error={errorMsg} />
+          <Button buttonType={"submit"} text={"Submit"} />
         </div>
       </form>
     </div>
