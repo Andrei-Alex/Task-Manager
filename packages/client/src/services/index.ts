@@ -1,2 +1,2 @@
 export * from "./health";
-export * from "./authentication";
+export * from "./authentication/";

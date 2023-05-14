@@ -1,11 +1,12 @@
 import { useEffect, useState } from "react";
 import { AxiosError } from "axios";
-import { authRequest, IAuthRequest, IAuthResponse } from "@/services";
+import { authRequest, IAuthRequest } from "@/services";
 import { useRouter } from "next/router";
+import { DataType, ErrorType } from "./types";
 
-function useLogin(url: string) {
-  const [data, setData] = useState<IAuthResponse | null>(null);
-  const [error, setError] = useState<AxiosError | null>(null);
+export function useLogin(url: string) {
+  const [data, setData] = useState<DataType>(null);
+  const [error, setError] = useState<ErrorType>(null);
   const router = useRouter();
 
   useEffect(() => {
@@ -35,5 +36,3 @@ function useLogin(url: string) {
 
   return { data, error, login };
 }
-
-export default useLogin;
