@@ -1,13 +1,10 @@
 @import '../../styles/variables';
-
+@import '../../styles/mixin';
 .container {
   background-color: white;
   width: 475px;
   height: 450px;
-  padding: 25px;
-  padding-top: 5px;
-  border: 2px solid;
-  border-color: #635FC750;
+  padding: 5px 25px 25px;
   box-shadow: 1px 5px 5px #635FC740;
   border-radius: 12px;
   display: flex;
@@ -21,8 +18,10 @@
 }
 .title {
   align-self: center;
+  font-size: 40px;
+  font-weight: bold;
   font-family: $fontPrimary;
-  color: $purple
+  @include gradientText();
 }
 .alert {
   color: red;

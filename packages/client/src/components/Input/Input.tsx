@@ -43,7 +43,7 @@ export const Input: React.FC<IInput> = ({
       <div className={styles.inputContainer}>
         {icon ? (
           <i className={styles.iconContainer}>
-            <Icon iconName={icon} />
+            <Icon iconName={icon} color={"rgba(205,0,185,1)"} size={22} />
           </i>
         ) : null}
         <input

@@ -5,8 +5,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9fc628b4-6acc-4626-b898-1214b7ca3d38" name="Changes" comment="merge">
+      <change afterPath="$PROJECT_DIR$/packages/client/src/styles/_mixin.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/client/src/pages/login/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/client/src/pages/login/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/client/src/atoms/Button/Button.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/packages/client/src/atoms/Button/Button.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/client/src/components/Input/Input.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/packages/client/src/components/Input/Input.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/client/src/components/Input/Input.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/client/src/components/Input/Input.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/client/src/features/Form/Form.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/packages/client/src/features/Form/Form.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/client/src/styles/_variables.scss" beforeDir="false" afterPath="$PROJECT_DIR$/packages/client/src/styles/_variables.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -123,7 +128,8 @@
       <workItem from="1683994592703" duration="5576000" />
       <workItem from="1684000337633" duration="1778000" />
       <workItem from="1684045817189" duration="7076000" />
-      <workItem from="1684068228224" duration="12914000" />
+      <workItem from="1684068228224" duration="13193000" />
+      <workItem from="1684257862846" duration="4483000" />
     </task>
     <servers />
   </component>
