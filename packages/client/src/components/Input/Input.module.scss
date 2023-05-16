@@ -1,5 +1,5 @@
 @import '../../styles/variables';
-
+@import '../../styles/mixin';
 .container {
   display: flex;
   flex-direction: column;
@@ -7,9 +7,12 @@
 }
 .labelContainer{
  display: flex;
+  margin-bottom: 10px;
   height: 25px;
 }
 .label {
+  font-size: 22px;
+  @include gradientText();
   color: $darkGray;
 }
 .inputContainer {
@@ -17,12 +20,14 @@
 }
 .input {
   background-color: white;
+  color: $darkGray;
   border: none;
   outline: none;
-  border-bottom: 1px solid $mediumGray;
-  padding-left: 25px;
+  border-bottom: 1px solid rgba(205,0,185,1);
+  padding-left: 35px;
   padding-bottom: 10px;
   font-family: $fontPrimary;
+  font-weight: 700;
   font-size: 16px;
   &:focus {
     outline-color: transparent;

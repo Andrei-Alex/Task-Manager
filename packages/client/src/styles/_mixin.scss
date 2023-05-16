@@ -1,0 +1,7 @@
+@import './variables';
+
+@mixin gradientText(){
+  background: $gradientPrimary;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
