@@ -5,8 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9fc628b4-6acc-4626-b898-1214b7ca3d38" name="Changes" comment="merge">
+      <change afterPath="$PROJECT_DIR$/packages/client/src/atoms/health/DisplayHealth.stories.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/client/src/styles/_mixin.scss" beforeDir="false" afterPath="$PROJECT_DIR$/packages/client/src/styles/_mixin.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/client/src/atoms/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/client/src/atoms/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/client/src/components/ConfirmMessage/ConfirmMessage.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/client/src/components/ConfirmMessage/ConfirmMessage.test.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/client/src/components/health/DisplayHealth.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/packages/client/src/atoms/health/DisplayHealth.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/client/src/components/health/DisplayHealth.stories.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/client/src/components/health/DisplayHealth.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/client/src/atoms/health/DisplayHealth.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/client/src/components/health/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/client/src/atoms/health/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/client/src/components/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/client/src/components/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/client/src/pages/health/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/client/src/pages/health/index.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -73,10 +81,10 @@
       <recent name="D:\Andrei\Projects\GitHub\Task-Manager\packages\client\src\atoms\Input" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Andrei\Projects\GitHub\Task-Manager\packages\client\src\atoms" />
       <recent name="D:\Andrei\Projects\GitHub\Task-Manager\packages\client\src\hooks\authentication" />
       <recent name="D:\Andrei\Projects\GitHub\Task-Manager\packages\client\src\components" />
       <recent name="D:\Andrei\Projects\GitHub\Task-Manager\packages\client\src\features" />
-      <recent name="D:\Andrei\Projects\GitHub\Task-Manager\packages\client\src\atoms" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -125,7 +133,7 @@
       <workItem from="1684045817189" duration="7076000" />
       <workItem from="1684068228224" duration="13193000" />
       <workItem from="1684257862846" duration="5091000" />
-      <workItem from="1684343646038" duration="505000" />
+      <workItem from="1684343646038" duration="1256000" />
     </task>
     <servers />
   </component>
