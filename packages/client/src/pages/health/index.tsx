@@ -1,10 +1,10 @@
-import type { NextPage } from 'next';
-import Head from 'next/head';
-import { getHealthFromFrontEndAPI, IHealthResponse } from '../../services';
-import { DisplayHealth } from '../../components';
-import styles from './index.module.scss';
+import type { NextPage } from "next";
+import Head from "next/head";
+import { getHealthFromFrontEndAPI, IHealthResponse } from "../../services";
+import { DisplayHealth } from "../../atoms";
+import styles from "./index.module.scss";
 
-const Health: NextPage<IHealthResponse>  = ({ status }) => {
+const Health: NextPage<IHealthResponse> = ({ status }) => {
   return (
     <div className={styles.container}>
       <Head>
