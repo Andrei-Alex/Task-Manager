@@ -4,22 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9fc628b4-6acc-4626-b898-1214b7ca3d38" name="Changes" comment="merge">
-      <change afterPath="$PROJECT_DIR$/packages/client/src/providers/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/client/src/providers/redux/AuthSlice/AuthSlice.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/client/src/providers/redux/AuthSlice/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/client/src/providers/redux/AuthSlice/types.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/client/src/providers/redux/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/client/src/providers/redux/store.ts" afterDir="false" />
+    <list default="true" id="9fc628b4-6acc-4626-b898-1214b7ca3d38" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/client/.eslintrc.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/client/.eslintrc.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/client/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/client/src/Hocs/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/client/src/hooks/authentication/useUser.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/client/src/features/Form/Form.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/client/src/features/Form/Form.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/client/src/features/Form/Form.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/client/src/features/Form/Form.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/client/src/features/Form/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/client/src/features/Form/types.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/client/src/hooks/authentication/useLogin.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/client/src/hooks/authentication/useLogin.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/client/src/pages/_app.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/client/src/pages/_app.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/client/src/providers/redux/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/client/src/providers/redux/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/client/src/specs/LoginPage.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/client/src/specs/LoginPage.test.tsx" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
