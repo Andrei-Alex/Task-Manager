@@ -5,16 +5,21 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9fc628b4-6acc-4626-b898-1214b7ca3d38" name="Changes" comment="merge">
-      <change afterPath="$PROJECT_DIR$/packages/client/src/atoms/health/DisplayHealth.stories.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/client/src/providers/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/client/src/providers/redux/AuthSlice/AuthSlice.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/client/src/providers/redux/AuthSlice/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/client/src/providers/redux/AuthSlice/types.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/client/src/providers/redux/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/client/src/providers/redux/store.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/client/src/atoms/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/client/src/atoms/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/client/src/components/ConfirmMessage/ConfirmMessage.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/client/src/components/ConfirmMessage/ConfirmMessage.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/client/src/components/health/DisplayHealth.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/packages/client/src/atoms/health/DisplayHealth.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/client/src/components/health/DisplayHealth.stories.tsx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/client/src/components/health/DisplayHealth.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/client/src/atoms/health/DisplayHealth.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/client/src/components/health/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/client/src/atoms/health/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/client/src/components/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/client/src/components/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/client/src/pages/health/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/client/src/pages/health/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/client/.eslintrc.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/client/.eslintrc.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/client/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/client/src/Hocs/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/client/src/hooks/authentication/useUser.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/client/src/features/Form/Form.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/client/src/features/Form/Form.test.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/client/src/features/Form/Form.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/client/src/features/Form/Form.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/client/src/features/Form/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/client/src/features/Form/types.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/client/src/hooks/authentication/useLogin.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/client/src/hooks/authentication/useLogin.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,6 +47,9 @@
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
   </component>
   <component name="ProjectId" id="2OBkmocJq6KPXAzeD3ARzLFmw7J" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -81,6 +89,7 @@
       <recent name="D:\Andrei\Projects\GitHub\Task-Manager\packages\client\src\atoms\Input" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Andrei\Projects\GitHub\Task-Manager\packages\client\src\providers\redux\AuthSlice" />
       <recent name="D:\Andrei\Projects\GitHub\Task-Manager\packages\client\src\atoms" />
       <recent name="D:\Andrei\Projects\GitHub\Task-Manager\packages\client\src\hooks\authentication" />
       <recent name="D:\Andrei\Projects\GitHub\Task-Manager\packages\client\src\components" />
@@ -133,7 +142,8 @@
       <workItem from="1684045817189" duration="7076000" />
       <workItem from="1684068228224" duration="13193000" />
       <workItem from="1684257862846" duration="5091000" />
-      <workItem from="1684343646038" duration="1256000" />
+      <workItem from="1684343646038" duration="2656000" />
+      <workItem from="1684515424540" duration="5407000" />
     </task>
     <servers />
   </component>
