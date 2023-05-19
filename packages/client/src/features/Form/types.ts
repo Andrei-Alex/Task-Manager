@@ -8,6 +8,6 @@ export interface IForm {
   submitHandler: (values: FieldValue<FieldValues>) => void;
   title: string;
   resolverSchema: ObjectSchema<any, AnyObject, any, "">;
-  confirmMessage: ConfirmMessage;
-  confirmMessageHandler: (arg: ConfirmMessage) => void;
+  confirmMessage?: ConfirmMessage;
+  confirmMessageHandler?: (arg: ConfirmMessage) => void;
 }

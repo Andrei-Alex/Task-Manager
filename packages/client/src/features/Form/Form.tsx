@@ -55,7 +55,8 @@ export const Form: React.FC<IForm> = ({
             <div key={input.id}>
               <Input
                 onChangeHandler={() => {
-                  confirmMessageHandler({ successMsg: null, errorMsg: null });
+                  confirmMessageHandler &&
+                    confirmMessageHandler({ successMsg: null, errorMsg: null });
                 }}
                 width={input.width}
                 icon={input.icon}
