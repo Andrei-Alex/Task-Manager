@@ -5,15 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9fc628b4-6acc-4626-b898-1214b7ca3d38" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/packages/client/src/constants/URLs/Urls.test.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/client/src/constants/axios/axios.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/libs/sharedTypes/index.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/client/src/constants/authentification.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/client/src/constants/URLs/URLs.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/client/src/constants/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/client/src/constants/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/client/src/hooks/authentication/useLogin.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/client/src/hooks/authentication/useLogin.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/client/src/pages/login/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/client/src/pages/login/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/client/src/services/authentication/authentication.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/client/src/services/authentication/authentication.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/client/src/specs/LoginPage.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/client/src/specs/LoginPage.test.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/client/src/features/Form/Form.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/client/src/features/Form/Form.test.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/client/src/services/health/getHealth.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/client/src/services/health/getHealth.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/server/src/auth/jwt-auth.guard.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/server/src/auth/jwt-auth.guard.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/server/src/auth/jwt.strategy.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/server/src/auth/jwt.strategy.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/server/src/constants/globals.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/server/src/constants/globals.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/server/src/user/User.entity.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/server/src/user/User.entity.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/server/src/user/user.controller.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/server/src/user/user.controller.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/server/src/user/user.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/server/src/user/user.module.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -139,7 +140,8 @@
       <workItem from="1684343646038" duration="2656000" />
       <workItem from="1684515424540" duration="5407000" />
       <workItem from="1684604838724" duration="2216000" />
-      <workItem from="1684664619943" duration="5856000" />
+      <workItem from="1684664619943" duration="12131000" />
+      <workItem from="1684685104834" duration="2924000" />
     </task>
     <servers />
   </component>

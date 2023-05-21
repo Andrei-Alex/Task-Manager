@@ -10,7 +10,7 @@ describe("Input", () => {
       <Form
         inputs={inputs}
         resolverSchema={loginSchema}
-        submitHandler={() => console.log("test")}
+        submitHandler={() => console.log("Jest")}
         title={"Login Form"}
       />
     );
