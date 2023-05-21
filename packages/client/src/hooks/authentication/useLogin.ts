@@ -7,9 +7,9 @@ import { setToken } from "@/providers/redux/AuthSlice/AuthSlice";
 import { useDispatch } from "react-redux";
 /**
  * if data
- * Set access token and user in both localStorage and redux
+ * Set access token in both localStorage and redux
  * **/
-export function useLogin(url: string) {
+export function useLogin() {
   const [data, setData] = useState<DataType>(null);
   const [error, setError] = useState<ErrorType>(null);
   const router = useRouter();
@@ -27,7 +27,7 @@ export function useLogin(url: string) {
     }
   }, [data, error]);
   const login = (values: IAuthRequest) => {
-    authRequest(url, values)
+    authRequest(values)
       .then((response) => {
         if (response instanceof AxiosError) {
           setError(response);

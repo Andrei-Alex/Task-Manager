@@ -7,9 +7,7 @@ import { inputs, loginSchema } from "@/features/Form";
 import { useConfirmMessage } from "@/hooks/";
 
 const Login: NextPage = () => {
-  const { data, error, login } = useLogin(
-    `http://${process.env.NEXT_PUBLIC_SERVER}/api/auth/login`
-  );
+  const { data, error, login } = useLogin();
   const { confirmMessage, setConfirmMessage } = useConfirmMessage(data, error);
 
   return (

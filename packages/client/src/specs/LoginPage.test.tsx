@@ -5,7 +5,6 @@ import { routerMock } from "../__MOCK__";
 import { Provider } from "react-redux";
 
 import store from "@/providers/redux/store";
-import { createStore } from "@reduxjs/toolkit";
 
 const path = "Login";
 it("renders LoginPage", () => {
