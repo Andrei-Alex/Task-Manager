@@ -9,3 +9,12 @@ export const loginInstance = axios.create({
     Accept: "application/json",
   },
 });
+
+export const userInstance = axios.create({
+  method: "get",
+  baseURL: API.toString(),
+  timeout: 8000,
+  headers: {
+    Accept: "application/json",
+  },
+});

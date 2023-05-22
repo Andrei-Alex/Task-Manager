@@ -26,19 +26,15 @@ export function useLogin() {
       localStorage.removeItem("access_token");
     }
   }, [data, error]);
-  const login = (values: IAuthRequest) => {
-    authRequest(values)
-      .then((response) => {
-        if (response instanceof AxiosError) {
-          setError(response);
-        } else {
-          setData(response);
-          setError(null);
-        }
-      })
-      .catch((err) => {
-        console.error(err);
-      });
+  const login = async (values: IAuthRequest) => {
+    const response = await authRequest(values);
+    if (response instanceof AxiosError) {
+      setError(response);
+    } else {
+      setData(response);
+      //const user = await userRequest(response);
+      setError(null);
+    }
   };
 
   return { data, error, login };
