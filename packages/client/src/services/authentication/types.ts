@@ -1,6 +1,13 @@
+export type AuthResponse =
+  | {
+      username: string;
+      email: string;
+      access_token?: string;
+    }
+  | string;
 export interface IAuthResponse {
-  username: string;
-  email: string;
+  username?: string;
+  email?: string;
   access_token?: string;
 }
 export type Token = {

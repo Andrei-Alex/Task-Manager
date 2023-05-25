@@ -20,14 +20,16 @@ export const authRequest = async (
 
 /**
  * User Request
- * @param {object} values Username and password
+ * @param {object} loginResponse Object with Token
  * @returns {string | object} token or AxiosError
  **/
 export const userRequest = async (
-  token: string
+  loginResponse: Partial<IAuthResponse>
 ): Promise<IAuthResponse | AxiosError> => {
   try {
-    const response = await userInstance("/profile", { params: token });
+    const response = await userInstance("/profile", {
+      headers: { Authorization: `Bearer ${loginResponse.access_token}` },
+    });
     return response.data;
   } catch (error) {
     return error as AxiosError;
