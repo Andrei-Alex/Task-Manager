@@ -9,6 +9,7 @@ const initialState: IAuth = {
   auth: {
     user: null,
     token: null,
+    error: null,
   },
 };
 export const AuthSlice = createSlice({
@@ -27,7 +28,14 @@ export const AuthSlice = createSlice({
         token: action.payload,
       };
     },
+    setError: (state: IAuth, action) => {
+      return {
+        ...state,
+        token: action.payload,
+      };
+    },
   },
 });
 export const setUser = AuthSlice.actions.setUser;
 export const setToken = AuthSlice.actions.setToken;
+export const setError = AuthSlice.actions.setError;

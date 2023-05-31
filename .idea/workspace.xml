@@ -5,17 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9fc628b4-6acc-4626-b898-1214b7ca3d38" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/packages/client/src/Hocs/withAuth/withAuth.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/client/src/constants/auth/auth.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/packages/client/src/hooks/authentication/useAuth.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/client/.eslintrc.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/client/.eslintrc.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/client/src/constants/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/client/src/constants/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/client/src/hooks/authentication/useLogin.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/client/src/hooks/authentication/useLogin.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/client/src/hooks/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/client/src/hooks/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/client/src/services/authentication/authentication.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/client/src/services/authentication/authentication.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/client/src/services/authentication/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/client/src/services/authentication/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/client/src/services/authentication/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/client/src/services/authentication/types.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/client/src/Hocs/withAuth/withAuth.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/client/src/Hocs/withAuth/withAuth.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/client/src/providers/redux/AuthSlice/AuthSlice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/client/src/providers/redux/AuthSlice/AuthSlice.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/client/src/providers/redux/AuthSlice/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/client/src/providers/redux/AuthSlice/types.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -145,7 +138,8 @@
       <workItem from="1684685104834" duration="3226000" />
       <workItem from="1684776776875" duration="1272000" />
       <workItem from="1685038043493" duration="3939000" />
-      <workItem from="1685511774520" duration="4418000" />
+      <workItem from="1685511774520" duration="4454000" />
+      <workItem from="1685528787095" duration="2186000" />
     </task>
     <servers />
   </component>
