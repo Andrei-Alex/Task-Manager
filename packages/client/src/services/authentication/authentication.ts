@@ -1,5 +1,5 @@
 import { AxiosError } from "axios";
-import { IAuthRequest, IAuthResponse } from "./types";
+import { IAuthRequest, IAuthResponse, LocalStorageToken } from "./types";
 import { loginInstance, userInstance } from "@/constants/";
 
 /**
@@ -24,11 +24,17 @@ export const authRequest = async (
  * @returns {string | object} token or AxiosError
  **/
 export const userRequest = async (
-  loginResponse: Partial<IAuthResponse>
+  loginResponse: Partial<IAuthResponse | LocalStorageToken>
 ): Promise<IAuthResponse | AxiosError> => {
   try {
     const response = await userInstance("/profile", {
-      headers: { Authorization: `Bearer ${loginResponse.access_token}` },
+      headers: {
+        Authorization: `Bearer ${
+          typeof loginResponse === "object"
+            ? loginResponse?.access_token
+            : loginResponse
+        }`,
+      },
     });
     return response.data;
   } catch (error) {

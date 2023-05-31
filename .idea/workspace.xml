@@ -5,10 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9fc628b4-6acc-4626-b898-1214b7ca3d38" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/packages/client/src/Hocs/withAuth/withAuth.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/client/src/constants/auth/auth.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/client/src/hooks/authentication/useAuth.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/client/src/hooks/authentication/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/client/src/hooks/authentication/types.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/client/.eslintrc.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/client/.eslintrc.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/client/src/constants/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/client/src/constants/index.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/client/src/hooks/authentication/useLogin.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/client/src/hooks/authentication/useLogin.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/client/src/hooks/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/client/src/hooks/index.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/client/src/services/authentication/authentication.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/client/src/services/authentication/authentication.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/client/src/services/authentication/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/client/src/services/authentication/index.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/client/src/services/authentication/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/client/src/services/authentication/types.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -79,11 +85,11 @@
       <recent name="D:\Andrei\Projects\GitHub\Task-Manager\packages\client\src\atoms\Input" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Andrei\Projects\GitHub\Task-Manager\packages\client\src\Hocs\withAuth" />
       <recent name="D:\Andrei\Projects\GitHub\Task-Manager\packages\client\src\constants\URLs" />
       <recent name="D:\Andrei\Projects\GitHub\Task-Manager\packages\client\src\constants" />
       <recent name="D:\Andrei\Projects\GitHub\Task-Manager\packages\client\src\providers\redux\AuthSlice" />
       <recent name="D:\Andrei\Projects\GitHub\Task-Manager\packages\client\src\atoms" />
-      <recent name="D:\Andrei\Projects\GitHub\Task-Manager\packages\client\src\hooks\authentication" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -138,7 +144,8 @@
       <workItem from="1684664619943" duration="12131000" />
       <workItem from="1684685104834" duration="3226000" />
       <workItem from="1684776776875" duration="1272000" />
-      <workItem from="1685038043493" duration="3850000" />
+      <workItem from="1685038043493" duration="3939000" />
+      <workItem from="1685511774520" duration="4418000" />
     </task>
     <servers />
   </component>

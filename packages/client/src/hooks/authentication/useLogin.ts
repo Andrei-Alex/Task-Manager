@@ -1,14 +1,18 @@
 import { useEffect, useState } from "react";
 import { AxiosError } from "axios";
-import { authRequest, IAuthRequest } from "@/services";
 import { useRouter } from "next/router";
 import { DataType, ErrorType } from "./types";
-import { setToken, setUser } from "@/providers/redux/AuthSlice/AuthSlice";
 import { useDispatch } from "react-redux";
-import { userRequest } from "@/services/authentication/authentication";
+import { authRequest, IAuthRequest, userRequest } from "@/services";
+import { setToken, setUser } from "@/providers/redux/AuthSlice/AuthSlice";
+
 /**
  * if data
  * Set access token and user in both localStorage and redux
+ * @return {object} data Axios response if credentials are correct
+ * @return {object} error Axios error if 400 - 500
+ * @return {object} userData Axios response if token is valid
+ * @return {function} login handle login
  * **/
 export function useLogin() {
   const [data, setData] = useState<DataType>(null);
@@ -27,7 +31,6 @@ export function useLogin() {
   }, [data, error]);
 
   useEffect(() => {
-    console.log(userData);
     if (userData?.email) {
       localStorage.setItem("userEmail", userData.email);
       dispatch(setUser(userData));
