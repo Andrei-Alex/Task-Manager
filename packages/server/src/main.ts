@@ -38,7 +38,7 @@ async function bootstrap() {
 
   const config = new DocumentBuilder()
     .addBearerAuth()
-    .setTitle('Task Manager API')
+    .setTitle('Task Manager AUTH_API')
     .setDescription(swaggerDescription)
     .setVersion(projectVersion)
     .build();

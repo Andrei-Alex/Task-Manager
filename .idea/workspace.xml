@@ -5,18 +5,22 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9fc628b4-6acc-4626-b898-1214b7ca3d38" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/packages/client/src/hooks/authentication/useRegister.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/client/next.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/client/next.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/client/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/packages/client/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/client/src/constants/URLs/URLs.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/client/src/constants/URLs/URLs.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/client/src/constants/URLs/Urls.test.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/client/src/constants/URLs/Urls.test.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/client/src/constants/axios/axios.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/client/src/constants/axios/axios.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/client/src/features/Form/Form.stories.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/client/src/features/Form/Form.stories.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/client/src/features/Form/Form.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/client/src/features/Form/Form.test.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/client/src/features/Form/Form.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/client/src/features/Form/Form.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/client/src/features/Form/data.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/client/src/features/Form/data.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/client/src/pages/home/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/client/src/pages/home/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/client/src/hooks/authentication/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/client/src/hooks/authentication/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/client/src/hooks/authentication/useConfirmMessage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/client/src/hooks/authentication/useAuthFormConfirmMessage.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/client/src/hooks/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/client/src/hooks/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/client/src/pages/health/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/client/src/pages/health/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/client/src/pages/login/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/client/src/pages/login/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/client/src/pages/register/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/client/src/pages/register/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/client/src/services/authentication/authentication.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/client/src/services/authentication/authentication.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/client/src/services/authentication/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/client/src/services/authentication/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/client/src/services/authentication/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/client/src/services/authentication/types.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/server/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/server/src/main.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,32 +58,33 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Andrei/Projects/GitHub/Task-Manager/packages/client/src/components/ConfirmMessage&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.standard&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.standard&quot;: &quot;&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;yarn&quot;,
-    &quot;prettierjs.PrettierConfiguration.Package&quot;: &quot;D:\\Andrei\\Projects\\GitHub\\Task-Manager\\packages\\server\\node_modules\\prettier&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;actions.on.save&quot;,
-    &quot;ts.external.directory.path&quot;: &quot;D:\\Andrei\\Projects\\GitHub\\Task-Manager\\node_modules\\typescript\\lib&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "D:/Andrei/Projects/GitHub/Task-Manager/packages/client/src/hooks/authentication",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.standard": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.standard": "",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "yarn",
+    "prettierjs.PrettierConfiguration.Package": "D:\\Andrei\\Projects\\GitHub\\Task-Manager\\packages\\server\\node_modules\\prettier",
+    "settings.editor.selected.configurable": "actions.on.save",
+    "ts.external.directory.path": "D:\\Andrei\\Projects\\GitHub\\Task-Manager\\node_modules\\typescript\\lib",
+    "vue.rearranger.settings.migration": "true"
   },
-  &quot;keyToStringList&quot;: {
-    &quot;DatabaseDriversLRU&quot;: [
-      &quot;postgresql&quot;
+  "keyToStringList": {
+    "DatabaseDriversLRU": [
+      "postgresql"
     ]
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Andrei\Projects\GitHub\Task-Manager\packages\client\src\hooks\authentication" />
       <recent name="D:\Andrei\Projects\GitHub\Task-Manager\packages\client\src\components\ConfirmMessage" />
       <recent name="D:\Andrei\Projects\GitHub\Task-Manager\bash" />
       <recent name="D:\Andrei\Projects\GitHub\Task-Manager\packages\client\src\components\Form" />
@@ -150,7 +155,7 @@
       <workItem from="1685528787095" duration="3815000" />
       <workItem from="1685600173328" duration="357000" />
       <workItem from="1686158088469" duration="1526000" />
-      <workItem from="1686471928031" duration="6319000" />
+      <workItem from="1686471928031" duration="10995000" />
     </task>
     <servers />
   </component>

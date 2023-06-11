@@ -1,5 +1,10 @@
 import { AxiosError } from "axios";
-import { IAuthRequest, IAuthResponse, LocalStorageToken } from "./types";
+import {
+  IAuthRequest,
+  IAuthResponse,
+  IRegisterRequest,
+  LocalStorageToken,
+} from "./types";
 import { loginInstance, userInstance, registerInstance } from "@/constants/";
 
 /**
@@ -42,19 +47,22 @@ export const userRequest = async (
   }
 };
 
+/**
+ * User Register
+ * @param {object} values Form data
+ * @returns {string | object} status and user (email and full name) or AxiosError
+ **/
 export const registerRequest = async (
-  values: any
+  values: IRegisterRequest
 ): Promise<IAuthResponse | AxiosError> => {
   try {
-    console.log(values);
     const response = await registerInstance("/register", {
-      params: {
+      data: {
         full_name: values.fullName,
         email: values.username,
         password: values.password,
       },
     });
-    console.log(response);
     return response.data;
   } catch (error) {
     return error as AxiosError;

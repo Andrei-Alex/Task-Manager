@@ -1,9 +1,9 @@
 import axios from "axios";
-import { API } from "@/constants";
+import { AUTH_API } from "@/constants";
 
 export const loginInstance = axios.create({
   method: "post",
-  baseURL: API.toString(),
+  baseURL: AUTH_API.toString(),
   timeout: 8000,
   headers: {
     Accept: "application/json",
@@ -12,7 +12,7 @@ export const loginInstance = axios.create({
 
 export const userInstance = axios.create({
   method: "get",
-  baseURL: API.toString(),
+  baseURL: AUTH_API.toString(),
   timeout: 8000,
   headers: {
     Accept: "application/json",
@@ -20,7 +20,7 @@ export const userInstance = axios.create({
 });
 export const registerInstance = axios.create({
   method: "post",
-  baseURL: API.toString(),
+  baseURL: AUTH_API.toString(),
   timeout: 8000,
   headers: {
     Accept: "application/json",

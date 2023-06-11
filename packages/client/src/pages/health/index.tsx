@@ -11,7 +11,7 @@ const Health: NextPage<IHealthResponse> = ({ status }) => {
         <title>Display Health</title>
         <meta
           name="description"
-          content="Display health fetched from Next API fetched from Nest API"
+          content="Display health fetched from Next AUTH_API fetched from Nest AUTH_API"
         />
         <link rel="icon" href="/favicon.ico" />
       </Head>

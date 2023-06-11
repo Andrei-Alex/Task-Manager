@@ -4,11 +4,14 @@ import styles from "./Styles.module.scss";
 import { useLogin } from "@/hooks";
 import { Form } from "@/features";
 import { loginInputs, loginSchema } from "@/features/Form";
-import { useConfirmMessage } from "@/hooks/";
+import { useAuthFormConfirmMessage } from "@/hooks/";
 
 const Login: NextPage = () => {
   const { data, error, login } = useLogin();
-  const { confirmMessage, setConfirmMessage } = useConfirmMessage(data, error);
+  const { confirmMessage, setConfirmMessage } = useAuthFormConfirmMessage(
+    data,
+    error
+  );
 
   return (
     <>

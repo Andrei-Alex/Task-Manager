@@ -1,3 +1,3 @@
 export * from "./types";
-export { useConfirmMessage } from "./useConfirmMessage";
+export { useAuthFormConfirmMessage } from "./useAuthFormConfirmMessage";
 export { useLogin } from "./useLogin";

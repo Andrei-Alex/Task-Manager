@@ -1,12 +1,16 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import Styles from "./Styles.module.scss";
 import styles from "@/pages/login/Styles.module.scss";
 import { Form } from "@/features";
 import { registerInputs, RegisterSchema } from "@/features/Form";
-import { registerRequest } from "@/services";
+import { useAuthFormConfirmMessage, useRegister } from "@/hooks";
 
 const Register: NextPage = () => {
+  const { data, error, register } = useRegister();
+  const { confirmMessage, setConfirmMessage } = useAuthFormConfirmMessage(
+    data,
+    error
+  );
   return (
     <>
       <Head>
@@ -16,12 +20,12 @@ const Register: NextPage = () => {
       </Head>
       <main className={styles.page}>
         <Form
-          title={"Login"}
+          title={"Register"}
           inputs={registerInputs}
           resolverSchema={RegisterSchema}
-          submitHandler={registerRequest}
-          // confirmMessage={confirmMessage}
-          // confirmMessageHandler={setConfirmMessage}
+          submitHandler={register}
+          confirmMessage={confirmMessage}
+          confirmMessageHandler={setConfirmMessage}
         />
       </main>
     </>

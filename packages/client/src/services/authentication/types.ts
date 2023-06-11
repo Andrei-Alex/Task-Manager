@@ -11,3 +11,8 @@ export interface IAuthRequest {
   password: string;
   email: string;
 }
+export interface IRegisterRequest {
+  fullName: string;
+  password: string;
+  username: string;
+}

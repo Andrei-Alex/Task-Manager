@@ -32,7 +32,7 @@
     ·
     <a href="https://github.com/Andrei-Alex/Task-Manager">Storybook Atoms</a>
     .
-    <a href="https://github.com/Andrei-Alex/Task-Manager">Back-end API</a>
+    <a href="https://github.com/Andrei-Alex/Task-Manager">Back-end AUTH_API</a>
 
   </p>
 </div>
