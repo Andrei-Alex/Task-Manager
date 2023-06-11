@@ -1,2 +1,2 @@
 export * from "./types";
-export { authRequest, userRequest } from "./authentication";
+export { authRequest, userRequest, registerRequest } from "./authentication";

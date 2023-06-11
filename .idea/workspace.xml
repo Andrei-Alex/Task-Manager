@@ -6,9 +6,17 @@
   <component name="ChangeListManager">
     <list default="true" id="9fc628b4-6acc-4626-b898-1214b7ca3d38" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/client/src/Hocs/withAuth/withAuth.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/client/src/Hocs/withAuth/withAuth.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/client/src/providers/redux/AuthSlice/AuthSlice.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/client/src/providers/redux/AuthSlice/AuthSlice.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/client/src/providers/redux/AuthSlice/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/client/src/providers/redux/AuthSlice/types.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/client/next.config.js" beforeDir="false" afterPath="$PROJECT_DIR$/packages/client/next.config.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/client/src/constants/axios/axios.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/client/src/constants/axios/axios.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/client/src/features/Form/Form.stories.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/client/src/features/Form/Form.stories.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/client/src/features/Form/Form.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/client/src/features/Form/Form.test.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/client/src/features/Form/Form.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/client/src/features/Form/Form.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/client/src/features/Form/data.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/client/src/features/Form/data.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/client/src/pages/home/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/client/src/pages/home/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/client/src/pages/login/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/client/src/pages/login/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/client/src/pages/register/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/client/src/pages/register/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/client/src/services/authentication/authentication.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/client/src/services/authentication/authentication.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/client/src/services/authentication/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/client/src/services/authentication/index.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -139,7 +147,10 @@
       <workItem from="1684776776875" duration="1272000" />
       <workItem from="1685038043493" duration="3939000" />
       <workItem from="1685511774520" duration="4454000" />
-      <workItem from="1685528787095" duration="2186000" />
+      <workItem from="1685528787095" duration="3815000" />
+      <workItem from="1685600173328" duration="357000" />
+      <workItem from="1686158088469" duration="1526000" />
+      <workItem from="1686471928031" duration="6319000" />
     </task>
     <servers />
   </component>

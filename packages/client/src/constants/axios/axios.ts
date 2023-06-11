@@ -18,3 +18,11 @@ export const userInstance = axios.create({
     Accept: "application/json",
   },
 });
+export const registerInstance = axios.create({
+  method: "post",
+  baseURL: API.toString(),
+  timeout: 8000,
+  headers: {
+    Accept: "application/json",
+  },
+});

@@ -1,6 +1,7 @@
 import * as yup from "yup";
 import { IInput } from "@/components/Input";
-export const loginSchema = yup.object().shape({
+
+const loginFields = {
   username: yup
     .string()
     .email("Must be a valid email")
@@ -10,8 +11,18 @@ export const loginSchema = yup.object().shape({
     .min(4, "Minimum 4 characters")
     .max(32, "Maximum 32 characters")
     .required("Password is required"),
-});
-export const inputs: IInput[] = [
+};
+const registerFields = {
+  fullName: yup
+    .string()
+    .min(4, "Minimum 4 characters")
+    .max(32, "Maximum 32 characters")
+    .required("Full name is required"),
+  ...loginFields,
+};
+export const loginSchema = yup.object().shape(loginFields);
+export const RegisterSchema = yup.object().shape(registerFields);
+export const loginInputs: IInput[] = [
   {
     icon: "HiMail",
     label: "Email",
@@ -28,4 +39,15 @@ export const inputs: IInput[] = [
     required: true,
     id: "password",
   },
+];
+export const registerInputs: IInput[] = [
+  {
+    icon: "HiMail",
+    label: "Full name",
+    width: "90%",
+    placeholder: "FirstName LastName",
+    required: true,
+    id: "fullName",
+  },
+  ...loginInputs,
 ];

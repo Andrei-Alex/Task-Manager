@@ -1,7 +1,7 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import React from "react";
 import Form from "./Form";
-import { inputs, loginSchema } from ".";
+import { loginInputs, loginSchema } from ".";
 
 const meta: Meta<typeof Form> = {
   component: Form,
@@ -39,7 +39,7 @@ type Story = StoryObj<typeof Form>;
 
 export const Default: Story = {
   args: {
-    inputs: inputs,
+    inputs: loginInputs,
     title: "Login",
     resolverSchema: loginSchema,
     submitHandler: () => null,

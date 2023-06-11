@@ -18,13 +18,13 @@ import { ConfirmMessage } from "../../components";
  * <Button />
  * ```
  * @Example Login form
- * @param {array} inputs map array to display inputs
+ * @param {array} inputs map array to display loginInputs
  * @param {function} submitHandler On submit handler
  * @param {string} title On submit handler
  * @param {object} resolverSchema Yup resolver loginSchema
  * @param {string} successMsg Success message on logged in
  * @param {string} errorMsg Error message on bad credentials
- * @return {JSX} Display inputs and submit Button
+ * @return {JSX} Display loginInputs and submit Button
  */
 export const Form: React.FC<IForm> = ({
   inputs,

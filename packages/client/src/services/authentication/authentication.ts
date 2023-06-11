@@ -1,6 +1,6 @@
 import { AxiosError } from "axios";
 import { IAuthRequest, IAuthResponse, LocalStorageToken } from "./types";
-import { loginInstance, userInstance } from "@/constants/";
+import { loginInstance, userInstance, registerInstance } from "@/constants/";
 
 /**
  * Login Request
@@ -36,6 +36,25 @@ export const userRequest = async (
         }`,
       },
     });
+    return response.data;
+  } catch (error) {
+    return error as AxiosError;
+  }
+};
+
+export const registerRequest = async (
+  values: any
+): Promise<IAuthResponse | AxiosError> => {
+  try {
+    console.log(values);
+    const response = await registerInstance("/register", {
+      params: {
+        full_name: values.fullName,
+        email: values.username,
+        password: values.password,
+      },
+    });
+    console.log(response);
     return response.data;
   } catch (error) {
     return error as AxiosError;
