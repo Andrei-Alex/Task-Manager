@@ -10,4 +10,8 @@ export interface IForm {
   resolverSchema: ObjectSchema<any, AnyObject, any, "">;
   confirmMessage?: ConfirmMessage;
   confirmMessageHandler?: (arg: ConfirmMessage) => void;
+  linkMsg?: string;
+
+  //TODO: Change navigateToType
+  navigateTo?: any;
 }

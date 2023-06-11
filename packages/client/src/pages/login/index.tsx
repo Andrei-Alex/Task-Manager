@@ -28,6 +28,10 @@ const Login: NextPage = () => {
           submitHandler={login}
           confirmMessage={confirmMessage}
           confirmMessageHandler={setConfirmMessage}
+          linkMsg={"Not registered ?"}
+          navigateTo={{
+            pathname: "/register",
+          }}
         />
       </main>
     </>

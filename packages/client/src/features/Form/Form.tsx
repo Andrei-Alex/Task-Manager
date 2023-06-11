@@ -6,6 +6,7 @@ import { IForm, styles } from "./index";
 import { FieldValues, useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { ConfirmMessage } from "../../components";
+import Link from "next/link";
 
 /**
  * Reusable Form.
@@ -33,6 +34,8 @@ export const Form: React.FC<IForm> = ({
   resolverSchema,
   confirmMessage,
   confirmMessageHandler,
+  linkMsg,
+  navigateTo,
 }) => {
   const {
     register,
@@ -75,6 +78,13 @@ export const Form: React.FC<IForm> = ({
               </p>
             </div>
           ))}
+          {linkMsg && (
+            <div>
+              <Link href={navigateTo} className={styles.link}>
+                {linkMsg}
+              </Link>
+            </div>
+          )}
         </div>
         <div>
           <ConfirmMessage

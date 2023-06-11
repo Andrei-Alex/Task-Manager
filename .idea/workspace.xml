@@ -5,22 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9fc628b4-6acc-4626-b898-1214b7ca3d38" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/packages/client/src/hooks/authentication/useRegister.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/client/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/packages/client/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/client/src/constants/URLs/URLs.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/client/src/constants/URLs/URLs.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/client/src/constants/URLs/Urls.test.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/client/src/constants/URLs/Urls.test.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/client/src/constants/axios/axios.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/client/src/constants/axios/axios.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/client/src/hooks/authentication/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/client/src/hooks/authentication/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/client/src/hooks/authentication/useConfirmMessage.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/client/src/hooks/authentication/useAuthFormConfirmMessage.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/client/src/hooks/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/client/src/hooks/index.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/client/src/pages/health/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/client/src/pages/health/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/client/src/features/Form/Form.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/packages/client/src/features/Form/Form.module.scss" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/client/src/features/Form/Form.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/client/src/features/Form/Form.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/client/src/features/Form/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/client/src/features/Form/types.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/client/src/pages/login/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/client/src/pages/login/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/client/src/pages/register/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/client/src/pages/register/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/client/src/services/authentication/authentication.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/client/src/services/authentication/authentication.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/client/src/services/authentication/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/client/src/services/authentication/types.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/server/src/main.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/server/src/main.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,6 +61,7 @@
     "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "yarn",
     "prettierjs.PrettierConfiguration.Package": "D:\\Andrei\\Projects\\GitHub\\Task-Manager\\packages\\server\\node_modules\\prettier",
+    "run.code.analysis.last.selected.profile": "pProject Default",
     "settings.editor.selected.configurable": "actions.on.save",
     "ts.external.directory.path": "D:\\Andrei\\Projects\\GitHub\\Task-Manager\\node_modules\\typescript\\lib",
     "vue.rearranger.settings.migration": "true"
@@ -155,7 +145,7 @@
       <workItem from="1685528787095" duration="3815000" />
       <workItem from="1685600173328" duration="357000" />
       <workItem from="1686158088469" duration="1526000" />
-      <workItem from="1686471928031" duration="10995000" />
+      <workItem from="1686471928031" duration="14573000" />
     </task>
     <servers />
   </component>
