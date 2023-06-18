@@ -10,9 +10,7 @@ function CustomApp({ Component, pageProps }: AppProps) {
       <Head>
         <title>Task Manager</title>
       </Head>
-      <main className="app">
-        <Component {...pageProps} />
-      </main>
+      <Component {...pageProps} />
     </Provider>
   );
 }

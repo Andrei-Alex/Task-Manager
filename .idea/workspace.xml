@@ -5,11 +5,30 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9fc628b4-6acc-4626-b898-1214b7ca3d38" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/packages/client/src/components/Header/Header.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/client/src/components/Header/Styles.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/client/src/components/Header/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/client/src/components/Header/types.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/client/src/layouts/AuthenticationLayout/AuthenticationLayout.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/client/src/layouts/AuthenticationLayout/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/client/src/layouts/AuthenticationLayout/types.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/client/src/layouts/MainLayout/MainLayout.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/client/src/layouts/MainLayout/Styles.module.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/client/src/layouts/MainLayout/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/client/src/layouts/MainLayout/types.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/client/src/layouts/index.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/libs/sharedTypes/globals.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/libs/sharedTypes/navigations.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/client/src/features/Form/Form.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/packages/client/src/features/Form/Form.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/client/src/features/Form/Form.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/client/src/features/Form/Form.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/client/src/features/Form/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/client/src/features/Form/types.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/client/src/components/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/client/src/components/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/client/src/constants/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/client/src/constants/index.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/client/src/pages/_app.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/client/src/pages/_app.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/client/src/pages/home/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/client/src/pages/home/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/client/src/pages/login/Styles.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/packages/client/src/layouts/AuthenticationLayout/Styles.module.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/packages/client/src/pages/login/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/client/src/pages/login/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/client/src/pages/register/Styles.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/packages/client/src/constants/navigation/navigation.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/client/src/pages/register/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/client/src/pages/register/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/libs/sharedTypes/index.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/libs/sharedTypes/index.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,7 +71,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "D:/Andrei/Projects/GitHub/Task-Manager/packages/client/src/hooks/authentication",
+    "last_opened_file_path": "D:/Andrei/Projects/GitHub/Task-Manager/packages/client/src/components/Header",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.standard": "true",
     "node.js.detected.package.tslint": "true",
@@ -74,18 +93,18 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Andrei\Projects\GitHub\Task-Manager\packages\client\src\components\Header" />
+      <recent name="D:\Andrei\Projects\GitHub\Task-Manager\packages\client\src\layouts\MainLayout" />
+      <recent name="D:\Andrei\Projects\GitHub\Task-Manager\packages\client\src\layouts\AuthenticationLayout" />
       <recent name="D:\Andrei\Projects\GitHub\Task-Manager\packages\client\src\hooks\authentication" />
       <recent name="D:\Andrei\Projects\GitHub\Task-Manager\packages\client\src\components\ConfirmMessage" />
-      <recent name="D:\Andrei\Projects\GitHub\Task-Manager\bash" />
-      <recent name="D:\Andrei\Projects\GitHub\Task-Manager\packages\client\src\components\Form" />
-      <recent name="D:\Andrei\Projects\GitHub\Task-Manager\packages\client\src\atoms\Input" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Andrei\Projects\GitHub\Task-Manager\packages\client\src\components" />
       <recent name="D:\Andrei\Projects\GitHub\Task-Manager\packages\client\src\Hocs\withAuth" />
       <recent name="D:\Andrei\Projects\GitHub\Task-Manager\packages\client\src\constants\URLs" />
       <recent name="D:\Andrei\Projects\GitHub\Task-Manager\packages\client\src\constants" />
       <recent name="D:\Andrei\Projects\GitHub\Task-Manager\packages\client\src\providers\redux\AuthSlice" />
-      <recent name="D:\Andrei\Projects\GitHub\Task-Manager\packages\client\src\atoms" />
     </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -145,7 +164,8 @@
       <workItem from="1685528787095" duration="3815000" />
       <workItem from="1685600173328" duration="357000" />
       <workItem from="1686158088469" duration="1526000" />
-      <workItem from="1686471928031" duration="14573000" />
+      <workItem from="1686471928031" duration="14688000" />
+      <workItem from="1687086936014" duration="11791000" />
     </task>
     <servers />
   </component>
