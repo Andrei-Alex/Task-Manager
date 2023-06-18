@@ -1,8 +1,8 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import styles from "./Styles.module.scss";
 import { useLogin } from "@/hooks";
 import { Form } from "@/features";
+import { AuthenticationLayout } from "@/layouts";
 import { loginInputs, loginSchema } from "@/features/Form";
 import { useAuthFormConfirmMessage } from "@/hooks/";
 
@@ -20,7 +20,7 @@ const Login: NextPage = () => {
         <meta name="description" content="Login page" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className={styles.page}>
+      <AuthenticationLayout>
         <Form
           title={"Login"}
           inputs={loginInputs}
@@ -33,7 +33,7 @@ const Login: NextPage = () => {
             pathname: "/register",
           }}
         />
-      </main>
+      </AuthenticationLayout>
     </>
   );
 };

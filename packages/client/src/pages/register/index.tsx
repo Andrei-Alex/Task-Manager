@@ -1,9 +1,9 @@
 import type { NextPage } from "next";
 import Head from "next/head";
-import styles from "@/pages/login/Styles.module.scss";
 import { Form } from "@/features";
 import { registerInputs, RegisterSchema } from "@/features/Form";
 import { useAuthFormConfirmMessage, useRegister } from "@/hooks";
+import { AuthenticationLayout } from "@/layouts";
 
 const Register: NextPage = () => {
   const { data, error, register } = useRegister();
@@ -18,7 +18,7 @@ const Register: NextPage = () => {
         <meta name="description" content="Registration page" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <main className={styles.page}>
+      <AuthenticationLayout>
         <Form
           title={"Register"}
           inputs={registerInputs}
@@ -27,7 +27,7 @@ const Register: NextPage = () => {
           confirmMessage={confirmMessage}
           confirmMessageHandler={setConfirmMessage}
         />
-      </main>
+      </AuthenticationLayout>
     </>
   );
 };
