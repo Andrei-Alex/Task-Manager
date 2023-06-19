@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useRouter } from "next/router";
 import { useAuth } from "@/hooks";
 import { setError } from "@/providers";
@@ -7,12 +7,16 @@ export const withAuth = (Component: React.FC) => {
   return () => {
     const router = useRouter();
     const { logged, error } = useAuth();
-    if (!logged) {
-      setError(error);
-      router.push("/login");
-      return null;
-    }
-    setError(null);
-    return <Component />;
+    useEffect(() => {
+      if (!logged && logged !== null) {
+        setError(error);
+        router.push("/login").then();
+        return;
+      }
+      setError(null);
+    }, [logged, error]);
+
+    if (logged) return <Component />;
+    return null;
   };
 };
