@@ -1,19 +1,14 @@
 import React from "react";
 import { IHeader, styles } from "./index";
 import Link from "next/link";
+import { LinkList } from "../../atoms";
 const Header: React.FC<IHeader> = ({ logo, navElements }) => {
   return (
     <header className={styles.header}>
-      <div>{logo.src ? <image href={logo.src} /> : <h1>logo.name</h1>}</div>
+      <div>{logo.src ? <image href={logo.src} /> : <h1>{logo.name}</h1>}</div>
       <div>
         <nav className={styles.leftNav}>
-          <ul className={styles.list}>
-            {navElements.map((navElement: any) => (
-              <li key={navElement.id}>
-                <Link href={navElement.navigateTo}>{navElement.name}</Link>
-              </li>
-            ))}
-          </ul>
+          <LinkList listElements={navElements} />
         </nav>
         <nav>
           <ul>

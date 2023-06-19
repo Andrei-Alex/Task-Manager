@@ -10,7 +10,7 @@ import { AxiosError } from "axios";
  * @return {Object} AxiosError
  */
 export const useAuth = () => {
-  const [logged, setLogged] = useState<boolean>(false);
+  const [logged, setLogged] = useState<boolean | null>(null);
   const [error, setError] = useState<AxiosError | null>(null);
 
   useEffect(() => {
