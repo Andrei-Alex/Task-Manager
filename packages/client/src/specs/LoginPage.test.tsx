@@ -1,7 +1,7 @@
 import { render, screen } from "@testing-library/react";
 import Login from "../pages/login";
 import { RouterContext } from "next/dist/shared/lib/router-context";
-import { routerMock } from "../__MOCK__";
+import { routerMock } from "@/__MOCK__";
 import { Provider } from "react-redux";
 
 import store from "@/providers/redux/store";
