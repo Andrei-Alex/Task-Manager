@@ -1,7 +1,7 @@
 import React from "react";
 import { IHeader, styles } from "./index";
 import Link from "next/link";
-import { LinkList } from "@/atoms";
+import { LinkList } from "../../atoms";
 const Header: React.FC<IHeader> = ({ logo, navElements }) => {
   return (
     <header className={styles.header}>
