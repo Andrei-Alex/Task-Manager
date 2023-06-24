@@ -8,7 +8,7 @@ export const withAuth = (Component: React.FC) => {
     const router = useRouter();
     const { logged, error } = useAuth();
     useEffect(() => {
-      if (!logged && logged !== null) {
+      if ((!logged && logged !== null) || error) {
         setError(error);
         router.push("/login").then();
         return;

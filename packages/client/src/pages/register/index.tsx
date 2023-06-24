@@ -26,6 +26,8 @@ const Register: NextPage = () => {
           submitHandler={register}
           confirmMessage={confirmMessage}
           confirmMessageHandler={setConfirmMessage}
+          linkMsg={"Already have an account?"}
+          navigateTo={"login"}
         />
       </AuthenticationLayout>
     </>

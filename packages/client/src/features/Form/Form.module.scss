@@ -2,8 +2,10 @@
 @import '../../styles/mixin';
 .container {
   background-color: white;
-  width: 475px;
-  height: 450px;
+  width: 30%;
+  min-width: 400px;
+  height: 60%;
+  min-height: 600px;
   padding: 5px 25px 25px;
   box-shadow: 1px 5px 5px #635FC740;
   border-radius: 12px;
@@ -24,8 +26,12 @@
   @include gradientText();
 }
 .alert {
-  color: red;
+  color: #880000;
 }
 .link {
-  color: #0074D9;
+  color: #828FA3;
+  font-weight: bold;
+}
+.button {
+  align-self: center;
 }

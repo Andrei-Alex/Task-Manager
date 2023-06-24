@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { AUTH_KEY } from "@/constants";
+import { AUTH_EMAIL, AUTH_KEY } from "@/constants";
 import { userRequest } from "@/services";
 import { AxiosError } from "axios";
 
@@ -21,11 +21,13 @@ export const useAuth = () => {
           setError(response);
         } else {
           if (response.email) {
+            localStorage.setItem(AUTH_EMAIL, response.email);
             setLogged(true);
             setError(null);
           }
         }
       } else {
+        localStorage.removeItem(AUTH_KEY);
         setLogged(false);
       }
     })();
