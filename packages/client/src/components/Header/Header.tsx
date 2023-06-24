@@ -2,7 +2,7 @@ import React from "react";
 import { IHeader, styles } from "./index";
 import Link from "next/link";
 import { LinkList } from "../../atoms";
-import { useLogout } from "@/hooks";
+import { useLogout } from "../../hooks";
 const Header: React.FC<IHeader> = ({ logo, navElements }) => {
   const { haveProfile, logout } = useLogout();
 

@@ -11,7 +11,7 @@ exports[`Button renders correctly 1`] = `
       Object {
         "backgroundColor": "#828FA3",
         "color": undefined,
-        "width": "415px",
+        "width": "100%",
       }
     }
     type="button"
