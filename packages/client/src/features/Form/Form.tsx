@@ -12,18 +12,19 @@ import Link from "next/link";
  * Reusable Form.
  * With yupResolver and react-hook-form
  *
+ * TODO: Finish usage and example
  * ## Usage
  * ```jsx
  * <Label>{Text *}</Label>
  * <Input />
  * <Button />
  * ```
- * @Example Login form
+ * @Example Login or register form
  * @param {array} inputs map array to display loginInputs
  * @param {function} submitHandler On submit handler
  * @param {string} title On submit handler
  * @param {object} resolverSchema Yup resolver loginSchema
- * @param {string} successMsg Success message on logged in
+ * @param {string} confirmMessage Form submission message
  * @param {string} errorMsg Error message on bad credentials
  * @return {JSX} Display loginInputs and submit Button
  */
@@ -91,7 +92,11 @@ export const Form: React.FC<IForm> = ({
             success={confirmMessage?.successMsg}
             error={confirmMessage?.errorMsg}
           />
-          <Button buttonType={"submit"} text={"Submit"} />
+          <Button
+            buttonType={"submit"}
+            text={"Submit"}
+            containerStyle={{ width: "100%" }}
+          />
         </div>
       </form>
     </div>

@@ -20,7 +20,7 @@ import { styles, IButton } from "./index";
  * @return {JSX} Display Button
  */
 export const Button: React.FC<IButton> = ({
-  width = "415",
+  width = "100%",
   buttonType = "submit",
   containerStyle,
   text,
@@ -35,7 +35,7 @@ export const Button: React.FC<IButton> = ({
         onClick={() => onClick()}
         className={styles.button}
         style={{
-          width: `${width}px`,
+          width: `${width}`,
           backgroundColor: backgroundColor,
           color: textColor,
         }}
