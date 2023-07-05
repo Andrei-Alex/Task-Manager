@@ -2,14 +2,22 @@ import React from "react";
 import { styles, IButton } from "./index";
 
 /**
- * Simple Button.
+ * Render a button with custom styles
  *
  * ## Usage
- * ```jsx
- * <button>
- *  text
- * <button>
+ *
+ * ```JSX
+ *       <Button
+ *         width="200px"
+ *         buttonType="button"
+ *         containerStyle={{ marginTop: '10px' }}
+ *         text="Click me!"
+ *         backgroundColor="#FF0000"
+ *         textColor="#FFFFFF"
+ *         onClick={handleClick}
+ *       />
  * ```
+ *
  * @param {string} text - Button text
  * @param {number} width - Button Width
  * @param {string} ButtonType - Button type

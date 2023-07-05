@@ -3,11 +3,12 @@
 .header {
   display: flex;
   width: 100vw;
-  height: 5%;
+  height: 7%;
   justify-content: space-between;
   align-items: center;
   padding: 0px 3%;
   background-color: black;
+  color: white;
 }
 .header :nth-child(2) {
   display: flex;

@@ -12,12 +12,44 @@ import Link from "next/link";
  * Reusable Form.
  * With yupResolver and react-hook-form
  *
- * TODO: Finish usage and example
  * ## Usage
  * ```jsx
- * <Label>{Text *}</Label>
- * <Input />
- * <Button />
+ * <Form
+ *  *   inputs={[
+ *  *     {
+ *  *       id: "email",
+ *  *       width: "100%",
+ *  *       icon: <HiOutlineMail />,
+ *  *       label: "Email",
+ *  *       placeholder: "Enter your email",
+ *  *       required: true,
+ *  *     },
+ *  *     {
+ *  *       id: "password",
+ *  *       width: "100%",
+ *  *       icon: <HiOutlineKey />,
+ *  *       label: "Password",
+ *  *       placeholder: "Enter your password",
+ *  *       required: true,
+ *  *     },
+ *  *   ]}
+ *  *   submitHandler={(data) => {
+ *  *     // Handle form submission
+ *  *     console.log(data);
+ *  *   }}
+ *  *   title="Login Form"
+ *  *   resolverSchema={yourResolverSchema}
+ *  *   confirmMessage={{
+ *  *     successMsg: "Form submitted successfully",
+ *  *     errorMsg: "Error submitting form",
+ *  *   }}
+ *  *   confirmMessageHandler={(message) => {
+ *  *     // Handle confirm message display
+ *  *     console.log(message);
+ *  *   }}
+ *  *   linkMsg="Forgot password?"
+ *  *   navigateTo="/forgot-password"
+ *  * />
  * ```
  * @Example Login or register form
  * @param {array} inputs map array to display loginInputs

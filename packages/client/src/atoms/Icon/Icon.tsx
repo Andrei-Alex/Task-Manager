@@ -29,4 +29,10 @@ export const Icon: React.FC<IIcon> = ({
   return <div style={{ height: `${size}px`, ...extraStyles }}>{icon}</div>;
 };
 
-export default Icon;
+function PropsAreEqual(prevProps: IIcon, nextProps: IIcon) {
+  return JSON.stringify(prevProps.extraStyles) === JSON.stringify(nextProps.extraStyles)
+      && prevProps.iconName === nextProps.iconName
+      && prevProps.color === nextProps.color
+      && prevProps.size === nextProps.size
+}
+export default React.memo(Icon, PropsAreEqual);
