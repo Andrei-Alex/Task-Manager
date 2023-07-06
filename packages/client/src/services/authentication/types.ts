@@ -16,3 +16,7 @@ export interface IRegisterRequest {
   password: string;
   username: string;
 }
+export interface ILoginTestResponse
+  extends Omit<IAuthResponse, "username" | "email"> {
+  access_token: string;
+}

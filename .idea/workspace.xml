@@ -5,18 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9fc628b4-6acc-4626-b898-1214b7ca3d38" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.github/workflows/Client-CI.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/Client-CI.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.github/workflows/ServerLint-CI.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/ServerLint-CI.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.github/workflows/ServerTest-CI.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/ServerTest-CI.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.github/workflows/Storybook-CI.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.github/workflows/Storybook-CI.yml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/client/src/services/authentication/authentication.test.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/bash/jest-BE.sh" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bash/jest-FE.sh" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/bash/storybook.sh" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/client/src/atoms/Button/Button.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/client/src/atoms/Button/Button.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/client/src/atoms/Icon/Icon.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/client/src/atoms/Icon/Icon.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/client/src/components/Header/Styles.module.scss" beforeDir="false" afterPath="$PROJECT_DIR$/packages/client/src/components/Header/Styles.module.scss" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/client/src/features/Form/Form.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/client/src/features/Form/Form.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/client/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/packages/client/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/client/src/services/authentication/authentication.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/client/src/services/authentication/authentication.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/client/src/services/authentication/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/client/src/services/authentication/types.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/yarn.lock" beforeDir="false" afterPath="$PROJECT_DIR$/yarn.lock" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -70,7 +64,7 @@
     "prettierjs.PrettierConfiguration.Package": "D:\\Andrei\\Projects\\GitHub\\Task-Manager\\packages\\server\\node_modules\\prettier",
     "run.code.analysis.last.selected.profile": "pProject Default",
     "settings.editor.selected.configurable": "actions.on.save",
-    "ts.external.directory.path": "D:\\Project\\GitHub\\Task-Manager\\node_modules\\typescript\\lib",
+    "ts.external.directory.path": "D:\\Andrei\\Projects\\GitHub\\Task-Manager\\node_modules\\typescript\\lib",
     "vue.rearranger.settings.migration": "true"
   },
   "keyToStringList": {
@@ -158,6 +152,7 @@
       <workItem from="1687456258235" duration="1065000" />
       <workItem from="1687602627577" duration="8469000" />
       <workItem from="1687614108177" duration="481000" />
+      <workItem from="1688670424296" duration="2057000" />
     </task>
     <servers />
   </component>

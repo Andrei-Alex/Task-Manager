@@ -17,6 +17,7 @@ export const authRequest = async (
 ): Promise<IAuthResponse | AxiosError> => {
   try {
     const response = await loginInstance("/login", { params: { ...values } });
+    console.log(response.data);
     return response.data;
   } catch (error) {
     return error as AxiosError;
