@@ -11,4 +11,5 @@ export interface IInput {
   register?: UseFormRegisterReturn<string>;
   icon?: Icons;
   onChangeHandler?: () => void;
+  dataTestId?: string;
 }
