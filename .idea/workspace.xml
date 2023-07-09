@@ -5,11 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="9fc628b4-6acc-4626-b898-1214b7ca3d38" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/server/src/appData/appData.controller.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/server/src/appData/appData.entity.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/server/src/appData/appData.module.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/packages/server/src/appData/dtos/appData.dto.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/client/src/components/Input/types.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/client/src/components/Input/types.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/client/src/services/authentication/authentication.test.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/packages/client/src/specs/LoginPage.test.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/packages/client/src/specs/LoginPage.test.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/packages/server/src/app.module.ts" beforeDir="false" afterPath="$PROJECT_DIR$/packages/server/src/app.module.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

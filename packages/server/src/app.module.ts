@@ -6,11 +6,13 @@ import { TypeOrmModule } from '@nestjs/typeorm';
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { UserModule } from './user/user.module';
+import { AppDataModule } from './appData/appData.module';
 
 @Module({
   imports: [
     HealthModule,
     UserModule,
+    AppDataModule,
     ConfigModule.forRoot({
       isGlobal: true,
       envFilePath: '../../.env',
