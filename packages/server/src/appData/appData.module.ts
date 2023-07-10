@@ -1,5 +1,5 @@
 import { Module } from '@nestjs/common';
-import { AppDataController } from './AppData.controller';
+import { AppDataController } from './appData.controller';
 import { ConfigModule } from '@nestjs/config';
 
 @Module({
