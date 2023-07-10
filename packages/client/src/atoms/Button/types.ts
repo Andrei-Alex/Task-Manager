@@ -1,8 +1,10 @@
 import { CustomStyles } from "../../../../libs/sharedTypes/styles";
+import {types} from "sass";
+import Color = types.Color;
 
 export interface IButton {
   text: string;
-  backgroundColor?: string;
+  background?: string | undefined;
   textColor?: string;
   onClick?: Function;
   width?: number;

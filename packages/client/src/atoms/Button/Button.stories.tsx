@@ -19,13 +19,13 @@ const meta: Meta<typeof Button> = {
         type: "text",
       },
     },
-    backgroundColor: {
-      name: "Background color",
+    background: {
+      name: "Background style",
       type: {
         name: "string",
         required: false,
       },
-      defaultValue: "#828FA3",
+      defaultValue: 'rgba(0, 128, 0, 0.3)',
       description: "Background color",
       control: {
         type: "text",
@@ -50,6 +50,17 @@ const meta: Meta<typeof Button> = {
         required: false,
       },
       description: "onClick callback function",
+    },
+    width: {
+      name: "width",
+      type: {
+        name: "function",
+        required: false,
+      },
+      description: "button width",
+      control: {
+        type: "text",
+      },
     },
   },
 };
