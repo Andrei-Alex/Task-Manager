@@ -4,11 +4,13 @@ import { MdOutlinePassword } from "react-icons/md";
 import { Icons, IIcon } from ".";
 
 /**
-* ## Usage
+* Icon
+*
 *
 * ```JSX
 *    <Icon iconName="HiMail" color="blue" size={24} />
 * ```
+*
 * @component Icon
 * @param {Object} extraStyles - Additional styles to be applied to the icon container.
 * @param {string} iconName - The name of the icon to be rendered.
@@ -49,4 +51,5 @@ function PropsAreEqual(prevProps: IIcon, nextProps: IIcon) {
       && prevProps.color === nextProps.color
       && prevProps.size === nextProps.size
 }
+
 export default React.memo(Icon, PropsAreEqual);

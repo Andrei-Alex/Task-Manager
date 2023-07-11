@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`NavLinks renders correctly 1`] = `
+<ul>
+  <li>
+    <a
+      href="PageOne"
+      onClick={[Function]}
+      onMouseEnter={[Function]}
+      onTouchStart={[Function]}
+    >
+      Main Title
+    </a>
+  </li>
+  <li>
+    <a
+      href="PageTwo"
+      onClick={[Function]}
+      onMouseEnter={[Function]}
+      onTouchStart={[Function]}
+    >
+      Second Title
+    </a>
+  </li>
+</ul>
+`;

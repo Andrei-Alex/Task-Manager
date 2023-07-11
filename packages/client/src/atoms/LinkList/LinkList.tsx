@@ -13,5 +13,7 @@ const LinkList: React.FC<ILinkList> = ({ listElements }) => {
     </ul>
   );
 };
-
-export default LinkList;
+function PropsAreEqual(prevProps: ILinkList, nextProps: ILinkList) {
+  return JSON.stringify(prevProps.listElements) === JSON.stringify(nextProps.listElements)
+}
+export default React.memo(LinkList, PropsAreEqual);

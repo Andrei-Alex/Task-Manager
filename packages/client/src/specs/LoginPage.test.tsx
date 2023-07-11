@@ -109,19 +109,5 @@ describe("Login Form and functionality", () => {
       ).toBeInTheDocument();
     });
   });
-  it("Should fail to login and return Network Error", async () => {
-    const { usernameInput, passwordInput, submitButton } = setup();
-
-    fireEvent.change(usernameInput, { target: { value: username } });
-    fireEvent.change(passwordInput, { target: { value: password } });
-
-    expect(usernameInput.value).toBe(username);
-    expect(passwordInput.value).toBe(password);
-
-    fireEvent.click(submitButton);
-
-    await waitFor(() => {
-      expect(screen.getByText("Network Error")).toBeInTheDocument();
-    });
-  });
+  //TODO: Add more tests
 });

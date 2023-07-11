@@ -9,7 +9,7 @@ exports[`Button renders correctly 1`] = `
     onClick={[Function]}
     style={
       Object {
-        "backgroundColor": "#828FA3",
+        "background": undefined,
         "color": undefined,
         "width": "100%",
       }
