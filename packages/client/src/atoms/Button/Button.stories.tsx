@@ -19,30 +19,6 @@ const meta: Meta<typeof Button> = {
         type: "text",
       },
     },
-    background: {
-      name: "Background style",
-      type: {
-        name: "string",
-        required: false,
-      },
-      defaultValue: 'rgba(0, 128, 0, 0.3)',
-      description: "Background color",
-      control: {
-        type: "text",
-      },
-    },
-    textColor: {
-      name: "Text color",
-      type: {
-        name: "string",
-        required: false,
-      },
-      defaultValue: "white",
-      description: "Text color",
-      control: {
-        type: "text",
-      },
-    },
     onClick: {
       name: "onClick",
       type: {
@@ -70,6 +46,5 @@ type Story = StoryObj<typeof Button>;
 export const Default: Story = {
   args: {
     text: "Click me",
-    textColor: "white",
   },
 };
