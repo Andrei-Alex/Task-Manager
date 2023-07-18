@@ -1,15 +1,5 @@
 @import '../../styles/variables';
 
 .button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border-radius: 12px;
-  height: 50px;
-  font-size: 1.2rem;
-  font-weight: 700;
-  color: white;
-  font-family: $fontPrimary;
-  border: none;
-  background: $gradientPrimary;
+  padding: 10px;
 }
