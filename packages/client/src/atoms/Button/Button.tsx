@@ -1,5 +1,6 @@
 import React from "react";
 import { styles, IButton } from "./index";
+import { Button as MantineButton } from '@mantine/core';
 
 /**
  * Render a button with custom styles
@@ -12,8 +13,6 @@ import { styles, IButton } from "./index";
  *         buttonType="button"
  *         containerStyle={{ marginTop: '10px' }}
  *         text="Click me!"
- *         background="rgba(0, 128, 0, 0.3)"
- *         textColor="#FFFFFF"
  *         onClick={handleClick}
  *       />
  * ```
@@ -22,34 +21,28 @@ import { styles, IButton } from "./index";
  * @param {number} width - Button Width
  * @param {string} ButtonType - Button type
  * @param {number} containerStyle - Extend/overwrite container Style
- * @param {string} background - CSS property
- * @param {string} textColor - Text color
  * @param {function} onClick - Callback function
  * @return {JSX} Display Button
  */
 export const Button: React.FC<IButton> = ({
   width = "100%",
-  buttonType = "submit",
+  type = "button",
   containerStyle,
   text,
-  background,
-  textColor,
   onClick = () => null,
+  variant='filled',
+  loading= false,
+  disabled = false,
+  size= 'md',
+  gradient = { from: 'indigo', to: 'cyan' },
+  color= 'lime',
+  fullWidth=true,
 }) => {
+    const props = {type, loading, disabled, variant, size, color, gradient, fullWidth}
+
   return (
-    <div style={{ ...containerStyle }}>
-      <button
-        type={buttonType}
-        onClick={() => onClick()}
-        className={styles.button}
-        style={{
-          width: `${width}`,
-            background: background,
-          color: textColor,
-        }}
-      >
-        {text}
-      </button>
+    <div style={{ width: width, ...containerStyle }}>
+        <MantineButton onClick={()=>onClick()} {...props} fullWidth={true}  >{!loading && text}</MantineButton>
     </div>
   );
 };

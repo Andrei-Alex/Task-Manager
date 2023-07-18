@@ -125,7 +125,7 @@ export const Form: React.FC<IForm> = ({
             error={confirmMessage?.errorMsg}
           />
           <Button
-            buttonType={"submit"}
+            type={"submit"}
             text={"Submit"}
             containerStyle={{ width: "100%" }}
           />
