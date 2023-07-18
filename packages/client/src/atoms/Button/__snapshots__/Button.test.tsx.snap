@@ -2,6 +2,7 @@
 
 exports[`Button renders correctly 1`] = `
 <div
+  className="button"
   style={
     Object {
       "width": "100%",
