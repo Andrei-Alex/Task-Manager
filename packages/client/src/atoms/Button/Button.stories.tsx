@@ -45,6 +45,10 @@ type Story = StoryObj<typeof Button>;
 
 export const Default: Story = {
   args: {
+    variant:'gradient',
+    gradient:{from: 'blue', to: "purple"},
+    type:"submit",
+    color: 'blue',
     text: "Click me",
   },
 };

@@ -125,6 +125,8 @@ export const Form: React.FC<IForm> = ({
             error={confirmMessage?.errorMsg}
           />
           <Button
+            variant={'gradient'}
+            gradient={{from: 'blue', to: "purple"}}
             type={"submit"}
             text={"Submit"}
             containerStyle={{ width: "100%" }}
