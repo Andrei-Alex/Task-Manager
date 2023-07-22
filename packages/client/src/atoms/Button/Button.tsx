@@ -61,7 +61,9 @@ export const Button: React.FC<IButton> = ({
 
   return (
     <div className={styles.button} style={{ width: width, ...containerStyle }}>
-        <MantineButton onClick={()=>onClick()} {...props} fullWidth={true}  >{!loading && text}</MantineButton>
+        <MantineButton onClick={()=> {
+          !loading && onClick()
+        }} {...props} fullWidth={true}  >{!loading && text}</MantineButton>
     </div>
   );
 };

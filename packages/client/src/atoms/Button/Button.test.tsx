@@ -17,7 +17,7 @@ describe("Button", () => {
     const button = screen.getByText("Click here");
     expect(button).toBeInTheDocument();
   });
-  it("should have container class", () => {
+  it("should have mantine class", () => {
     render(<Button text={"Click here"} type={"button"} />);
     const button = screen.getByText("Click here");
     expect(button).toHaveClass(`mantine-1ryt1ht mantine-Button-label
@@ -33,6 +33,22 @@ describe("Button", () => {
       <Button text={"Click here"} onClick={handleClick} type={"button"} />
     );
     const button = screen.getByText("Click here");
+    fireEvent.click(button);
+    expect(handleClick).toBeCalledTimes(1);
+  });
+  it("should NOT call onClick function if disabled", async () => {
+    render(
+        <Button text={"Click here"} onClick={handleClick} type={"button"} disabled={true} />
+    );
+    const button = screen.getByRole('button')
+    fireEvent.click(button);
+    expect(handleClick).toBeCalledTimes(1);
+  });
+  it("should NOT call onClick function if loading", async () => {
+    render(
+        <Button text={"Click here"} onClick={handleClick} type={"button"} loading={true} />
+    );
+    const button = screen.getByRole('button')
     fireEvent.click(button);
     expect(handleClick).toBeCalledTimes(1);
   });
