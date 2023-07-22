@@ -3,12 +3,15 @@ import { styles, IButton } from "./index";
 import { Button as MantineButton } from '@mantine/core';
 
 /**
- * The Button component is a reusable React component that provides a customizable
- * button element with various properties and styles. It supports features such as setting
- * the width, type, container style, text content, click event handler, variant,
- * loading state, disabled state, size, color gradient, and full-width behavior.
- * By utilizing these props, you can easily create and customize buttons in your
- * React application for different purposes and styling requirements
+ * The Button component is a versatile and reusable React component that provides
+ * a customizable button element with various properties and styles.
+ * It empowers developers to easily create and customize buttons for different purposes
+ * and styling requirements within their React applications.
+ * With the Button component, you can easily create visually appealing and interactive buttons,
+ * tailored to the application's specific requirements.
+ *
+ * The Button component utilizes the React.Memo higher-order component (HOC) along with a custom
+ * comparison function to optimize its rendering performance.
  *
  * ## Usage
  *
@@ -28,7 +31,7 @@ import { Button as MantineButton } from '@mantine/core';
  *         fullWidth={true}
  *       />
  * ```
- * @Component Button render a Mantine button
+ * @Component Button - render a Mantine button
  * @param {string} width - The width of the button. Default is "100%".
  * @param {string} type - The type of the button. Default is "button".
  * @param {object} containerStyle - Additional CSS styles for the container element.
@@ -58,7 +61,6 @@ export const Button: React.FC<IButton> = ({
   fullWidth=true,
 }) => {
     const props = {type, loading, disabled, variant, size, color, gradient, fullWidth}
-
   return (
     <div className={styles.button} style={{ width: width, ...containerStyle }}>
         <MantineButton onClick={()=> {
@@ -68,4 +70,28 @@ export const Button: React.FC<IButton> = ({
   );
 };
 
-export default Button;
+function PropsAreEqual(prevProps: IButton, nextProps: IButton) {
+  if (
+      prevProps.width !== nextProps.width ||
+      prevProps.type !== nextProps.type ||
+      prevProps.text !== nextProps.text ||
+      prevProps.variant !== nextProps.variant ||
+      prevProps.loading !== nextProps.loading ||
+      prevProps.disabled !== nextProps.disabled ||
+      prevProps.size !== nextProps.size ||
+      prevProps.color !== nextProps.color ||
+      prevProps.fullWidth !== nextProps.fullWidth
+  ) {
+    return false;
+  }
+  if (
+      JSON.stringify(prevProps.gradient) !== JSON.stringify(nextProps.gradient)
+  ) {
+    return false;
+  }
+  if (prevProps.onClick !== nextProps.onClick) {
+    return false;
+  }
+  return true;
+}
+export default React.memo(Button, PropsAreEqual);
