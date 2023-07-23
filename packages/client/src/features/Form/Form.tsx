@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, {useCallback, useEffect, useState} from "react";
 import { Button } from "../../atoms";
 import { Input } from "../../components";
 import { IInput } from "../../components/Input";
@@ -81,6 +81,10 @@ export const Form: React.FC<IForm> = ({
     reset();
     submitHandler(data);
   };
+  const onChangeHandler = () => {
+    confirmMessageHandler &&
+    confirmMessageHandler({ successMsg: null, errorMsg: null });
+  }
 
   return (
     <div className={styles.container}>
@@ -90,10 +94,7 @@ export const Form: React.FC<IForm> = ({
           {inputs.map((input: IInput) => (
             <div key={input.id}>
               <Input
-                onChangeHandler={() => {
-                  confirmMessageHandler &&
-                    confirmMessageHandler({ successMsg: null, errorMsg: null });
-                }}
+                onChangeHandler={onChangeHandler}
                 width={input.width}
                 icon={input.icon}
                 register={{ ...register(input.id) }}

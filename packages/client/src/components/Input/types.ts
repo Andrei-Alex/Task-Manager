@@ -12,4 +12,5 @@ export interface IInput {
   icon?: Icons;
   onChangeHandler?: () => void;
   dataTestId?: string;
+  [key: string]: (() => void) | string | boolean | CustomStyles | undefined;
 }

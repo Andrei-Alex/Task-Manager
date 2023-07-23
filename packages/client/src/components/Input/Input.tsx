@@ -1,4 +1,4 @@
-import React from "react";
+import React, {useEffect} from "react";
 import { styles, IInput } from "./index";
 import { Icon } from "../../atoms";
 
@@ -63,4 +63,19 @@ export const Input: React.FC<IInput> = ({
   );
 };
 
-export default Input;
+
+function PropsAreEqual(prevProps: IInput, nextProps: IInput) {
+
+    if (prevProps.onChangeHandler?.toString() !== nextProps.onChangeHandler?.toString() ||
+        prevProps?.register?.toString() !== nextProps?.register?.toString()) {
+        return false;
+    }
+    for (const [key] of Object.entries(prevProps)) {
+        if(prevProps[key] !== 'register' && prevProps[key] !== 'onChangeHandler') {
+            if (prevProps[key] !== nextProps[key]) return false;
+        }
+    }
+    return true;
+}
+
+export default React.memo(Input, PropsAreEqual);
