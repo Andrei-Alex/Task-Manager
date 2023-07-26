@@ -12,7 +12,7 @@ exports[`NavLinks renders correctly 1`] = `
       onMouseEnter={[Function]}
       onTouchStart={[Function]}
     >
-      Main Title
+      Home
     </a>
   </li>
   <li>
@@ -23,7 +23,7 @@ exports[`NavLinks renders correctly 1`] = `
       onMouseEnter={[Function]}
       onTouchStart={[Function]}
     >
-      Second Title
+      Board
     </a>
   </li>
 </ul>
