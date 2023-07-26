@@ -43,8 +43,6 @@ describe("NavLinks", () => {
         fireEvent.click(linkElement);
         expect(mockHandleLinkClick).toHaveBeenCalledTimes(1);
         expect(mockHandleLinkClick).toHaveBeenCalledWith('/PageOne');
-
-
     });
 });
 

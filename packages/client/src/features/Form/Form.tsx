@@ -34,8 +34,7 @@ import Link from "next/link";
  *  *     },
  *  *   ]}
  *  *   submitHandler={(data) => {
- *  *     // Handle form submission
- *  *     console.log(data);
+ *  *     handler(data)
  *  *   }}
  *  *   title="Login Form"
  *  *   resolverSchema={yourResolverSchema}
@@ -44,8 +43,7 @@ import Link from "next/link";
  *  *     errorMsg: "Error submitting form",
  *  *   }}
  *  *   confirmMessageHandler={(message) => {
- *  *     // Handle confirm message display
- *  *     console.log(message);
+ *  *     handler(message)
  *  *   }}
  *  *   linkMsg="Forgot password?"
  *  *   navigateTo="/forgot-password"
