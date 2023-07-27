@@ -1,10 +1,10 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import React from "react";
-import {Input} from "./Input";
+import {TextInput} from "./TextInput";
 
-const meta: Meta<typeof Input> = {
-  component: Input,
-  title: "Components/Input",
+const meta: Meta<typeof TextInput> = {
+  component: TextInput,
+  title: "Components/TextInput",
   tags: ["autodocs"],
   argTypes: {
     label: {
@@ -63,7 +63,7 @@ const meta: Meta<typeof Input> = {
         name: "string",
         required: true,
       },
-      description: "Input ID",
+      description: "TextInput ID",
       control: {
         type: "text",
       },
@@ -71,7 +71,7 @@ const meta: Meta<typeof Input> = {
   },
 };
 export default meta;
-type Story = StoryObj<typeof Input>;
+type Story = StoryObj<typeof TextInput>;
 
 export const Default: Story = {
   args: {

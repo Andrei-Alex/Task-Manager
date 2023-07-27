@@ -1,14 +1,15 @@
 import React from "react";
 import { styles, IInput } from "./index";
 import { Icon } from "../../atoms";
+import { Input } from '@mantine/core';
 
 /**
- * The Input component is a custom React functional component designed to render an input field
+ * The TextInput component is a custom React functional component designed to render an input field
  * with various optional features such as an icon, label, and validation.
  * This component is designed to be highly flexible and can be easily integrated into various React applications.
  *
- * The Input component is wrapped in React.memo, which is a higher-order component used for performance optimization.
- * It prevents unnecessary re-renders of the Input component when the props remain the same.
+ * The TextInput component is wrapped in React.memo, which is a higher-order component used for performance optimization.
+ * It prevents unnecessary re-renders of the TextInput component when the props remain the same.
  * The PropsAreEqual function is used as the second argument to React.memo and customizes the comparison of props.
  *
  * The PropsAreEqual function compares the prevProps and nextProps to determine if the component should re-render.
@@ -17,9 +18,9 @@ import { Icon } from "../../atoms";
  *
  * ## Usage
  * ```jsx
- *   <Input
+ *   <TextInput
  *         icon="icon-name"
- *         label="Input Label"
+ *         label="TextInput Label"
  *         required={true}
  *         width="300px"
  *         placeholder="Enter your input here"
@@ -29,6 +30,7 @@ import { Icon } from "../../atoms";
  *         onChangeHandler={handleInputChange}
  *       />
  * ```
+ * TODO: Create Tooltip
  * @param {string} icon Icon name
  * @param {string} label Text label
  * @param {boolean} required If true add *
@@ -38,9 +40,9 @@ import { Icon } from "../../atoms";
  * @param {object} containerStyle style object
  * @param {object} register react-hook-form object
  * @param {function} onChangeHandler onChange handler
- * @return {JSX} Display Label with conditional * and Input
+ * @return {JSX} Display Label with conditional * and TextInput
  */
-export const Input: React.FC<IInput> = ({
+export const TextInput: React.FC<IInput> = ({
   icon,
   label,
   required = false,
@@ -60,17 +62,13 @@ export const Input: React.FC<IInput> = ({
         <p className={styles.alert}> {required && " *"}</p>
       </div>
       <div className={styles.inputContainer}>
-        {icon ? (
-          <i className={styles.iconContainer}>
-            <Icon iconName={icon} color={"rgba(205,0,185,1)"} size={22} />
-          </i>
-        ) : null}
-        <input
+          <Input
           onKeyDown={() => {
             if (onChangeHandler) {
               onChangeHandler();
             }
           }}
+          icon={<Icon iconName={icon} color={"rgba(205,0,185,1)"} size={22} />}
           className={styles.input}
           style={{ width: width }}
           placeholder={placeholder}
@@ -96,4 +94,4 @@ function PropsAreEqual(prevProps: IInput, nextProps: IInput) {
     return true;
 }
 
-export default React.memo(Input, PropsAreEqual);
+export default React.memo(TextInput, PropsAreEqual);

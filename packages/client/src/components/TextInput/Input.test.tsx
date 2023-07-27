@@ -1,7 +1,7 @@
 import React from "react";
 import { fireEvent, render } from "@testing-library/react";
 import { screen } from "@testing-library/dom";
-import Input from "./Input";
+import Input from "./TextInput";
 import renderer from "react-test-renderer";
 
 const setup = () => {

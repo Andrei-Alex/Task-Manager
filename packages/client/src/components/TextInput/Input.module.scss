@@ -16,25 +16,14 @@
   color: $darkGray;
 }
 .inputContainer {
-  position: relative;
 }
 .input {
-  background-color: white;
-  color: $darkGray;
-  border: none;
-  outline: none;
-  border-bottom: 1px solid rgba(205,0,185,1);
-  padding-left: 35px;
-  padding-bottom: 10px;
-  font-family: $fontPrimary;
-  font-weight: 700;
-  font-size: 16px;
-  &:focus {
-    outline-color: transparent;
-  }
+
 }
 .iconContainer {
   position: absolute;
+  left: 40px;
+  bottom: 17.5px;
   z-index: 1;
 }
 .alert {

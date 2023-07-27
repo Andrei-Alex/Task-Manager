@@ -1,7 +1,7 @@
 import React, {useCallback, useEffect, useState} from "react";
 import { Button } from "../../atoms";
 import { Input } from "../../components";
-import { IInput } from "../../components/Input";
+import { IInput } from "../../components/TextInput";
 import { IForm, styles } from "./index";
 import { FieldValues, useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
