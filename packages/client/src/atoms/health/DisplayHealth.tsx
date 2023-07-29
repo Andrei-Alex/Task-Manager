@@ -1,24 +1,30 @@
 import styles from './DisplayHealth.module.scss';
 import { IHealthResponse } from '../../services';
+import React from "react";
 
 /**
- * Display status of health point.
+ * The DisplayHealth component takes a single prop:
+ * status (string): The health status information to be displayed.
+ * If provided, it will be shown in the component. If not provided (or set to null or undefined),
+ * the component will display the default message "No status."
+ *
+ * The DisplayHealth component is memoized using React.memo, which means it will only re-render if
+ * its props have changed.
  *
  * ## Usage
  * ```jsx
- * <div>
- *  <p>Status</p>
- * </div>
+ * <DisplayHealth status={healthStatus} />
  * ```
+ * @Component DisplayHealth - Render  health status
  * @param {string} status - Fetched status as string
  * @return {JSX} Display text in JSX elements
  */
 export const DisplayHealth = ({ status }: IHealthResponse) => {
   return (
     <div className={styles['container']}>
-      <p>Status : {status || 'No status'}</p>
+        <p>Status:</p><p>{status || 'No status'}</p>
     </div>
   );
 };
 
-export default DisplayHealth;
+export default React.memo(DisplayHealth);

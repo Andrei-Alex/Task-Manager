@@ -1,6 +1,6 @@
 import type { Meta, StoryObj } from "@storybook/react";
 import React from "react";
-import Button from "./Button";
+import {Button} from "./Button";
 
 const meta: Meta<typeof Button> = {
   component: Button,
@@ -15,30 +15,6 @@ const meta: Meta<typeof Button> = {
       },
       defaultValue: "Click",
       description: "Display text",
-      control: {
-        type: "text",
-      },
-    },
-    background: {
-      name: "Background style",
-      type: {
-        name: "string",
-        required: false,
-      },
-      defaultValue: 'rgba(0, 128, 0, 0.3)',
-      description: "Background color",
-      control: {
-        type: "text",
-      },
-    },
-    textColor: {
-      name: "Text color",
-      type: {
-        name: "string",
-        required: false,
-      },
-      defaultValue: "white",
-      description: "Text color",
       control: {
         type: "text",
       },
@@ -69,7 +45,10 @@ type Story = StoryObj<typeof Button>;
 
 export const Default: Story = {
   args: {
+    variant:'gradient',
+    gradient:{from: 'blue', to: "purple"},
+    type:"submit",
+    color: 'blue',
     text: "Click me",
-    textColor: "white",
   },
 };

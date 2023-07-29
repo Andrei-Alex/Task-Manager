@@ -1,5 +1,5 @@
 import * as yup from "yup";
-import { IInput } from "@/components/Input";
+import { IInput } from "@/components/TextInput";
 
 const loginFields = {
   username: yup

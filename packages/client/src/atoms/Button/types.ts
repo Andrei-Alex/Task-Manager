@@ -1,13 +1,17 @@
 import { CustomStyles } from "../../../../libs/sharedTypes/styles";
-import {types} from "sass";
-import Color = types.Color;
 
 export interface IButton {
   text: string;
-  background?: string | undefined;
-  textColor?: string;
-  onClick?: Function;
+  onClick?: () => void;
   width?: number;
-  buttonType: "submit" | "button" | "reset" | undefined;
+  type: "submit" | "button" | "reset" | undefined;
   containerStyle?: CustomStyles;
+  variant?: "outline" | "white" | "light" | "default" | "filled" | "gradient" | "subtle";
+  loading?: boolean;
+  disabled?: boolean;
+  size?: "xs" | "sm" | "md" | "lg" | "xl"
+  color?:  string;
+  gradient?:  {from: string, to: string};
+  fullWidth?: boolean;
+
 }

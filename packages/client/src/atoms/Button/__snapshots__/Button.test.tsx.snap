@@ -2,21 +2,34 @@
 
 exports[`Button renders correctly 1`] = `
 <div
-  style={Object {}}
+  className="button"
+  style={
+    Object {
+      "width": "100%",
+    }
+  }
 >
   <button
-    className="button"
+    className="mantine-UnstyledButton-root mantine-Button-root mantine-1w95i7y"
+    data-button={true}
+    disabled={false}
     onClick={[Function]}
-    style={
-      Object {
-        "background": undefined,
-        "color": undefined,
-        "width": "100%",
-      }
-    }
     type="button"
   >
-    Click here
+    <div
+      className="mantine-1wpc1xj mantine-Button-inner"
+    >
+      <span
+        className="mantine-1ryt1ht mantine-Button-label"
+        style={
+          Object {
+            "textTransform": undefined,
+          }
+        }
+      >
+        Click here
+      </span>
+    </div>
   </button>
 </div>
 `;

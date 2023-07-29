@@ -1,5 +1,5 @@
 import { AnyObject, ObjectSchema } from "yup";
-import type { IInput } from "@/components/Input";
+import type { IInput } from "@/components/TextInput";
 import { FieldValue, FieldValues } from "react-hook-form";
 import { ConfirmMessage } from "@/hooks/authentication/types";
 

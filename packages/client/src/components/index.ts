@@ -1,3 +1,3 @@
-export { default as Input } from "./Input/Input";
-export { default as ConfirmMessage } from "./ConfirmMessage/ConfirmMessage";
+export { default as Input } from "./TextInput/TextInput";
+export { default as ConfirmMessage } from "../atoms/ConfirmMessage/ConfirmMessage";
 export { default as Header } from "./Header/Header";

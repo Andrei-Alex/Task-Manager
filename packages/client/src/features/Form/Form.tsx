@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from "react";
+import React, {useCallback, useEffect, useState} from "react";
 import { Button } from "../../atoms";
 import { Input } from "../../components";
-import { IInput } from "../../components/Input";
+import { IInput } from "../../components/TextInput";
 import { IForm, styles } from "./index";
 import { FieldValues, useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
@@ -34,8 +34,7 @@ import Link from "next/link";
  *  *     },
  *  *   ]}
  *  *   submitHandler={(data) => {
- *  *     // Handle form submission
- *  *     console.log(data);
+ *  *     handler(data)
  *  *   }}
  *  *   title="Login Form"
  *  *   resolverSchema={yourResolverSchema}
@@ -44,8 +43,7 @@ import Link from "next/link";
  *  *     errorMsg: "Error submitting form",
  *  *   }}
  *  *   confirmMessageHandler={(message) => {
- *  *     // Handle confirm message display
- *  *     console.log(message);
+ *  *     handler(message)
  *  *   }}
  *  *   linkMsg="Forgot password?"
  *  *   navigateTo="/forgot-password"
@@ -81,6 +79,10 @@ export const Form: React.FC<IForm> = ({
     reset();
     submitHandler(data);
   };
+  const onChangeHandler = () => {
+    confirmMessageHandler &&
+    confirmMessageHandler({ successMsg: null, errorMsg: null });
+  }
 
   return (
     <div className={styles.container}>
@@ -90,10 +92,7 @@ export const Form: React.FC<IForm> = ({
           {inputs.map((input: IInput) => (
             <div key={input.id}>
               <Input
-                onChangeHandler={() => {
-                  confirmMessageHandler &&
-                    confirmMessageHandler({ successMsg: null, errorMsg: null });
-                }}
+                onChangeHandler={onChangeHandler}
                 width={input.width}
                 icon={input.icon}
                 register={{ ...register(input.id) }}
@@ -125,7 +124,9 @@ export const Form: React.FC<IForm> = ({
             error={confirmMessage?.errorMsg}
           />
           <Button
-            buttonType={"submit"}
+            variant={'gradient'}
+            gradient={{from: 'blue', to: "purple"}}
+            type={"submit"}
             text={"Submit"}
             containerStyle={{ width: "100%" }}
           />

@@ -1,0 +1,56 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Input renders correctly 1`] = `
+<div
+  className="container"
+  style={Object {}}
+>
+  <div
+    className="labelContainer"
+  >
+    <label
+      className="label"
+      htmlFor="label"
+    >
+      Label
+    </label>
+    <p
+      className="alert"
+    >
+       
+    </p>
+  </div>
+  <div
+    className="inputContainer"
+  >
+    <div
+      className="mantine-Input-wrapper input mantine-1v7s5f8"
+      style={
+        Object {
+          "width": "100%",
+        }
+      }
+    >
+      <div
+        className="mantine-16k3d8y mantine-Input-icon"
+      >
+        <div
+          style={
+            Object {
+              "height": "22px",
+            }
+          }
+        />
+      </div>
+      <input
+        aria-invalid={false}
+        className="mantine-Input-input mantine-gszoqu"
+        data-with-icon={true}
+        id="label"
+        onKeyDown={[Function]}
+        placeholder="My Placeholder"
+      />
+    </div>
+  </div>
+</div>
+`;
