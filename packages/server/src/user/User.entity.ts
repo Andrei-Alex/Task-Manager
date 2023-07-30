@@ -1,4 +1,12 @@
-import { Entity, PrimaryGeneratedColumn, Column, Index } from 'typeorm';
+import {
+  Entity,
+  PrimaryGeneratedColumn,
+  Column,
+  Index,
+  ManyToMany,
+  JoinTable,
+} from 'typeorm';
+import { Board } from '../board/board.entity';
 @Entity()
 export class User {
   @PrimaryGeneratedColumn()
@@ -12,4 +20,9 @@ export class User {
     unique: true,
   })
   email: string;
+  @ManyToMany(() => Board, (board) => board.members, {
+    cascade: true,
+  })
+  @JoinTable()
+  boards: Board[];
 }
