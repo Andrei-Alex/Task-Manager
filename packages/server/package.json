@@ -21,7 +21,7 @@
     "typeormSrc": "typeorm-ts-node-esm -d src/typeOrm.config.ts",
     "typeorm": "typeorm-ts-node-esm",
     "run-migration": "yarn typeormSrc -- migration:run",
-    "generate-migration": "yarn typeormSrc migration:generate",
+    "generate-migration": "yarn typeorm -- migration:generate",
     "show-migration": "yarn typeormSrc migration:show",
     "create-migration": "yarn typeorm -- migration:create ./src/migrations/mig"
   },

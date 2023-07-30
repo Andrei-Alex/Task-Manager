@@ -1,9 +1,11 @@
 import { ConfigService, registerAs } from '@nestjs/config';
 import { DataSourceOptions } from 'typeorm';
-import { migrations1668411426720 } from './migrations/1670173571238-Users';
+
 import { User } from './user/User.entity';
 import { Board } from './board/board.entity';
 import { BoardColumn } from './column/column.entity';
+import { migrations1690728646371 } from './migrations/migrations1690728646371';
+
 const configService = new ConfigService();
 
 export default registerAs('database', () => {
@@ -20,7 +22,7 @@ export default registerAs('database', () => {
     autoLoadEntities: true,
     // TODO: Change entities and migrations imports
     entities: [User, Board, BoardColumn],
-    migrations: [migrations1668411426720],
+    migrations: [migrations1690728646371],
     cli: {
       migrationsDir: 'src/migrations',
     },
