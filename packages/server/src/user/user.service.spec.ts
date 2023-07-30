@@ -1,65 +1,49 @@
 import { Test } from '@nestjs/testing';
 import { UserService } from './user.service';
-import {
-  Connection,
-  createConnection,
-  getConnection,
-  getRepository,
-  Repository,
-} from 'typeorm';
 import { User } from './User.entity';
-import { ConfigService } from '@nestjs/config';
-const configService = new ConfigService();
-import { getRepositoryToken } from '@nestjs/typeorm';
 
-// TODO: Change DB connection to DataSource
 describe('UserService', () => {
-  let repository: Repository<User>;
+  // TODO: No reason for findById to return array
   let service: UserService;
-  let connection: Connection;
   beforeEach(async () => {
-    connection = await createConnection({
-      type: 'postgres',
-      logging: true,
-      database: configService.get('DB_DATABASE'),
-      host: configService.get('DB_HOST'),
-      port: Number(configService.get('DB_PORT')),
-      username: configService.get('DB_USER'),
-      password: String(configService.get('DB_PASSWORD')),
-      synchronize: false,
-      entities: [User],
-    });
-    repository = getRepository(User);
-    const testingModule = await Test.createTestingModule({
+    const fakeUserService: Partial<UserService> = {
+      findAll: () => Promise.resolve([]),
+      findByMail: (email: string) =>
+        Promise.resolve([
+          {
+            full_name: 'Jest',
+            password: 'unit-test',
+            email: `jest@mail.com`,
+          },
+        ] as User[]),
+      create: (full_name: string, password: string, email: string) =>
+        Promise.resolve({
+          full_name: full_name,
+          password: password,
+          email: email,
+        } as User),
+    };
+    const module = await Test.createTestingModule({
       providers: [
         UserService,
         {
-          provide: getRepositoryToken(User, connection),
-          useFactory: () => {
-            return repository;
-          },
+          provide: UserService,
+          useValue: fakeUserService,
         },
       ],
     }).compile();
-    service = testingModule.get<UserService>(UserService);
-    return connection;
+    service = module.get(UserService);
   });
-
-  afterEach(async () => {
-    await getConnection().close();
-  });
-
-  const payload = {
-    full_name: 'Jest',
-    password: 'unit-test',
-    email: `jest@mail.com`,
-  };
-
-  it('should be defined', () => {
+  it('Create an instance of userService', async () => {
     expect(service).toBeDefined();
   });
 
   it('should create user', async () => {
+    const payload = {
+      full_name: 'Jest',
+      password: 'unit-test',
+      email: `jest@mail.com`,
+    };
     const user = await service.create(
       payload.full_name,
       payload.password,
@@ -68,9 +52,8 @@ describe('UserService', () => {
     expect(user).toMatchObject(payload);
   });
 
-  // TODO: Create user and then search
-  it('should find user', async () => {
-    const user: User[] = await service.findByMail('john@mail.com');
-    expect(user[0].full_name).toBe('john');
+  it('should find and return user', async () => {
+    const user: User[] = await service.findByMail('Jest@mail.com');
+    expect(user[0].full_name).toBe('Jest');
   });
 });

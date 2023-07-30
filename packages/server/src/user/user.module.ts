@@ -10,7 +10,6 @@ import { User } from './User.entity';
 import { UserService } from './user.service';
 import { PassportModule } from '@nestjs/passport';
 import { EncryptionService } from '../auth/encryption.service';
-import { JwtAuthGuard } from '../auth/jwt-auth.guard';
 
 @Module({
   imports: [
