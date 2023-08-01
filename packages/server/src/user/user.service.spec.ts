@@ -3,26 +3,27 @@ import { UserService } from './user.service';
 import { User } from './User.entity';
 
 describe('UserService', () => {
-  // TODO: No reason for findById to return array
+  const payload = {
+    full_name: 'Jest',
+    password: 'unit-test',
+    email: `jest@mail.com`,
+  };
+  let users: User[] = [];
   let service: UserService;
+  const fakeUserService: Partial<UserService> = {
+    findByMail: (email: string) =>
+      Promise.resolve(users.filter((user: User) => user.email === email)),
+    create: (full_name: string, password: string, email: string) => {
+      const user = {
+        full_name: full_name,
+        password: password,
+        email: email,
+      } as User;
+      users = [...users, user];
+      return Promise.resolve(user);
+    },
+  };
   beforeEach(async () => {
-    const fakeUserService: Partial<UserService> = {
-      findAll: () => Promise.resolve([]),
-      findByMail: (email: string) =>
-        Promise.resolve([
-          {
-            full_name: 'Jest',
-            password: 'unit-test',
-            email: `jest@mail.com`,
-          },
-        ] as User[]),
-      create: (full_name: string, password: string, email: string) =>
-        Promise.resolve({
-          full_name: full_name,
-          password: password,
-          email: email,
-        } as User),
-    };
     const module = await Test.createTestingModule({
       providers: [
         UserService,
@@ -37,13 +38,7 @@ describe('UserService', () => {
   it('Create an instance of userService', async () => {
     expect(service).toBeDefined();
   });
-
   it('should create user', async () => {
-    const payload = {
-      full_name: 'Jest',
-      password: 'unit-test',
-      email: `jest@mail.com`,
-    };
     const user = await service.create(
       payload.full_name,
       payload.password,
@@ -51,9 +46,12 @@ describe('UserService', () => {
     );
     expect(user).toMatchObject(payload);
   });
-
   it('should find and return user', async () => {
-    const user: User[] = await service.findByMail('Jest@mail.com');
-    expect(user[0].full_name).toBe('Jest');
+    const user = await service.findByMail('jest@mail.com');
+    expect(user[0]).toMatchObject(payload);
+  });
+  it('should not find and return user', async () => {
+    const user = await service.findByMail('Jest@mail.com');
+    expect(user.length).toBe(0);
   });
 });
