@@ -13,7 +13,7 @@ env:
   DB_HOST: postgres
   DB_PORT: 5432
   DB_PASSWORD: postgres
-  DB_DATABASE: postgres
+  DB_DATABASE: testing
   DB_USER: postgres
   SECRET_KEY: SECRET
   BCRYPT_ROUNDS: 10
