@@ -14,7 +14,7 @@ describe('HealthController', () => {
     await app.init();
   });
 
-  it('/health  (GET)', () => {
+  it('should return status up (for testing db)', () => {
     return request(app.getHttpServer())
       .get('/health')
       .expect({
