@@ -1,15 +1,31 @@
 version: '3.9'
 services:
-  db:
+  dev:
     image: postgres:14.1-alpine
     restart: always
     environment:
       - POSTGRES_PASSWORD=postgres
       - POSTGRES_USER=postgres
+      - POSTGRES_DB=dev
+    ports:
+      - '5433:5432'
+    volumes:
+      - dev_db:/var/lib/postgresql/data
+  testing:
+    image: postgres:14.1-alpine
+    restart: always
+    environment:
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_USER=postgres
+      - POSTGRES_DB=testing
     ports:
       - '5432:5432'
     volumes:
-      - db:/var/lib/postgresql/data
+      - testing_db:/var/lib/postgresql/data
+
 volumes:
-  db:
+  dev_db: # Named volume for the 'dev' service
     driver: local
+  testing_db: # Named volume for the 'testing' service
+    driver: local
+
