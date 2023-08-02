@@ -2,7 +2,8 @@ import { Test, TestingModule } from '@nestjs/testing';
 import * as request from 'supertest';
 import { INestApplication } from '@nestjs/common';
 import { AppModule } from '../app.module';
-
+import { ConfigService } from '@nestjs/config';
+const configService = new ConfigService();
 describe('HealthController', () => {
   let app: INestApplication;
 
@@ -15,13 +16,14 @@ describe('HealthController', () => {
   });
 
   it('should return status up (for testing db)', () => {
+    const db = configService.get('DB_DATABASE');
     return request(app.getHttpServer())
       .get('/health')
       .expect({
         status: 'ok',
-        info: { testing: { status: 'up' } },
+        info: { [db]: { status: 'up' } },
         error: {},
-        details: { testing: { status: 'up' } },
+        details: { [db]: { status: 'up' } },
       });
   });
 });
