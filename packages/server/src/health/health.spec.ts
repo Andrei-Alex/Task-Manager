@@ -15,7 +15,7 @@ describe('HealthController', () => {
     await app.init();
   });
   describe('Health Check', () => {
-    it('should return status up (for testing db)', () => {
+    it('should return status up', () => {
       const db = configService.get('DB_DATABASE');
       return request(app.getHttpServer())
         .get('/health')
