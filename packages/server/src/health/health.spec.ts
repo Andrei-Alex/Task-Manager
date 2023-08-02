@@ -14,16 +14,17 @@ describe('HealthController', () => {
     app = moduleFixture.createNestApplication();
     await app.init();
   });
-
-  it('should return status up (for testing db)', () => {
-    const db = configService.get('DB_DATABASE');
-    return request(app.getHttpServer())
-      .get('/health')
-      .expect({
-        status: 'ok',
-        info: { [db]: { status: 'up' } },
-        error: {},
-        details: { [db]: { status: 'up' } },
-      });
+  describe('Health Check', () => {
+    it('should return status up (for testing db)', () => {
+      const db = configService.get('DB_DATABASE');
+      return request(app.getHttpServer())
+        .get('/health')
+        .expect({
+          status: 'ok',
+          info: { [db]: { status: 'up' } },
+          error: {},
+          details: { [db]: { status: 'up' } },
+        });
+    });
   });
 });
