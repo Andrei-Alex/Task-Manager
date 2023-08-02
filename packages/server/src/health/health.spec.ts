@@ -19,9 +19,9 @@ describe('HealthController', () => {
       .get('/health')
       .expect({
         status: 'ok',
-        info: { postgres: { status: 'up' } },
+        info: { testing: { status: 'up' } },
         error: {},
-        details: { postgres: { status: 'up' } },
+        details: { testing: { status: 'up' } },
       });
   });
 });

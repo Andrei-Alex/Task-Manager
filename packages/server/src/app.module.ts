@@ -8,12 +8,16 @@ import { AppService } from './app.service';
 import { UserModule } from './user/user.module';
 import { AppDataModule } from './appData/appData.module';
 import { BoardModule } from './board/board.module';
+import * as dotenv from 'dotenv';
+dotenv.config();
+console.log('test');
+console.log(process.env.NODE_ENV);
 
 @Module({
   imports: [
     ConfigModule.forRoot({
       isGlobal: true,
-      envFilePath: '../.env',
+      envFilePath: `.env.${process.env.NODE_ENV}`,
       load: [dbConfiguration],
     }),
     TypeOrmModule.forRootAsync({
