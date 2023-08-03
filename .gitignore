@@ -1,5 +1,8 @@
 node_modules/
 .env
+.env.dev
+.env.testing
+.env.prod
 *.log
 dist
 .idea/workspace.xml
