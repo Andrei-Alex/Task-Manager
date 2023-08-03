@@ -20,7 +20,7 @@
     "test:e2e": "cross-env NODE_ENV=testing jest --config ./test/jest-e2e.json",
     "typeormSrc": "typeorm-ts-node-esm -d src/typeOrm.config.ts",
     "typeorm": "typeorm-ts-node-esm",
-    "run-migration": "yarn typeormSrc -- migration:run",
+    "run-migration": "cross-env NODE_ENV=dev yarn typeormSrc -- migration:run",
     "generate-migration": "yarn typeorm -- migration:generate ./src/typeOrm.config.ts",
     "show-migration": "yarn typeormSrc migration:show",
     "create-migration": "yarn typeorm -- migration:create ./src/migrations/mig"
