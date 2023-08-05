@@ -1,35 +1,10 @@
 import { Test } from '@nestjs/testing';
 import { UserService } from '../user.service';
-import { User } from '../User.entity';
+import { mockedUser, fakeUserService } from '../../../libs/jest/mocks';
 
 describe('UserService', () => {
-  const mockedUser = {
-    id: 67,
-    full_name: 'Jest',
-    password: 'unit-test',
-    email: `jest@mail.com`,
-  };
-  let users: User[] = [];
   let service: UserService;
-  const fakeUserService: Partial<UserService> = {
-    findAll: () => Promise.resolve(users),
-    findById: (userId: number) =>
-      Promise.resolve(users.filter((user: User) => user.id === userId)),
-    findByName: (name: string) =>
-      Promise.resolve(users.filter((user: User) => user.full_name === name)[0]),
-    findByMail: (email: string) =>
-      Promise.resolve(users.filter((user: User) => user.email === email)),
-    create: (full_name: string, password: string, email: string) => {
-      const user = {
-        id: mockedUser.id,
-        full_name: full_name,
-        password: password,
-        email: email,
-      } as User;
-      users = [...users, user];
-      return Promise.resolve(user);
-    },
-  };
+
   beforeEach(async () => {
     const module = await Test.createTestingModule({
       providers: [
