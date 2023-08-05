@@ -49,3 +49,4 @@ jobs:
       - run: yarn
       - run: npx lerna run build --scope=server
       - run: npx lerna run test --scope=server
+      - run: npx lerna run test:e2e --scope=server

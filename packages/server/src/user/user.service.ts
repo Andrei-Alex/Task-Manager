@@ -1,4 +1,4 @@
-import { Injectable } from '@nestjs/common';
+import { Injectable, NotFoundException } from '@nestjs/common';
 import { Like, Repository } from 'typeorm';
 import { InjectRepository } from '@nestjs/typeorm';
 import { User } from './User.entity';
@@ -40,5 +40,13 @@ export class UserService {
         id: userId,
       },
     });
+  }
+  async deleteByMail(email: string) {
+    const user = await this.repo.findOne({ where: { email } });
+    if (!user) {
+      throw new NotFoundException('User not found');
+    }
+
+    await this.repo.delete(user);
   }
 }
