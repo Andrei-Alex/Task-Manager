@@ -1,6 +1,6 @@
 import { Test } from '@nestjs/testing';
-import { UserService } from './user.service';
-import { User } from './User.entity';
+import { UserService } from '../user.service';
+import { User } from '../User.entity';
 
 describe('UserService', () => {
   const payload = {

@@ -2,9 +2,8 @@ import { HttpStatus } from '@nestjs/common';
 import { Test, TestingModule } from '@nestjs/testing';
 import * as request from 'supertest';
 import { INestApplication } from '@nestjs/common';
-import { AppModule } from '../app.module';
+import { AppModule } from '../../app.module';
 import * as jwt from 'jsonwebtoken';
-
 import { ConfigService } from '@nestjs/config';
 
 const configService = new ConfigService();
