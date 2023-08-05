@@ -47,9 +47,9 @@ export class UserController {
   })
   @Post('/register')
   async createUser(
-    @Param('full_name') full_name: string,
+    /*@Param('full_name') full_name: string,
     @Param('password') password: string,
-    @Param('email') email: string,
+    @Param('email') email: string,*/
     @Body()
     createUserDto: CreateUserDto,
   ) {

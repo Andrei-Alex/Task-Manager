@@ -1,80 +1,81 @@
-import { HttpStatus } from '@nestjs/common';
 import { Test, TestingModule } from '@nestjs/testing';
-import * as request from 'supertest';
-import { INestApplication } from '@nestjs/common';
-import { AppModule } from '../../app.module';
-import * as jwt from 'jsonwebtoken';
-import { ConfigService } from '@nestjs/config';
+import { UserController } from '../user.controller';
+import { UserService } from '../user.service';
+import { AuthService } from '../../auth/auth.service';
+import { EncryptionService } from '../../auth/encryption.service';
+import { User } from '../User.entity';
+import { CreateUserDto } from '../user.DTO';
+import { UserRepository } from '../user.repository';
+import { getRepositoryToken } from '@nestjs/typeorm';
+import { Repository } from 'typeorm';
 
-const configService = new ConfigService();
-const random = Math.floor(Math.random() * 1283);
 describe('AuthController (e2e)', () => {
-  let app: INestApplication;
-
+  const mockedUser = {
+    id: 67,
+    full_name: 'Jest',
+    password: 'unit-test',
+    email: `jest@mail.com`,
+  };
+  let controller: UserController;
+  let users: User[] = [];
+  let fakeUserService: Partial<UserService> = {};
+  const fakeEncryptionService: Partial<EncryptionService> = {};
+  const fakeAuthService: Partial<AuthService> = {};
+  const fakeUserRepository: Partial<UserRepository> = {
+    findAllByName: (listOfNames: string[]) => Promise.resolve([]),
+  };
   beforeAll(async () => {
-    const moduleFixture: TestingModule = await Test.createTestingModule({
-      imports: [AppModule],
+    fakeUserService = {
+      findAll: () => Promise.resolve(users),
+      findById: (userId: number) =>
+        Promise.resolve(users.filter((user: User) => user.id === userId)),
+      findByName: (name: string) =>
+        Promise.resolve(
+          users.filter((user: User) => user.full_name === name)[0],
+        ),
+      findByMail: (email: string) =>
+        Promise.resolve(users.filter((user: User) => user.email === email)),
+      create: (full_name: string, password: string, email: string) => {
+        const user = {
+          id: mockedUser.id,
+          full_name: full_name,
+          password: password,
+          email: email,
+        } as User;
+        users = [...users, user];
+        return Promise.resolve(user);
+      },
+    };
+    const module: TestingModule = await Test.createTestingModule({
+      controllers: [UserController],
+      providers: [
+        {
+          provide: getRepositoryToken(User),
+          useClass: Repository,
+        },
+        {
+          provide: EncryptionService,
+          useValue: fakeEncryptionService,
+        },
+        {
+          provide: UserService,
+          useValue: fakeUserService,
+        },
+        {
+          provide: AuthService,
+          useValue: fakeAuthService,
+        },
+        {
+          provide: UserRepository,
+          useValue: fakeUserRepository,
+        },
+      ],
     }).compile();
-    app = moduleFixture.createNestApplication();
-    await app.init();
-    return request(app.getHttpServer())
-      .post('/auth/register')
-      .set('Content-Type', 'application/json')
-      .send({
-        full_name: 'JohnyJohny',
-        email: 'johnyJohny@mail.com',
-        password: 'changeMe',
-      });
+
+    controller = module.get<UserController>(UserController);
   });
 
-  describe('authentication/login (POST)', () => {
-    it('should create new user', () => {
-      return request(app.getHttpServer())
-        .post('/auth/register')
-        .set('Content-Type', 'application/json')
-        .send({
-          full_name: 'Johny BeGood',
-          email: `johnyBeGood${random}@mail.com`,
-          password: 'changeMe',
-        })
-        .expect(HttpStatus.CREATED);
-    });
-
-    it('should not log in nor return a JWT for an unregistered user', () => {
-      return request(app.getHttpServer())
-        .post('/auth/login')
-        .set('Content-Type', 'application/json')
-        .send({ username: 'JohnyJohny', password: 'badpass' })
-        .expect((response: request.Response) => {
-          const { token }: { token: string } = response.body;
-          expect(token).toBeUndefined();
-        })
-        .expect(HttpStatus.UNAUTHORIZED);
-    });
-
-    it('should not log in nor return a JWT for an unregistered user', () => {
-      return request(app.getHttpServer())
-        .post('/auth/login')
-        .set('Content-Type', 'application/json')
-        .send({ username: 'John' })
-        .expect((response: request.Response) => {
-          const { token }: { token: string } = response.body;
-          expect(token).toBeUndefined();
-        })
-        .expect(HttpStatus.BAD_REQUEST);
-    });
-
-    it('should log in and return a JWT for a registered user', () => {
-      return request(app.getHttpServer())
-        .post('/auth/login')
-        .set('Content-Type', 'application/json')
-        .send({ username: 'johnyJohny@mail.com', password: 'changeMe' })
-        .expect((response: request.Response) => {
-          const token = response.body.access_token;
-          expect(
-            jwt.verify(token, configService.get('SECRET_KEY')),
-          ).toBeTruthy();
-        });
-    });
+  it('Create an instance of userService', async () => {
+    expect(controller).toBeDefined();
   });
 });

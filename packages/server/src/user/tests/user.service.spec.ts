@@ -3,7 +3,7 @@ import { UserService } from '../user.service';
 import { User } from '../User.entity';
 
 describe('UserService', () => {
-  const payload = {
+  const mockedUser = {
     id: 67,
     full_name: 'Jest',
     password: 'unit-test',
@@ -21,7 +21,7 @@ describe('UserService', () => {
       Promise.resolve(users.filter((user: User) => user.email === email)),
     create: (full_name: string, password: string, email: string) => {
       const user = {
-        id: payload.id,
+        id: mockedUser.id,
         full_name: full_name,
         password: password,
         email: email,
@@ -47,15 +47,15 @@ describe('UserService', () => {
   });
   it('should create user', async () => {
     const user = await service.create(
-      payload.full_name,
-      payload.password,
-      payload.email,
+      mockedUser.full_name,
+      mockedUser.password,
+      mockedUser.email,
     );
-    expect(user).toMatchObject(payload);
+    expect(user).toMatchObject(mockedUser);
   });
   it('should find and return user', async () => {
     const user = await service.findByMail('jest@mail.com');
-    expect(user[0]).toMatchObject(payload);
+    expect(user[0]).toMatchObject(mockedUser);
   });
   it('should not find and return user', async () => {
     const user = await service.findByMail('Jest@mail.com');
@@ -67,10 +67,10 @@ describe('UserService', () => {
   });
   it('should return one user', async () => {
     const user = await service.findById(67);
-    expect(user[0]).toMatchObject(payload);
+    expect(user[0]).toMatchObject(mockedUser);
   });
   it('should return one user', async () => {
     const user = await service.findByName('Jest');
-    expect(user).toMatchObject(payload);
+    expect(user).toMatchObject(mockedUser);
   });
 });
