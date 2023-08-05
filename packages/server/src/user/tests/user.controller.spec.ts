@@ -17,6 +17,14 @@ describe('AuthController (e2e)', () => {
     }).compile();
     app = moduleFixture.createNestApplication();
     await app.init();
+    return request(app.getHttpServer())
+      .post('/auth/register')
+      .set('Content-Type', 'application/json')
+      .send({
+        full_name: 'JohnyJohny',
+        email: 'johnyJohny@mail.com',
+        password: 'changeMe',
+      });
   });
 
   describe('authentication/login (POST)', () => {
