@@ -8,7 +8,6 @@ import { ConfigService } from '@nestjs/config';
 import { JwtAuthGuard } from '../../auth/jwt-auth.guard';
 
 const configService = new ConfigService();
-const random = Math.floor(Math.random() * 1283);
 let userTestEmail;
 describe('AuthController (e2e)', () => {
   let app: INestApplication;
