@@ -6,6 +6,10 @@ import {
   Post,
   UseGuards,
   Param,
+  Delete,
+  HttpCode,
+  HttpStatus,
+  BadRequestException,
 } from '@nestjs/common';
 import { CreateUserDto } from './user.DTO';
 import { UserService } from './user.service';
@@ -89,6 +93,7 @@ export class UserController {
   @ApiOperation({ summary: 'Login with username and password ' })
   @UseGuards(LocalAuthGuard)
   @Post('login')
+  @HttpCode(HttpStatus.OK)
   async login(@Request() req) {
     return this.authService.login(req.user);
   }
@@ -110,5 +115,16 @@ export class UserController {
     } else {
       return this.userService.findByName(full_name);
     }
+  }
+  @ApiOperation({ summary: 'Delete user by email' })
+  @UseGuards(JwtAuthGuard)
+  @ApiBearerAuth()
+  @Delete('/delete/:email')
+  @HttpCode(HttpStatus.OK)
+  async deleteUser(@Param('email') email: string) {
+    if (!email) {
+      throw new BadRequestException('Email parameter is missing');
+    }
+    await this.userService.deleteByMail(email);
   }
 }

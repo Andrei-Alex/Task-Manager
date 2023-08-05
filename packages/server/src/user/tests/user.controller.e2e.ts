@@ -9,6 +9,7 @@ import { JwtAuthGuard } from '../../auth/jwt-auth.guard';
 
 const configService = new ConfigService();
 const random = Math.floor(Math.random() * 1283);
+let userTestEmail;
 describe('AuthController (e2e)', () => {
   let app: INestApplication;
   beforeAll(async () => {
@@ -29,17 +30,18 @@ describe('AuthController (e2e)', () => {
         .set('Content-Type', 'application/json')
         .send({
           full_name: 'Johny BeGood',
-          email: `johnyBeGood${random}@mail.com`,
+          email: `johnyJohny@mail.com`,
           password: 'changeMe',
         })
         .expect(HttpStatus.CREATED)
         .then((response: request.Response) => {
-          const email = response.body.email.toLowerCase();
+          userTestEmail = response.body.email;
+          const email = userTestEmail.toLowerCase();
           expect(response.body).not.toHaveProperty('password');
           expect(response.body).toHaveProperty('full_name');
           expect(response.body).toHaveProperty('email');
           expect(response.body.full_name).toEqual('Johny BeGood');
-          expect(email).toEqual(expect.stringContaining('johnybegood'));
+          expect(email).toEqual(expect.stringContaining('johnyjohny'));
           expect(email).toEqual(expect.stringContaining('@mail.com'));
         });
     });
@@ -73,7 +75,7 @@ describe('AuthController (e2e)', () => {
         .post('/auth/login')
         .set('Content-Type', 'application/json')
         .send({ username: 'johnyJohny@mail.com', password: 'changeMe' })
-        .expect(201)
+        .expect(200)
         .then((response: request.Response) => {
           expect(response.body).toHaveProperty('access_token');
           expect(
@@ -89,7 +91,7 @@ describe('AuthController (e2e)', () => {
         .post('/auth/login')
         .set('Content-Type', 'application/json')
         .send({ username: 'johnyJohny@mail.com', password: 'changeMe' })
-        .expect(201)
+        .expect(200)
         .then((response: request.Response) => {
           expect(response.body).toHaveProperty('access_token');
           expect(
@@ -126,7 +128,6 @@ describe('UserController (e2e)', () => {
     const response = await request(app.getHttpServer()).get('/auth/users');
 
     expect(response.status).toBe(200);
-    console.log(response.body);
     expect(Array.isArray(response.body)).toBe(true);
     expect(response.body.length).toBeGreaterThan(0);
   });
@@ -142,5 +143,12 @@ describe('UserController (e2e)', () => {
     expect(response.body).toHaveProperty('id');
     expect(response.body).toHaveProperty('full_name');
     expect(response.body).toHaveProperty('email');
+  });
+  it('should delete user', () => {
+    return request(app.getHttpServer())
+      .delete(`/auth/delete/${userTestEmail}`)
+      .set('Content-Type', 'application/json')
+      .send({ email: userTestEmail })
+      .expect(200);
   });
 });
