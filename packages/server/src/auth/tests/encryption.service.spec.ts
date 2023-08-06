@@ -1,7 +1,6 @@
 import { Test } from '@nestjs/testing';
 import { fakeEncryptionService } from '../../../libs/jest/mocks';
 import { EncryptionService } from '../encryption.service';
-
 describe('EncryptionService', () => {
   let service: EncryptionService;
   beforeEach(async () => {
