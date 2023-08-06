@@ -17,6 +17,11 @@ describe('UserService', () => {
     }).compile();
     service = module.get(UserService);
   });
+
+  afterEach(() => {
+    jest.clearAllMocks();
+  });
+
   it('Create an instance of userService', async () => {
     expect(service).toBeDefined();
   });
@@ -29,8 +34,8 @@ describe('UserService', () => {
     expect(user).toMatchObject(mockedUser);
   });
   it('should find and return user', async () => {
-    const user = await service.findByMail('jest@mail.com');
-    expect(user[0]).toMatchObject(mockedUser);
+    const [user] = await service.findByMail('jest@mail.com');
+    expect(user).toMatchObject(mockedUser);
   });
   it('should not find and return user', async () => {
     const user = await service.findByMail('Jest@mail.com');
@@ -41,8 +46,8 @@ describe('UserService', () => {
     expect(user.length).toBe(2);
   });
   it('should return one user', async () => {
-    const user = await service.findById(67);
-    expect(user[0]).toMatchObject(mockedUser);
+    const [user] = await service.findById(67);
+    expect(user).toMatchObject(mockedUser);
   });
   it('should return one user', async () => {
     const user = await service.findByName('Jest');
