@@ -2,6 +2,7 @@ import { UserService } from '../../../src/user/user.service';
 import { User } from '../../../src/user/User.entity';
 import { AuthService } from '../../../src/auth/auth.service';
 import { JwtService } from '@nestjs/jwt';
+import { EncryptionService } from '../../../src/auth/encryption.service';
 export const mockedUser = {
   id: 67,
   full_name: 'Jest',
@@ -65,4 +66,8 @@ export const fakeJWTService: Partial<JwtService> = {
   sign: (payload) => {
     return 'Fake.JWT.Token';
   },
+};
+export const fakeEncryptionService: Partial<EncryptionService> = {
+  hashPassword: (pass: string): Promise<string> => Promise.resolve(''),
+  decryptPassword: () => Promise.resolve(true),
 };
