@@ -11,7 +11,7 @@ import {
   HttpStatus,
   BadRequestException,
 } from '@nestjs/common';
-import { CreateUserDto } from './user.DTO';
+import { CreateUserDto } from './dots/user.DTO';
 import { UserService } from './user.service';
 import { User } from './User.entity';
 import { Repository } from 'typeorm';
@@ -51,9 +51,6 @@ export class UserController {
   })
   @Post('/register')
   async createUser(
-    /*@Param('full_name') full_name: string,
-    @Param('password') password: string,
-    @Param('email') email: string,*/
     @Body()
     createUserDto: CreateUserDto,
   ) {
