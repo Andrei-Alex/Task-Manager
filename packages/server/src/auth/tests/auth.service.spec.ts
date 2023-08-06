@@ -33,8 +33,12 @@ describe('AuthService', () => {
     expect(user.full_name).toEqual(mockedUser2.full_name);
     expect(user.email).toEqual(mockedUser2.email);
   });
-  it('Should return user without password if correct user', async () => {
+  it('should not return user password if incorrect user', async () => {
     const user = await service.validateUser('notUser@mail.com', 'unit-test');
+    expect(user).toEqual(null);
+  });
+  it('should not return user password if incorrect user', async () => {
+    const user = await service.validateUser('andrei@mail.com', 'incorrect');
     expect(user).toEqual(null);
   });
 });
