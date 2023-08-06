@@ -2,6 +2,7 @@ import { Injectable } from '@nestjs/common';
 import { UserService } from '../user/user.service';
 import { JwtService } from '@nestjs/jwt';
 import { EncryptionService } from './encryption.service';
+import { User } from '../user/User.entity';
 
 @Injectable()
 export class AuthService {
@@ -26,7 +27,7 @@ export class AuthService {
     return null;
   }
 
-  async login(user: any) {
+  async login(user: Partial<User>) {
     const payload = { email: user.email, sub: user.id };
 
     return {

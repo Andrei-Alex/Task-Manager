@@ -1,7 +1,7 @@
 import { UserService } from '../../../src/user/user.service';
 import { User } from '../../../src/user/User.entity';
 import { AuthService } from '../../../src/auth/auth.service';
-
+import { JwtService } from '@nestjs/jwt';
 export const mockedUser = {
   id: 67,
   full_name: 'Jest',
@@ -49,5 +49,20 @@ export const fakeAuthService: Partial<AuthService> = {
       return Promise.resolve(null);
     }
     return Promise.resolve(null);
+  },
+  login: (user: Partial<User>) => {
+    if (user.id && user.email) {
+      const access_token = fakeJWTService.sign({
+        email: user.email,
+        sub: user.id,
+      });
+      return Promise.resolve(access_token);
+    }
+    return Promise.resolve(null);
+  },
+};
+export const fakeJWTService: Partial<JwtService> = {
+  sign: (payload) => {
+    return 'Fake.JWT.Token';
   },
 };
