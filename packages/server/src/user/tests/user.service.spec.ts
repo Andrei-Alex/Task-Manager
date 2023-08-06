@@ -38,7 +38,7 @@ describe('UserService', () => {
   });
   it('should return all users', async () => {
     const user = await service.findAll();
-    expect(user.length).toBe(1);
+    expect(user.length).toBe(2);
   });
   it('should return one user', async () => {
     const user = await service.findById(67);
