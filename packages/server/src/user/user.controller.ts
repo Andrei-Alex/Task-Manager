@@ -54,7 +54,7 @@ export class UserController {
     @Body()
     createUserDto: CreateUserDto,
   ) {
-    this.userService.create(
+    await this.userService.create(
       createUserDto.full_name,
       createUserDto.password,
       createUserDto.email,

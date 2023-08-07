@@ -13,6 +13,7 @@ import {
 import { UserRepository } from '../user.repository';
 import { getRepositoryToken } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
+import { fakeEncryptionService } from '../../../dist/libs/jest/mocks';
 
 describe('AuthController', () => {
   let controller: UserController;
@@ -34,7 +35,7 @@ describe('AuthController', () => {
           useValue: fakeAuthService,
         },
         {
-          provide: UserRepository,
+          provide: getRepositoryToken(User),
           useValue: fakeUserRepository,
         },
       ],
@@ -45,5 +46,18 @@ describe('AuthController', () => {
 
   it('Create an instance of userService', async () => {
     expect(controller).toBeDefined();
+  });
+  it('Create an user', async () => {
+    const createUserDto = {
+      full_name: 'John Doe',
+      password: 'password',
+      email: 'john@example.com',
+    };
+
+    const result = await controller.createUser(createUserDto);
+    expect(result).toEqual({
+      email: createUserDto.email,
+      full_name: createUserDto.full_name,
+    });
   });
 });

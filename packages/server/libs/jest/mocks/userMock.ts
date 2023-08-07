@@ -71,8 +71,5 @@ export const fakeJWTService: Partial<JwtService> = {
 };
 export const fakeUserRepository: Partial<UserRepository> = {
   findAllByName: (listOfNames: string[]) => Promise.resolve([]),
-  save: (users: User[], options?: SaveOptions) => {
-    users = [...users, ...users];
-    return Promise.resolve(users);
-  },
+  save: jest.fn().mockImplementation((user: User) => Promise.resolve(user)),
 };
