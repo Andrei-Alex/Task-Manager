@@ -10,10 +10,8 @@ import {
   fakeUserRepository,
   mockedUser,
 } from '../../../libs/jest/mocks';
-import { UserRepository } from '../user.repository';
 import { getRepositoryToken } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
-import { fakeEncryptionService } from '../../../dist/libs/jest/mocks';
 
 describe('AuthController', () => {
   let controller: UserController;
