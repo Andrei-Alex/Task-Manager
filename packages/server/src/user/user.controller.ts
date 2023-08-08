@@ -106,11 +106,13 @@ export class UserController {
   @UseGuards(JwtAuthGuard)
   @ApiBearerAuth()
   @Get('users/:full_name?')
-  getUsers(@Request() req, @Param('full_name') full_name: string) {
-    if (!full_name) {
+  getUsers(@Request() req?) {
+    if (!req?.full_name) {
+      console.log('test');
       return this.userService.findAll();
     } else {
-      return this.userService.findByName(full_name);
+      console.log(req);
+      return this.userService.findByName(req.full_name);
     }
   }
   @ApiOperation({ summary: 'Delete user by email' })

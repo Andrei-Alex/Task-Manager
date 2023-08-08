@@ -9,6 +9,8 @@ import {
   fakeAuthService,
   fakeUserRepository,
   mockedUser,
+  mockedUser2,
+  users,
 } from '../../../libs/jest/mocks';
 import { getRepositoryToken } from '@nestjs/typeorm';
 import { Repository } from 'typeorm';
@@ -20,7 +22,7 @@ describe('AuthController', () => {
     password: 'password',
     email: 'john@example.com',
   };
-  const user = { ...createUserDto, id: 1 };
+  const user = { ...mockedUser };
   beforeAll(async () => {
     const module: TestingModule = await Test.createTestingModule({
       controllers: [UserController],
@@ -67,5 +69,17 @@ describe('AuthController', () => {
     const req = { user };
     const profile = await controller.getProfile(req);
     expect(profile).toEqual(req.user);
+  });
+  it('should return all user', async () => {
+    const users = await controller.getUsers();
+    expect(users).toEqual(users);
+    expect(users).toHaveLength(2);
+  });
+  it('should return a single user', async () => {
+    const users = await controller.getUsers({
+      full_name: 'Andrei',
+    });
+    const { password, ...testUser } = mockedUser2;
+    expect(users).toMatchObject(testUser);
   });
 });
