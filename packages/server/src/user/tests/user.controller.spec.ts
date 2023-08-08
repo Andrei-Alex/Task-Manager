@@ -15,6 +15,12 @@ import { Repository } from 'typeorm';
 
 describe('AuthController', () => {
   let controller: UserController;
+  const createUserDto = {
+    full_name: 'John Doe',
+    password: 'password',
+    email: 'john@example.com',
+  };
+  const user = { ...createUserDto, id: 1 };
   beforeAll(async () => {
     const module: TestingModule = await Test.createTestingModule({
       controllers: [UserController],
@@ -42,20 +48,24 @@ describe('AuthController', () => {
     controller = module.get<UserController>(UserController);
   });
 
-  it('Create an instance of userService', async () => {
+  it('should create an instance of userService', async () => {
     expect(controller).toBeDefined();
   });
-  it('Create an user', async () => {
-    const createUserDto = {
-      full_name: 'John Doe',
-      password: 'password',
-      email: 'john@example.com',
-    };
-
-    const result = await controller.createUser(createUserDto);
-    expect(result).toEqual({
+  it('should create an user', async () => {
+    const newUser = await controller.createUser(createUserDto);
+    expect(newUser).toEqual({
       email: createUserDto.email,
       full_name: createUserDto.full_name,
     });
+  });
+  it('should login and return JWT token', async () => {
+    const req = { user };
+    const loggedIn = await controller.login(req);
+    expect(loggedIn).toEqual('Fake.JWT.Token');
+  });
+  it('should return user', async () => {
+    const req = { user };
+    const profile = await controller.getProfile(req);
+    expect(profile).toEqual(req.user);
   });
 });

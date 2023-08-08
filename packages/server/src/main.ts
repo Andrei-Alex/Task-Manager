@@ -50,7 +50,7 @@ async function bootstrap() {
   app.useGlobalPipes(new ValidationPipe());
   await app.listen(configService.get('PORT'));
   Logger.log(
-    `🚀 Application is running on:
+    `🚀 Application is running on: 
     ${configService.get('ALLOWED_ORIGIN_SERVER')}/${globalPrefix}`,
   );
 }
