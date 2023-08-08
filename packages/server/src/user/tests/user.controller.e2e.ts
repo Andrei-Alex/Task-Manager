@@ -139,9 +139,10 @@ describe('UserController (e2e)', () => {
     expect(response.status).toBe(200);
     expect(response.status).toBe(200);
     expect(typeof response.body).toBe('object');
-    expect(response.body).toHaveProperty('id');
-    expect(response.body).toHaveProperty('full_name');
-    expect(response.body).toHaveProperty('email');
+    expect(response.body.length).toBeGreaterThan(0);
+    expect(response.body[0]).toHaveProperty('id');
+    expect(response.body[0]).toHaveProperty('full_name');
+    expect(response.body[0]).toHaveProperty('email');
   });
   it('should delete user', () => {
     return request(app.getHttpServer())
