@@ -108,10 +108,8 @@ export class UserController {
   @Get('users/:full_name?')
   getUsers(@Request() req?) {
     if (!req?.full_name) {
-      console.log('test');
       return this.userService.findAll();
     } else {
-      console.log(req);
       return this.userService.findByName(req.full_name);
     }
   }
