@@ -82,4 +82,10 @@ describe('AuthController', () => {
     const { password, ...testUser } = mockedUser2;
     expect(users).toMatchObject(testUser);
   });
+  it('should delete user', async () => {
+    const deleteUserSpy = jest.spyOn(controller, 'deleteUser');
+    await controller.deleteUser(mockedUser2.email);
+    expect(users).toHaveLength(1);
+    expect(deleteUserSpy).toHaveBeenCalledWith('andrei@mail.com');
+  });
 });

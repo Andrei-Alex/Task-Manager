@@ -2,9 +2,7 @@ import { UserService } from '../../../src/user/user.service';
 import { User } from '../../../src/user/User.entity';
 import { AuthService } from '../../../src/auth/auth.service';
 import { JwtService } from '@nestjs/jwt';
-import { EncryptionService } from '../../../src/auth/encryption.service';
 import { UserRepository } from '../../../src/user/user.repository';
-import { SaveOptions } from 'typeorm';
 export const mockedUser = {
   id: 67,
   full_name: 'Jest',
@@ -37,6 +35,10 @@ export const fakeUserService: Partial<UserService> = {
     } as User;
     users = [...users, user];
     return Promise.resolve(user);
+  },
+  deleteByMail: (email: string) => {
+    users = users.filter((user: User) => user.email !== email);
+    return Promise.resolve();
   },
 };
 export const fakeAuthService: Partial<AuthService> = {
