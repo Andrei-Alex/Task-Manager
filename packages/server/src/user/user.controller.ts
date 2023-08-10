@@ -30,9 +30,21 @@ import {
   ApiUnprocessableEntityResponse,
   ApiBody,
 } from '@nestjs/swagger';
+
+/**
+ * Controller handling user-related operations.
+ */
 @ApiTags('Auth')
 @Controller('auth')
 export class UserController {
+  /**
+   * Creates an instance of UserController.
+   *
+   * @param authService - The service responsible for authentication.
+   * @param encryptionService - The service for password encryption.
+   * @param userService - The service handling user-related operations.
+   * @param userRepository - The repository for User entities.
+   */
   constructor(
     private authService: AuthService,
     private encryptionService: EncryptionService,
@@ -40,6 +52,13 @@ export class UserController {
     @InjectRepository(User)
     private readonly userRepository: Repository<User>,
   ) {}
+
+  /**
+   * Register a new user.
+   *
+   * @param createUserDto - Data for creating a new user.
+   * @returns Created user's email and full name.
+   */
   @ApiCreatedResponse({ description: 'Created Successfully' })
   @ApiUnprocessableEntityResponse({ description: 'Bad Request' })
   @ApiOperation({ summary: 'Register new user' })
@@ -50,28 +69,37 @@ export class UserController {
     type: User,
   })
   @Post('/register')
-  async createUser(
-    @Body()
-    createUserDto: CreateUserDto,
-  ) {
+  async createUser(@Body() createUserDto: CreateUserDto) {
+    // Call the UserService to create a new user entry
     await this.userService.create(
       createUserDto.full_name,
       createUserDto.password,
       createUserDto.email,
     );
+
+    // Create a new User entity
     const user = new User();
     user.full_name = createUserDto.full_name;
     user.password = await this.encryptionService.hashPassword(
       createUserDto.password,
     );
     user.email = createUserDto.email;
+
+    // Save the user entity in the repository
     await this.userRepository.save(user);
+
     return {
       email: user.email,
       full_name: user.full_name,
     };
   }
 
+  /**
+   * Authenticate and log in a user.
+   *
+   * @param req - Request object containing user credentials.
+   * @returns Access token.
+   */
   @ApiResponse({
     status: 201,
     description: 'Access token',
@@ -87,13 +115,20 @@ export class UserController {
   })
   @ApiUnauthorizedResponse({ description: 'Unauthorized' })
   @ApiUnprocessableEntityResponse({ description: 'Bad Request' })
-  @ApiOperation({ summary: 'Login with username and password ' })
+  @ApiOperation({ summary: 'Login with username and password' })
   @UseGuards(LocalAuthGuard)
   @Post('login')
   @HttpCode(HttpStatus.OK)
   async login(@Request() req) {
     return this.authService.login(req.user);
   }
+
+  /**
+   * Get user profile.
+   *
+   * @param req - Request object containing user profile information.
+   * @returns User profile.
+   */
   @ApiOperation({ summary: 'Get user profile' })
   @ApiBearerAuth()
   @UseGuards(JwtAuthGuard)
@@ -102,6 +137,12 @@ export class UserController {
     return req.user;
   }
 
+  /**
+   * Get users by name.
+   *
+   * @param req - Request object containing user search query.
+   * @returns List of users matching the search query.
+   */
   @ApiOperation({ summary: 'Get users by name' })
   @UseGuards(JwtAuthGuard)
   @ApiBearerAuth()
@@ -113,6 +154,12 @@ export class UserController {
       return this.userService.findByName(req.full_name);
     }
   }
+
+  /**
+   * Delete user by email.
+   *
+   * @param email - Email of the user to be deleted.
+   */
   @ApiOperation({ summary: 'Delete user by email' })
   @UseGuards(JwtAuthGuard)
   @ApiBearerAuth()
