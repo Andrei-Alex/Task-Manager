@@ -13,8 +13,14 @@ import { EncryptionService } from '../auth/encryption.service';
 
 @Module({
   imports: [
+    /**
+     * Imports
+     */
     TypeOrmModule.forFeature([User]),
     PassportModule,
+    /**
+     * Configure the JwtModule to handle JWT token creation and validation.
+     */
     JwtModule.registerAsync({
       imports: [ConfigModule],
       useFactory: async (configService: ConfigService) => ({
@@ -24,7 +30,13 @@ import { EncryptionService } from '../auth/encryption.service';
       inject: [ConfigService],
     }),
   ],
+  /**
+   * Controllers associated with the UserModule.
+   */
   controllers: [UserController],
+  /**
+   * Providers for services used within the UserModule.
+   */
   providers: [
     UserService,
     AuthService,
@@ -32,6 +44,9 @@ import { EncryptionService } from '../auth/encryption.service';
     LocalStrategy,
     JwtStrategy,
   ],
+  /**
+   * Expose the UserService for potential use in other modules.
+   */
   exports: [UserService],
 })
 export class UserModule {}

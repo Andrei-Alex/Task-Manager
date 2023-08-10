@@ -8,6 +8,10 @@ import { migrations1690728646371 } from './migrations/migrations1690728646371';
 
 const configService = new ConfigService();
 
+/**
+ * Register database configuration using the ConfigService.
+ * @returns A configuration object for TypeORM's DataSourceOptions.
+ */
 export default registerAs('database', () => {
   return {
     type: 'postgres',

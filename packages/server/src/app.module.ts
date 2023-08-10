@@ -13,11 +13,17 @@ dotenv.config();
 
 @Module({
   imports: [
+    /**
+     * Configure the ConfigModule to load environment variables and configuration.
+     */
     ConfigModule.forRoot({
       isGlobal: true,
       envFilePath: `.env.${process.env.NODE_ENV}`,
       load: [dbConfiguration],
     }),
+    /**
+     * Configure the TypeOrmModule to connect to the database using configuration.
+     */
     TypeOrmModule.forRootAsync({
       imports: [ConfigModule],
       inject: [ConfigService],
@@ -27,12 +33,21 @@ dotenv.config();
         };
       },
     }),
+    /**
+     * Imports
+     */
     HealthModule,
     UserModule,
     AppDataModule,
     BoardModule,
   ],
+  /**
+   * Controllers associated with the AppModule.
+   */
   controllers: [AppController],
+  /**
+   * Providers for services used within the AppModule.
+   */
   providers: [AppService],
 })
 export class AppModule {}
