@@ -1,4 +1,5 @@
-import React, {useCallback, useEffect, useState} from "react";
+"use client";
+import React, { useCallback, useEffect, useState } from "react";
 import { Button } from "../../atoms";
 import { Input } from "../../components";
 import { IInput } from "../../components/TextInput";
@@ -81,8 +82,8 @@ export const Form: React.FC<IForm> = ({
   };
   const onChangeHandler = () => {
     confirmMessageHandler &&
-    confirmMessageHandler({ successMsg: null, errorMsg: null });
-  }
+      confirmMessageHandler({ successMsg: null, errorMsg: null });
+  };
 
   return (
     <div className={styles.container}>
@@ -124,8 +125,8 @@ export const Form: React.FC<IForm> = ({
             error={confirmMessage?.errorMsg}
           />
           <Button
-            variant={'gradient'}
-            gradient={{from: 'blue', to: "purple"}}
+            variant={"gradient"}
+            gradient={{ from: "blue", to: "purple" }}
             type={"submit"}
             text={"Submit"}
             containerStyle={{ width: "100%" }}
