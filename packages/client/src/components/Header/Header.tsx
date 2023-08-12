@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import { IHeader, styles } from "./index";
 import Link from "next/link";

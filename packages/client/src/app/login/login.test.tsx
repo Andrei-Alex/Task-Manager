@@ -1,6 +1,6 @@
 import React from "react";
 import { fireEvent, render, screen, waitFor } from "@testing-library/react";
-import Login from "../pages/login";
+import Login from "./page";
 import { RouterContext } from "next/dist/shared/lib/router-context";
 import { routerMock } from "@/__MOCK__";
 import { Provider } from "react-redux";
@@ -9,6 +9,7 @@ import { IAuthRequest, ILoginTestResponse } from "@/services/authentication";
 import store from "@/providers/redux/store";
 import { setupServer } from "msw/node";
 import { AUTH_API, BASE } from "@/constants";
+jest.mock("next/navigation");
 
 const username = "Mail@Jest.com";
 const password = "Password";

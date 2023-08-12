@@ -1,6 +1,7 @@
+"use client";
 import { useState } from "react";
 import { AxiosError } from "axios";
-import { useRouter } from "next/router";
+import { useRouter } from "next/navigation";
 import { DataType, ErrorType } from "./types";
 import { IRegisterRequest, registerRequest } from "@/services";
 
