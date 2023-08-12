@@ -1,7 +1,7 @@
 import React from "react";
 import { styles, IInput } from "./index";
 import { Icon } from "../../atoms";
-import { Input } from '@mantine/core';
+import { Input } from "@mantine/core";
 
 /**
  * The TextInput component is a custom React functional component designed to render an input field
@@ -62,7 +62,7 @@ export const TextInput: React.FC<IInput> = ({
         <p className={styles.alert}> {required && " *"}</p>
       </div>
       <div className={styles.inputContainer}>
-          <Input
+        <Input
           onKeyDown={() => {
             if (onChangeHandler) {
               onChangeHandler();
@@ -80,18 +80,20 @@ export const TextInput: React.FC<IInput> = ({
   );
 };
 
-
 function PropsAreEqual(prevProps: IInput, nextProps: IInput) {
-    if (prevProps.onChangeHandler?.toString() !== nextProps.onChangeHandler?.toString() ||
-        prevProps?.register?.toString() !== nextProps?.register?.toString()) {
-        return false;
+  if (
+    prevProps.onChangeHandler?.toString() !==
+      nextProps.onChangeHandler?.toString() ||
+    prevProps?.register?.toString() !== nextProps?.register?.toString()
+  ) {
+    return false;
+  }
+  for (const [key] of Object.entries(prevProps)) {
+    if (prevProps[key] !== "register" && prevProps[key] !== "onChangeHandler") {
+      if (prevProps[key] !== nextProps[key]) return false;
     }
-    for (const [key] of Object.entries(prevProps)) {
-        if(prevProps[key] !== 'register' && prevProps[key] !== 'onChangeHandler') {
-            if (prevProps[key] !== nextProps[key]) return false;
-        }
-    }
-    return true;
+  }
+  return true;
 }
 
 export default React.memo(TextInput, PropsAreEqual);

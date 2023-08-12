@@ -1,3 +1,4 @@
+"use client";
 import { useEffect, useState } from "react";
 import { AUTH_EMAIL, AUTH_KEY } from "@/constants";
 export const useLogout = () => {

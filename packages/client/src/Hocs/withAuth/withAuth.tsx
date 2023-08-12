@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { useRouter } from "next/router";
+import { useRouter } from "next/navigation";
 import { useAuth } from "@/hooks";
 import { setError } from "@/providers";
 
@@ -10,7 +10,7 @@ export const withAuth = (Component: React.FC) => {
     useEffect(() => {
       if ((!logged && logged !== null) || error) {
         setError(error);
-        router.push("/login").then();
+        router.push("/login");
         return;
       }
       setError(null);

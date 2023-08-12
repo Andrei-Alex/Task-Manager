@@ -1,6 +1,7 @@
-import {useCallback, useEffect, useState} from "react";
+"use client";
+import { useCallback, useEffect, useState } from "react";
 import { AxiosError } from "axios";
-import { useRouter } from "next/router";
+import { useRouter } from "next/navigation";
 import { DataType, ErrorType } from "./types";
 import { useDispatch } from "react-redux";
 import { authRequest, IAuthRequest, userRequest } from "@/services";
@@ -56,7 +57,6 @@ export function useLogin() {
     }
   }, [userData, error]);
 
-
   const login = useCallback(async (values: IAuthRequest) => {
     const response = await authRequest(values);
     if (response instanceof AxiosError) {
@@ -71,7 +71,7 @@ export function useLogin() {
         setError(null);
       }
     }
-   }, []);
+  }, []);
 
   return { data, error, userData, login };
 }
