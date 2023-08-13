@@ -22,7 +22,7 @@ const Login: NextPage = () => {
       confirmMessageHandler={setConfirmMessage}
       linkMsg={"Not registered ?"}
       navigateTo={{
-        pathname: "/register",
+        pathname: "/auth/register",
       }}
     />
   );

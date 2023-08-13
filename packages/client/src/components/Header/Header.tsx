@@ -19,10 +19,10 @@ const Header: React.FC<IHeader> = ({ logo, navElements }) => {
             {!haveProfile ? (
               <>
                 <li>
-                  <Link href={"register"}>Register</Link>
+                  <Link href={"/auth/register"}>Register</Link>
                 </li>
                 <li>
-                  <Link href={"login"}>Login</Link>
+                  <Link href={"auth/login"}>Login</Link>
                 </li>
               </>
             ) : (
@@ -30,7 +30,7 @@ const Header: React.FC<IHeader> = ({ logo, navElements }) => {
                 onClick={() => {
                   logout();
                 }}
-                href={"login"}
+                href={"auth/login"}
               >
                 Logout
               </Link>

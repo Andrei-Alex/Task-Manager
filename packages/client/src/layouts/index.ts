@@ -1,1 +1,1 @@
-export { default as AuthenticationLayout } from "./AuthenticationLayout/AuthenticationLayout";
+export { default as MainLayout } from "./MainLayout/MainLayout";
