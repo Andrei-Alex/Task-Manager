@@ -1,7 +1,7 @@
 import { render, screen } from "@testing-library/react";
 import Register from "./page";
 import { RouterContext } from "next/dist/shared/lib/router-context";
-import { routerMock } from "../../__MOCK__";
+import { routerMock } from "../../../__MOCK__";
 jest.mock("next/navigation");
 
 const path = "Register";

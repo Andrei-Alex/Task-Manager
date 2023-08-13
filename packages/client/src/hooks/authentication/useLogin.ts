@@ -50,7 +50,7 @@ export function useLogin() {
       localStorage.setItem("userEmail", userData.email);
       dispatch(setUser(userData));
       setTimeout(() => {
-        router.push("home");
+        router.push("/home");
       }, 1000);
     } else if (error) {
       localStorage.removeItem("userEmail");
