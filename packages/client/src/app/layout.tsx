@@ -1,13 +1,12 @@
-"use client";
 import "../styles/Global.scss";
 import { ILayouts } from "../../../libs/sharedTypes";
-import { ReduxProvider, store } from "@/providers";
+import { AppWrapper } from "@/containers";
 
 const RootLayout: React.FC<ILayouts> = ({ children }) => {
   return (
     <html lang={"en"}>
       <body>
-        <ReduxProvider>{children}</ReduxProvider>
+        <AppWrapper>{children}</AppWrapper>
       </body>
     </html>
   );

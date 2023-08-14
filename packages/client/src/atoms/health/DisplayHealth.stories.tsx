@@ -26,6 +26,6 @@ type Story = StoryObj<typeof DisplayHealth>;
 
 export const Default: Story = {
   args: {
-    status: "Status ok !",
+    status: 200,
   },
 };

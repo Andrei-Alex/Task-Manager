@@ -1,14 +1,13 @@
-import axios from "axios";
-import { HealthResponse } from ".";
+import { HealthData } from ".";
+import { healthInstance } from "@/constants";
+import { AxiosError, AxiosResponse } from "axios";
 
-export const getHealthFromFrontEndAPI = async (): Promise<HealthResponse> => {
+export const getHealth = async (): Promise<HealthData | AxiosError> => {
   try {
-    const response = await axios.get(
-      `http://${process.env.NEXT_PUBLIC_SERVER}/api/health`
-    );
-    return response.data.status;
+    const response = await healthInstance({});
+    return response.data;
   } catch (error) {
     console.error("Fetch Failed :", error);
-    return null;
+    return error as AxiosError;
   }
 };

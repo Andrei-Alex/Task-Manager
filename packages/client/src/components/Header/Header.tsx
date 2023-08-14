@@ -22,7 +22,7 @@ const Header: React.FC<IHeader> = ({ logo, navElements }) => {
                   <Link href={"/auth/register"}>Register</Link>
                 </li>
                 <li>
-                  <Link href={"auth/login"}>Login</Link>
+                  <Link href={"/auth/login"}>Login</Link>
                 </li>
               </>
             ) : (
@@ -30,7 +30,7 @@ const Header: React.FC<IHeader> = ({ logo, navElements }) => {
                 onClick={() => {
                   logout();
                 }}
-                href={"auth/login"}
+                href="/auth/login"
               >
                 Logout
               </Link>
