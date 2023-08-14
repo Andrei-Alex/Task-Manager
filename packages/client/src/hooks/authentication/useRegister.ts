@@ -24,7 +24,7 @@ export function useRegister() {
     } else {
       setData(response);
       setTimeout(() => {
-        router.push("auth/login");
+        router.push("/auth/login");
       }, 3000);
     }
   };
