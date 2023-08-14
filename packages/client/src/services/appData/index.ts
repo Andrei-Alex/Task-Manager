@@ -1,2 +1,2 @@
 export * from "./types";
-export { getAppData } from "./getAppData";
+export { getAppData, getServerSideAppData } from "./getAppData";

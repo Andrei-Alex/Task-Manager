@@ -1,9 +1,9 @@
 import MainLayout from "@/layouts/MainLayout/MainLayout";
 import React from "react";
 import type { Metadata } from "next";
-import { appDataServerSideInstance, logo, navElements } from "@/constants";
+import { logo, navElements } from "@/constants";
 import { AsyncComponent, ILayouts } from "../../../../libs/sharedTypes";
-import { getHealth } from "@/services";
+import { getServerSideAppData } from "@/services/appData";
 
 export const metadata: Metadata = {
   title: "Kanban Home page",
@@ -13,7 +13,7 @@ export const metadata: Metadata = {
 const Layout: ({ children }: ILayouts) => AsyncComponent = async ({
   children,
 }) => {
-  const res = await appDataServerSideInstance({});
+  const res = await getServerSideAppData();
 
   return (
     <MainLayout logo={logo} navElements={navElements}>

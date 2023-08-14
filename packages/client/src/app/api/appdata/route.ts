@@ -15,7 +15,7 @@ export type AppDataServer = {
   serverVersion: string;
 };
 
-export async function GET() {
+export async function GET(request: Request) {
   try {
     const res = await getHealth();
     const appData = await getAppData();
@@ -34,6 +34,7 @@ export async function GET() {
         server,
         clientVersion: process.env.NEXT_PUBLIC_VERSION,
       };
+      console.log(data);
       return NextResponse.json(data);
     }
   } catch (err) {
