@@ -8,6 +8,6 @@ export class AppDataController {
   @Get()
   @ApiOperation({ summary: 'Display Server version' })
   getServerVersion() {
-    return configService.get('SERVER_VERSION');
+    return { serverVersion: configService.get('SERVER_VERSION') };
   }
 }

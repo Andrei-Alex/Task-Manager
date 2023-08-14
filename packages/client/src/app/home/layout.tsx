@@ -10,6 +10,7 @@ export const metadata: Metadata = {
 };
 
 const Layout: React.FC<ILayouts> = ({ children }) => {
+  console.log("server");
   return (
     <MainLayout logo={logo} navElements={navElements}>
       {children}
