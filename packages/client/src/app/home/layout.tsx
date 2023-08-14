@@ -17,7 +17,7 @@ const Layout: ({ children }: ILayouts) => AsyncComponent = async ({
 
   return (
     <MainLayout logo={logo} navElements={navElements}>
-      {res.data.server.dbName}
+      {children}
     </MainLayout>
   );
 };

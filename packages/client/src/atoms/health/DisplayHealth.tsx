@@ -1,5 +1,5 @@
-import styles from './DisplayHealth.module.scss';
-import { IHealthResponse } from '../../services';
+import styles from "./DisplayHealth.module.scss";
+import { HealthData, IHealthResponse } from "../../services";
 import React from "react";
 
 /**
@@ -19,10 +19,11 @@ import React from "react";
  * @param {string} status - Fetched status as string
  * @return {JSX} Display text in JSX elements
  */
-export const DisplayHealth = ({ status }: IHealthResponse) => {
+export const DisplayHealth = ({ status }: HealthData) => {
   return (
-    <div className={styles['container']}>
-        <p>Status:</p><p>{status || 'No status'}</p>
+    <div className={styles["container"]}>
+      <p>Status:</p>
+      <p>{status || "No status"}</p>
     </div>
   );
 };

@@ -30,7 +30,7 @@ const Header: React.FC<IHeader> = ({ logo, navElements }) => {
                 onClick={() => {
                   logout();
                 }}
-                href={"auth/login"}
+                href="/auth/login"
               >
                 Logout
               </Link>
