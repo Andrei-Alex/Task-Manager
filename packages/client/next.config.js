@@ -4,6 +4,7 @@ const nextConfig = {
   reactStrictMode: true,
   experimental: {
     appDir: true,
+    typedRoutes: true,
   },
   sassOptions: {
     includePaths: [path.join(__dirname, "styles")],

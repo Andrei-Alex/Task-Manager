@@ -1,27 +1,41 @@
 import { NextResponse } from "next/server";
-import axios from "axios";
+import { AxiosError } from "axios";
+import { getHealth } from "@/services";
+import { getAppData } from "@/services/appData";
 
-export async function GET(request: Request) {
+export interface IAppData {
+  server: Partial<AppDataServer>;
+  clientVersion: string | undefined;
+}
+
+export type AppDataServer = {
+  serverStatus: number;
+  dbName: string;
+  dbStatus: string;
+  serverVersion: string;
+};
+
+export async function GET() {
   try {
-    const res = await axios.get(
-      `http://${process.env.NEXT_PUBLIC_SERVER}/api/health`
-    );
-    const appData = await axios.get(
-      `http://${process.env.NEXT_PUBLIC_SERVER}/api/appData`
-    );
-    const [dbName] = Object.keys(res.data.info);
-    const server = {
-      serverStatus: res.status,
-      dbName: dbName,
-      dbStatus: res.data.info[dbName].status,
-      serverVersion: appData.data.serverVersion,
-    };
+    const res = await getHealth();
+    const appData = await getAppData();
+    if (!(res instanceof AxiosError)) {
+      const [dbName] = Object.keys(res.info);
+      const server: Partial<AppDataServer> = {
+        serverStatus: res.status,
+        dbName: dbName,
+        dbStatus: res.info[dbName].status,
+      };
+      if (!(appData instanceof AxiosError)) {
+        server.serverVersion = appData.serverVersion;
+      }
 
-    const data = {
-      server,
-      clientVersion: process.env.NEXT_PUBLIC_VERSION,
-    };
-    return NextResponse.json(data);
+      const data: IAppData = {
+        server,
+        clientVersion: process.env.NEXT_PUBLIC_VERSION,
+      };
+      return NextResponse.json(data);
+    }
   } catch (err) {
     console.error(err);
     return NextResponse.json({ err });
