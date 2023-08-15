@@ -1,11 +1,11 @@
 "use client";
-import type { NextPage } from "next";
 import { useLogin } from "@/hooks";
 import { Form } from "@/features";
 import { loginInputs, loginSchema } from "@/features/Form";
 import { useAuthFormConfirmMessage } from "@/hooks";
+import React from "react";
 
-const Login: NextPage = () => {
+const Login: React.FC = () => {
   const { data, error, login } = useLogin();
   const { confirmMessage, setConfirmMessage } = useAuthFormConfirmMessage(
     data,

@@ -1,3 +1,4 @@
+"use server";
 import "../styles/Global.scss";
 import { ILayouts } from "../../../libs/sharedTypes";
 import { AppWrapper } from "@/containers";

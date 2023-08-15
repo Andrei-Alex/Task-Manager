@@ -1,16 +1,6 @@
-"use client";
 import React from "react";
-import { IAppData } from "@/services/appData";
-
-export type ILogo = {
-  logo: {
-    name?: string;
-    src?: string;
-  };
-  appData?: IAppData;
-};
-
-export const Logo: React.FC<ILogo> = ({ logo, appData }) => {
+import { ILogo } from ".";
+const Logo: React.FC<ILogo> = ({ logo, appData }) => {
   return (
     <div>
       {logo?.src ? <image href={logo.src} /> : <h1>{logo?.name}</h1>}
