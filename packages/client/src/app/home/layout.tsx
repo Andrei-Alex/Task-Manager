@@ -16,7 +16,7 @@ const Layout: ({ children }: ILayouts) => AsyncComponent = async ({
   const res = await getServerSideAppData();
 
   return (
-    <MainLayout logo={logo} navElements={navElements}>
+    <MainLayout logo={logo} appData={res} navElements={navElements}>
       {children}
     </MainLayout>
   );

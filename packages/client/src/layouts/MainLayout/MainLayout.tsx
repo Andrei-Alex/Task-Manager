@@ -2,10 +2,15 @@
 import React from "react";
 import { IMainLayout, styles } from "./index";
 import { Header } from "@/components";
-const MainLayout: React.FC<IMainLayout> = ({ children, logo, navElements }) => {
+import { logo } from "@/constants";
+const MainLayout: React.FC<IMainLayout> = ({
+  children,
+  appData,
+  navElements,
+}) => {
   return (
     <>
-      <Header logo={logo} navElements={navElements} />
+      <Header logo={logo} appData={appData} navElements={navElements} />
       <main className={styles.main}>{children}</main>
     </>
   );

@@ -1,6 +1,7 @@
 import { Logo, NavElement } from "../../../../libs/sharedTypes";
+import { IAppData } from "@/services/appData";
 
 export interface IHeader {
-  logo: Logo;
   navElements: NavElement[];
+  appData: IAppData;
 }

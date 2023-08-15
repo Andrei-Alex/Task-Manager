@@ -3,18 +3,6 @@ import { AxiosError } from "axios";
 import { getHealth } from "@/services";
 import { getAppData } from "@/services/appData";
 
-export interface IAppData {
-  server: Partial<AppDataServer>;
-  clientVersion: string | undefined;
-}
-
-export type AppDataServer = {
-  serverStatus: number;
-  dbName: string;
-  dbStatus: string;
-  serverVersion: string;
-};
-
 export async function GET(request: Request) {
   try {
     const res = await getHealth();

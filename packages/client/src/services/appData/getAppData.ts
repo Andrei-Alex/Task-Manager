@@ -1,8 +1,8 @@
 import { AxiosError } from "axios";
 import { appDataServerSideInstance, appDateInstance } from "@/constants";
-import { appData, IAppData } from "@/services/appData/types";
+import { AppDataServer, IAppData } from "@/services/appData/types";
 
-export const getAppData = async (): Promise<appData | AxiosError> => {
+export const getAppData = async (): Promise<AppDataServer | AxiosError> => {
   try {
     const response = await appDateInstance({});
     return response.data;
