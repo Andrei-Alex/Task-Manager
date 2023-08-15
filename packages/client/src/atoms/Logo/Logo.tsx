@@ -10,7 +10,6 @@ export type ILogo = {
 };
 
 export const Logo: React.FC<ILogo> = ({ logo, appData }) => {
-  console.log(logo);
   return (
     <div>
       {logo?.src ? <image href={logo.src} /> : <h1>{logo?.name}</h1>}

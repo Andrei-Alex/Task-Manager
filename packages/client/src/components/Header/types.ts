@@ -4,4 +4,5 @@ import { IAppData } from "@/services/appData";
 export interface IHeader {
   navElements: NavElement[];
   appData: IAppData;
+  logo: Logo;
 }
