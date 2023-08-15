@@ -4,7 +4,9 @@
 name: 'Chromatic'
 on:
   push:
-   paths:
+    branches:
+    - main
+    paths:
     - packages/client/**
 
 # List of jobs

@@ -1,9 +1,7 @@
 import { IAppData } from "@/services/appData";
+import { Logo } from "../../../../libs/sharedTypes";
 
-export type ILogo = {
-  logo: {
-    name?: string;
-    src?: string;
-  };
+export interface ILogo {
+  logo: Logo;
   appData?: IAppData;
-};
+}

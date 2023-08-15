@@ -10,6 +10,7 @@ const Header: React.FC<IHeader> = ({ logo, navElements, appData }) => {
 
   return (
     <header className={styles.header}>
+      <Logo logo={logo} appData={appData} />
       <div>
         <nav className={styles.leftNav}>
           <LinkList listElements={navElements} />
