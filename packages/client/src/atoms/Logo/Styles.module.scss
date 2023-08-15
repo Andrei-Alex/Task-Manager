@@ -5,20 +5,39 @@
   font-family: sans-serif;
   padding: 1rem;
 
+
   h1 {
     margin: 0;
     width: fit-content;
-    font-size: 4rem;
+    font-size: 3rem;
   }
 
-  .dev, .data {
+  .dev {
     display: flex;
     justify-content: space-between;
-    font-size: 0.8rem;
+
+    p{
+      font-size: 0.7rem;
+    }
   }
+
+  .data {
+    display: flex;
+    justify-content: space-between;
+
+    p {
+      font-size: 0.7rem;
+    }
+  }
+
   .dev > p:first-of-type {
     color: red;
   }
+
+  p {
+    margin: 0;
+  }
+
   p:not(:last-child) {
     margin-right: 0.5rem;
   }

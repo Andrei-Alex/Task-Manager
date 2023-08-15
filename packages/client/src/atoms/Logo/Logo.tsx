@@ -38,17 +38,20 @@ import { ILogo, styles } from ".";
 export const Logo: React.FC<ILogo> = ({ logo, appData }) => {
   return (
     <div className={styles.logo}>
-      {logo?.src ? (
-        <img src={logo.src} alt={logo.name} />
-      ) : (
-        <h1>{logo?.name}</h1>
-      )}
+      <div>
+        {logo?.src ? (
+          <img src={logo.src} alt={logo.name} />
+        ) : (
+          <h1>{logo?.name}</h1>
+        )}
+      </div>
+      <div className={styles.div}></div>
       {appData && appData.server.dbName === "dev" && (
         <div className={styles.dev}>
           <p>Dev</p>
           <div className={styles.data}>
-            <p>Client: {appData.clientVersion}</p>
-            <p>Server: {appData.server.serverVersion}</p>
+            <p>Client:{appData.clientVersion}</p>
+            <p>Server:{appData.server.serverVersion}</p>
           </div>
         </div>
       )}
