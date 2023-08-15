@@ -1,7 +1,7 @@
 import { NextResponse } from "next/server";
 import { AxiosError } from "axios";
 import { getHealth } from "@/services";
-import { getAppData } from "@/services/appData";
+import { AppDataServer, getAppData, IAppData } from "@/services/appData";
 
 export async function GET(request: Request) {
   try {
@@ -22,7 +22,6 @@ export async function GET(request: Request) {
         server,
         clientVersion: process.env.NEXT_PUBLIC_VERSION,
       };
-      console.log(data);
       return NextResponse.json(data);
     }
   } catch (err) {
