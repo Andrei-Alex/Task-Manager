@@ -4,12 +4,12 @@ import { IHeader, styles } from "./index";
 import Link from "next/link";
 import { LinkList } from "../../atoms";
 import { useLogout } from "../../hooks";
-const Header: React.FC<IHeader> = ({ logo, navElements }) => {
+import { Logo } from "@/atoms";
+const Header: React.FC<IHeader> = ({ logo, navElements, appData }) => {
   const { haveProfile, logout } = useLogout();
 
   return (
     <header className={styles.header}>
-      <div>{logo.src ? <image href={logo.src} /> : <h1>{logo.name}</h1>}</div>
       <div>
         <nav className={styles.leftNav}>
           <LinkList listElements={navElements} />

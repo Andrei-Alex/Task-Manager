@@ -1,0 +1,26 @@
+.logo {
+  display: inline-flex;
+  flex-direction: column;
+  justify-content: space-around;
+  font-family: sans-serif;
+  padding: 1rem;
+
+  h1 {
+    margin: 0;
+    width: fit-content;
+    font-size: 4rem;
+  }
+
+  .dev, .data {
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.8rem;
+  }
+  .dev > p:first-of-type {
+    color: red;
+  }
+  p:not(:last-child) {
+    margin-right: 0.5rem;
+  }
+
+}

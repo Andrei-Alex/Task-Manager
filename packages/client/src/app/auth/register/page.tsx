@@ -1,11 +1,11 @@
 "use client";
-import type { NextPage } from "next";
 import Head from "next/head";
 import { Form } from "@/features";
 import { registerInputs, RegisterSchema } from "@/features/Form";
 import { useAuthFormConfirmMessage, useRegister } from "@/hooks";
+import React from "react";
 
-const Register: NextPage = () => {
+const Register: React.FC = () => {
   const { data, error, register } = useRegister();
   const { confirmMessage, setConfirmMessage } = useAuthFormConfirmMessage(
     data,
