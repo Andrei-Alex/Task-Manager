@@ -4,9 +4,14 @@ exports[`Logo renders correctly 1`] = `
 <div
   className="logo"
 >
-  <h1>
-    Kanban
-  </h1>
+  <div>
+    <h1>
+      Kanban
+    </h1>
+  </div>
+  <div
+    className="div"
+  />
   <div
     className="dev"
   >
@@ -17,11 +22,11 @@ exports[`Logo renders correctly 1`] = `
       className="data"
     >
       <p>
-        Client: 
+        Client:
         1.2.2
       </p>
       <p>
-        Server: 
+        Server:
         1.1.1
       </p>
     </div>
