@@ -10,7 +10,7 @@ import { IRegisterRequest, registerRequest } from "@/services";
  * Redirect to login page if successful
  * @return {object} data Axios response (status, userName and email)
  * @return {object} error Axios error if 400 - 500
- * @return {function} register handle register request
+ * @return {function} register handler register request
  * **/
 export function useRegister() {
   const [data, setData] = useState<DataType>(null);

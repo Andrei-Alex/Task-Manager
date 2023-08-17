@@ -5,10 +5,12 @@ import { userRequest } from "@/services";
 import { AxiosError } from "axios";
 
 /**
- * useAuth
- * Check if the token is correct
- * @return {boolean} logged
- * @return {Object} AxiosError
+ * A custom hook for managing user authentication status and related errors.
+ * It checks for authentication data in localStorage and updates the authentication status accordingly.
+ *
+ * @function
+ * @returns {Object} An object containing the user's authentication status and related error information.
+ *
  */
 export const useAuth = () => {
   const [logged, setLogged] = useState<boolean | null>(null);
