@@ -1,13 +1,12 @@
-"use client";
 import React from "react";
 import { IHeader, styles } from "./index";
 import Link from "next/link";
 import { LinkList } from "../../atoms";
 import { useLogout } from "../../hooks";
 import { Logo } from "@/atoms";
+import { AuthButtons } from "@/components";
+import { withUseLogout } from "@/Hocs";
 const Header: React.FC<IHeader> = ({ logo, navElements, appData }) => {
-  const { haveProfile, logout } = useLogout();
-
   return (
     <header className={styles.header}>
       <Logo logo={logo} appData={appData} />
@@ -15,29 +14,7 @@ const Header: React.FC<IHeader> = ({ logo, navElements, appData }) => {
         <nav className={styles.leftNav}>
           <LinkList listElements={navElements} />
         </nav>
-        <nav>
-          <ul>
-            {!haveProfile ? (
-              <>
-                <li>
-                  <Link href={"/auth/register"}>Register</Link>
-                </li>
-                <li>
-                  <Link href={"/auth/login"}>Login</Link>
-                </li>
-              </>
-            ) : (
-              <Link
-                onClick={() => {
-                  logout();
-                }}
-                href="/auth/login"
-              >
-                Logout
-              </Link>
-            )}
-          </ul>
-        </nav>
+        <AuthButtons />
       </div>
     </header>
   );
