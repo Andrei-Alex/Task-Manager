@@ -6,11 +6,9 @@ import { AppWrapper } from "@/containers";
 
 const RootLayout: React.FC<ILayouts> = ({ children }) => {
   return (
-    <html lang={"en"}>
-      <body>
-        <AppWrapper>{children}</AppWrapper>
-      </body>
-    </html>
+    <AppWrapper>
+      <body>{children}</body>
+    </AppWrapper>
   );
 };
 export default RootLayout;
