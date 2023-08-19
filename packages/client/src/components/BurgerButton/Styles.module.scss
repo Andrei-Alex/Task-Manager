@@ -1,0 +1,10 @@
+.burgerButtonContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+ &:active {
+   transform: scale(1.2);
+   transition: transform 0.1s ease-in-out;
+  }
+}
+

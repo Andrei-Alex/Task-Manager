@@ -21,4 +21,12 @@ describe("Icon", () => {
     expect(screen.getByTestId("MdOutlinePassword-icon")).toBeInTheDocument();
     expect(screen.queryByTestId("HiMail-icon")).not.toBeInTheDocument();
   });
+  it("should display correct icon", () => {
+    render(<Icon iconName={"RxHamburgerMenu"} />);
+    expect(screen.getByTestId("RxHamburgerMenu-icon")).toBeInTheDocument();
+  });
+  it("should display correct icon", () => {
+    render(<Icon iconName={"IoIosArrowDown"} />);
+    expect(screen.getByTestId("IoIosArrowDown-icon")).toBeInTheDocument();
+  });
 });

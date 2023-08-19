@@ -1,6 +1,11 @@
 import { CustomStyles } from "../../../../libs/sharedTypes/styles";
 
-export type Icons = "HiMail" | "MdOutlinePassword" | undefined;
+export type Icons =
+  | "HiMail"
+  | "MdOutlinePassword"
+  | "RxHamburgerMenu"
+  | "IoIosArrowDown"
+  | undefined;
 export interface IIcon {
   extraStyles?: CustomStyles;
   iconName: Icons;
