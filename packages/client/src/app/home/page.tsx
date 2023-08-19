@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import { withAuth } from "@/Hocs/withAuth/withAuth";
+import { withAuth } from "@/Hocs/Auth/withAuth";
 
 const Home = () => {
   return (
