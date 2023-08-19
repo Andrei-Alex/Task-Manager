@@ -1,6 +1,8 @@
 import React from "react";
 import { HiMail } from "react-icons/hi";
 import { MdOutlinePassword } from "react-icons/md";
+import { RxHamburgerMenu } from "react-icons/rx";
+import { IoIosArrowDown } from "react-icons/io";
 import { Icons, IIcon } from ".";
 
 /**
@@ -32,7 +34,7 @@ import { Icons, IIcon } from ".";
  * @param {number} size - The size of the icon in pixels. Defaults to 16.
  * @returns {JSX.Element} - The rendered icon component.
  *
-*/
+ */
 export const Icon: React.FC<IIcon> = ({
   extraStyles,
   iconName,
@@ -51,6 +53,23 @@ export const Icon: React.FC<IIcon> = ({
             data-testid="MdOutlinePassword-icon"
           />
         );
+      case "RxHamburgerMenu":
+        return (
+          <RxHamburgerMenu
+            size={size}
+            color={color}
+            data-testid="RxHamburgerMenu-icon"
+          />
+        );
+      case "IoIosArrowDown":
+        return (
+          <IoIosArrowDown
+            size={size}
+            color={color}
+            data-testid="IoIosArrowDown-icon"
+          />
+        );
+
       default:
         return null;
     }
@@ -60,10 +79,13 @@ export const Icon: React.FC<IIcon> = ({
 };
 
 function PropsAreEqual(prevProps: IIcon, nextProps: IIcon) {
-  return JSON.stringify(prevProps.extraStyles) === JSON.stringify(nextProps.extraStyles)
-      && prevProps.iconName === nextProps.iconName
-      && prevProps.color === nextProps.color
-      && prevProps.size === nextProps.size
+  return (
+    JSON.stringify(prevProps.extraStyles) ===
+      JSON.stringify(nextProps.extraStyles) &&
+    prevProps.iconName === nextProps.iconName &&
+    prevProps.color === nextProps.color &&
+    prevProps.size === nextProps.size
+  );
 }
 
 export default React.memo(Icon, PropsAreEqual);
