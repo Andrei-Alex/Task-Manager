@@ -1,8 +1,8 @@
 "use client";
 import React from "react";
 import { IMainLayout, styles } from "./index";
-import { Header } from "@/components";
 import { logo } from "@/constants";
+import { Footer, Header } from "@/layouts/LayoutParts";
 
 /**
  *
@@ -32,6 +32,7 @@ const MainLayout: React.FC<IMainLayout> = ({
     <>
       <Header logo={logo} appData={appData} navElements={navElements} />
       <main className={styles.main}>{children}</main>
+      <Footer />
     </>
   );
 };

@@ -1,0 +1,60 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ThemeSwitcher renders correctly 1`] = `
+<div
+  className="mantine-Group-root mantine-k3ov3c"
+>
+  <div
+    className="mantine-Switch-root mantine-Switch-root mantine-1knyxmk"
+  >
+    <div
+      className="mantine-hqx0d1 mantine-Switch-body"
+    >
+      <input
+        checked={false}
+        className="mantine-19htmtn mantine-Switch-input"
+        id="mantine-4q131l6z4"
+        onChange={[Function]}
+        type="checkbox"
+      />
+      <label
+        className="mantine-x21r6k mantine-Switch-track"
+        htmlFor="mantine-4q131l6z4"
+      >
+        <div
+          className="mantine-x4nrms mantine-Switch-thumb"
+        />
+        <div
+          className="mantine-jjud08 mantine-Switch-trackLabel"
+        >
+          <svg
+            className="tabler-icon tabler-icon-moon-stars"
+            fill="none"
+            height="1.25rem"
+            stroke="black"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            strokeWidth={1.5}
+            viewBox="0 0 24 24"
+            width="1.25rem"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M12 3c.132 0 .263 0 .393 0a7.5 7.5 0 0 0 7.92 12.446a9 9 0 1 1 -8.313 -12.454z"
+            />
+            <path
+              d="M17 4a2 2 0 0 0 2 2a2 2 0 0 0 -2 2a2 2 0 0 0 -2 -2a2 2 0 0 0 2 -2"
+            />
+            <path
+              d="M19 11h2m-1 -1v2"
+            />
+          </svg>
+        </div>
+      </label>
+      <div
+        className="mantine-xynbgb mantine-Switch-labelWrapper"
+      />
+    </div>
+  </div>
+</div>
+`;
