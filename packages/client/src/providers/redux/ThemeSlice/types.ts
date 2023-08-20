@@ -1,5 +1,3 @@
 export interface ITheme {
-  theme: {
-    isDarkMode: boolean;
-  };
+  isDarkMode: boolean;
 }

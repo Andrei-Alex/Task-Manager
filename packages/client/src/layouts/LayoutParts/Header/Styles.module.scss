@@ -1,4 +1,4 @@
-@import '../../styles/_variables';
+@import '../../../styles/variables';
 
 .header {
   display: flex;
@@ -7,9 +7,8 @@
   justify-content: space-between;
   align-items: center;
   padding: 0px 3%;
-  background-color: black;
-  color: white;
 }
+
 .header :nth-child(2) {
   display: flex;
   width: 85%;
