@@ -13,13 +13,13 @@ exports[`ThemeSwitcher renders correctly 1`] = `
       <input
         checked={false}
         className="mantine-19htmtn mantine-Switch-input"
-        id="mantine-4q131l6z4"
+        id="mantine-cxamiqpw4"
         onChange={[Function]}
         type="checkbox"
       />
       <label
         className="mantine-x21r6k mantine-Switch-track"
-        htmlFor="mantine-4q131l6z4"
+        htmlFor="mantine-cxamiqpw4"
       >
         <div
           className="mantine-x4nrms mantine-Switch-thumb"
