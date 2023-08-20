@@ -1,4 +1,4 @@
-@import '../../styles/_variables';
+@import '../../../styles/variables';
 
 .header {
   display: flex;
@@ -10,6 +10,7 @@
   background-color: black;
   color: white;
 }
+
 .header :nth-child(2) {
   display: flex;
   width: 85%;

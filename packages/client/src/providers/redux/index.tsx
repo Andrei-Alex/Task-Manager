@@ -8,5 +8,6 @@ export const ReduxProvider: React.FC<ILayouts> = ({ children }) => {
   return <Provider store={store}>{children}</Provider>;
 };
 export { default as store } from "./store";
+export type { RootState } from "./store";
 export * from "./AuthSlice";
 export * from "./ThemeSlice";

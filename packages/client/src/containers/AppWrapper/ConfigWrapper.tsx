@@ -1,14 +1,14 @@
 "use client";
 import React from "react";
 import { useSelector } from "react-redux";
-import { ITheme } from "@/providers";
+import { ITheme, RootState } from "@/providers";
 import { IConfigWrapper, styles } from ".";
 
 const ConfigWrapper: React.FC<Partial<IConfigWrapper>> = ({
   lang = "en",
   children,
 }) => {
-  const isDarkMode = useSelector((state: ITheme) => state.theme.isDarkMode);
+  const isDarkMode = useSelector((state: RootState) => state.theme.isDarkMode);
   return (
     <html
       lang={lang}

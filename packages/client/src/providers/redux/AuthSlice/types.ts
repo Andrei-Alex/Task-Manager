@@ -1,9 +1,7 @@
 export interface IAuth {
-  auth: {
-    token: string | null;
-    user: User | null;
-    error: string | null;
-  };
+  token: string | null;
+  user: User | null;
+  error: string | null;
 }
 
 export type User = {

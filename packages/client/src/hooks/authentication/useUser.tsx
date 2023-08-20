@@ -1,7 +1,7 @@
 "use client";
 import { useEffect } from "react";
 import { useSelector, useDispatch } from "react-redux";
-import { setToken, setUser, IAuth } from "@/providers";
+import { setToken, setUser, IAuth, RootState } from "@/providers";
 
 /**
  * * A custom hook for managing user data and authentication token.
@@ -13,8 +13,8 @@ import { setToken, setUser, IAuth } from "@/providers";
  *  *
  **/
 export const useUser = () => {
-  const user = useSelector((state: IAuth) => state.auth.user);
-  const token = useSelector((state: IAuth) => state.auth.token);
+  const user = useSelector((state: RootState) => state.auth.user);
+  const token = useSelector((state: RootState) => state.auth.token);
   const dispatch = useDispatch();
 
   useEffect(() => {

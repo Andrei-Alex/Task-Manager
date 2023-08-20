@@ -1,11 +1,9 @@
 import React from "react";
 import { IHeader, styles } from "./index";
-import Link from "next/link";
-import { LinkList } from "../../atoms";
-import { useLogout } from "../../hooks";
+import { LinkList } from "../../../atoms";
 import { Logo } from "@/atoms";
 import { AuthButtons } from "@/components";
-import { withUseLogout } from "@/Hocs";
+import { ThemeSwitcher } from "../../../features/ThemeSwitcher/ThemeSwitcher";
 const Header: React.FC<IHeader> = ({ logo, navElements, appData }) => {
   return (
     <header className={styles.header}>
@@ -13,6 +11,7 @@ const Header: React.FC<IHeader> = ({ logo, navElements, appData }) => {
       <div>
         <nav className={styles.leftNav}>
           <LinkList listElements={navElements} />
+          <ThemeSwitcher />
         </nav>
         <AuthButtons />
       </div>
