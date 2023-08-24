@@ -12,9 +12,21 @@ export const ThemeSwitcher = () => {
       toggleHandler={() => {
         dispatch(toggleTheme(isDarkMode));
       }}
-      mainIcon={<IconSun color={"white"} size="1.25rem" stroke={1.5} />}
+      mainIcon={
+        <IconSun
+          color={"white"}
+          size="1.25rem"
+          stroke={1.5}
+          data-testid="lightModeIcon"
+        />
+      }
       secondaryIcon={
-        <IconMoonStars color={"black"} size="1.25rem" stroke={1.5} />
+        <IconMoonStars
+          color={"black"}
+          size="1.25rem"
+          stroke={1.5}
+          data-testid="darkModeIcon"
+        />
       }
     />
   );
