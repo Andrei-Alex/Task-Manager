@@ -6,7 +6,7 @@ import { fireEvent, render, waitFor } from "@testing-library/react";
 import { screen } from "@testing-library/dom";
 
 describe("ThemeSwitcher", () => {
-  it("should render burger icon", () => {
+  it("should render ThemeSwitcher", () => {
     render(
       <Provider store={store}>
         <ThemeSwitcher />

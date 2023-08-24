@@ -5,5 +5,5 @@ export interface ISwitchButton {
   toggleHandler: () => void;
   mainIcon: React.ReactNode;
   secondaryIcon: React.ReactNode;
-  testId: "string";
+  testId?: "string";
 }
