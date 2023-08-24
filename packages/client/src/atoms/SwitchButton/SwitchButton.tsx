@@ -7,10 +7,12 @@ export const SwitchButton: React.FC<ISwitchButton> = ({
   toggleHandler,
   mainIcon,
   secondaryIcon,
+  testId = "switch-button",
 }) => {
   return (
     <Group>
       <Switch
+        data-testid={testId}
         checked={checked}
         onChange={() => toggleHandler()}
         size="lg"
