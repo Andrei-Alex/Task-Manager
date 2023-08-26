@@ -1,0 +1,8 @@
+@import "../../styles/_variables";
+.authNav {
+  .link {
+    &:hover {
+      color: $hover-color
+    }
+  }
+}
