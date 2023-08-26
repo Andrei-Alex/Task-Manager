@@ -10,7 +10,6 @@
 ![Docker](https://img.shields.io/badge/docker-%230db7ed.svg?style=for-the-badge&logo=docker&logoColor=white)
 ![GitHub](https://img.shields.io/badge/github-%23121011.svg?style=for-the-badge&logo=github&logoColor=white)
 
-
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
@@ -26,13 +25,11 @@
     <a href="https://github.com/Andrei-Alex/Task-Manager"><strong>Explore the repo »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/Andrei-Alex/Task-Manager">Front-end</a>
+    <a href="http://localhost:3000">Front-end</a>
     ·
-    <a href="https://github.com/Andrei-Alex/Task-Manager">Storybook Client</a>
+    <a href="http://localhost:6006">Storybook</a>
     ·
-    <a href="https://github.com/Andrei-Alex/Task-Manager">Storybook Atoms</a>
-    .
-    <a href="https://github.com/Andrei-Alex/Task-Manager">Back-end AUTH_API</a>
+    <a href="http://localhost:3333/api">Swagger</a>
 
   </p>
 </div>
@@ -53,13 +50,7 @@
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-Practice project built for training, refactoring, try or discover new frameworks/libraries
-
-* DRY
-* KISS
-
-
-
+This TypeScript project is a Next.js and Node.js journey. Through the creation of a minimalist to-do application, I am delving into unit testing, library integration, and the core principles of KISS (Keep It Simple, Stupid), DRY (Don't Repeat Yourself), and TDD (Test-Driven Development). The project centers around code optimization and refactoring, offering an immersive learning experience in the world of modern programming practices.
 
 
 <!-- GETTING STARTED -->
@@ -112,6 +103,8 @@ To get a local copy up and running follow these simple example steps.
 - SASS styling languages.
 - Storybook as component library.
 - Jest for testing
+- Redux for state management.
+- Mantine UI components
 
 <H3>Back-End Tech :</h3>
 
@@ -120,10 +113,6 @@ To get a local copy up and running follow these simple example steps.
 - Swagger for documentation.
 - Jest for testing
 
-<H3>Libs :</h3>
-
-- Storybook Atoms lib
-- SharedTypes TS lib
 
 <!-- LICENSE -->
 ## License
@@ -137,7 +126,7 @@ Andrei Alexandru - [@Linkedin](https://linkedin.com/andrei-alex) - Andrei-Alex@o
 
 Project Link: [Andrei-Alex](https://github.com/Andrei-Alex)
 
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
+<p align="right">(<a href="#about-the-project">back to project</a>)</p>
 
 
 
@@ -164,5 +153,4 @@ Project Link: [Andrei-Alex](https://github.com/Andrei-Alex)
 [Vue-url]: https://vuejs.org/
 [Angular.io]: https://img.shields.io/badge/Angular-DD0031?style=for-the-badge&logo=angular&logoColor=white
 [Angular-url]: https://angular.io/
-[Svelte.dev]: https://img.shields.io/badge/Svelte-4A4A55?style=for-the-badge&logo=svelte&logoColor=FF3E00
-[Svelte-url]: https://svelte.dev/
+
