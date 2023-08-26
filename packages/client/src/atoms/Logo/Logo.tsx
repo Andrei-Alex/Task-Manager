@@ -49,10 +49,6 @@ export const Logo: React.FC<ILogo> = ({ logo, appData }) => {
       {appData && appData.server.dbName === "dev" && (
         <div className={styles.dev}>
           <p>Dev</p>
-          <div className={styles.data}>
-            <p>Client:{appData.clientVersion}</p>
-            <p>Server:{appData.server.serverVersion}</p>
-          </div>
         </div>
       )}
     </div>
