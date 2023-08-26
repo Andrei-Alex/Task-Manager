@@ -18,18 +18,6 @@ exports[`Logo renders correctly 1`] = `
     <p>
       Dev
     </p>
-    <div
-      className="data"
-    >
-      <p>
-        Client:
-        1.2.2
-      </p>
-      <p>
-        Server:
-        1.1.1
-      </p>
-    </div>
   </div>
 </div>
 `;

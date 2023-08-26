@@ -21,9 +21,6 @@ const Header: React.FC<IHeader> = ({ logo, navElements, appData }) => {
           />
         ) : (
           <>
-            <nav className={styles.leftNav}>
-              <LinkList listElements={navElements} />
-            </nav>
             <AuthButtons />
           </>
         )}
