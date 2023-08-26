@@ -1,6 +1,10 @@
 @import "../../styles/_variables";
 .authNav {
+  ul {
+    list-style: none;
+  }
   .link {
+    text-decoration: none;
     &:hover {
       color: $hover-color
     }
