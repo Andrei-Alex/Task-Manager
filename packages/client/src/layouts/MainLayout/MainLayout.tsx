@@ -3,6 +3,7 @@ import React from "react";
 import { IMainLayout, styles } from "./index";
 import { logo } from "@/constants";
 import { Footer, Header } from "@/layouts/LayoutParts";
+import { LayoutProvider } from "@/providers/";
 
 /**
  *
@@ -23,17 +24,13 @@ import { Footer, Header } from "@/layouts/LayoutParts";
  *
  **/
 
-const MainLayout: React.FC<IMainLayout> = ({
-  children,
-  appData,
-  navElements,
-}) => {
+const MainLayout: React.FC<IMainLayout> = ({ children, appData }) => {
   return (
-    <>
-      <Header logo={logo} appData={appData} navElements={navElements} />
+    <LayoutProvider>
+      <Header logo={logo} appData={appData} />
       <main className={styles.main}>{children}</main>
       <Footer />
-    </>
+    </LayoutProvider>
   );
 };
 export default MainLayout;

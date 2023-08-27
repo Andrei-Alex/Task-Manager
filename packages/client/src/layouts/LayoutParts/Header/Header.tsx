@@ -1,14 +1,15 @@
 "use client";
-import React, { useState } from "react";
+import React, { useContext, useState } from "react";
+import Link from "next/link";
 import { IHeader, styles } from "./index";
-import { LinkList } from "../../../atoms";
 import { Logo } from "@/atoms";
 import { AuthButtons, BurgerButton } from "@/components";
-import { useWindowWidth } from "@/hooks";
-import Link from "next/link";
-const Header: React.FC<IHeader> = ({ logo, navElements, appData }) => {
+import { LayoutContext } from "@/providers";
+
+const Header: React.FC<IHeader> = ({ logo, appData }) => {
   const [isBurgerOpen, setIsBurgerOpen] = useState(false);
-  const [isMobile] = useWindowWidth();
+  const [isMobile] = useContext(LayoutContext);
+
   return (
     <header className={styles.header}>
       <Link href={"/home"}>
