@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { AUTH_EMAIL, AUTH_KEY } from "@/constants";
 /**
  * A custom hook for handling user logout functionality and tracking profile status.
@@ -16,10 +16,10 @@ export const useLogout = () => {
     setHaveProfile(profile);
   }, []);
 
-  const logout = () => {
+  const logout = useCallback(() => {
     localStorage.removeItem(AUTH_EMAIL);
     localStorage.removeItem(AUTH_KEY);
-  };
+  }, []);
 
   return { haveProfile, setHaveProfile, logout };
 };

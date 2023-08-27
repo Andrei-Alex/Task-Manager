@@ -1,5 +1,5 @@
 "use client";
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { AUTH_EMAIL, AUTH_KEY } from "@/constants";
 import { userRequest } from "@/services";
 import { AxiosError } from "axios";
@@ -15,11 +15,14 @@ import { AxiosError } from "axios";
 export const useAuth = () => {
   const [logged, setLogged] = useState<boolean | null>(null);
   const [error, setError] = useState<AxiosError | null>(null);
+  const memoizedUserRequest = useCallback(userRequest, []);
 
   useEffect(() => {
     (async () => {
       if (localStorage.getItem(AUTH_KEY) !== null) {
-        const response = await userRequest(localStorage.getItem(AUTH_KEY));
+        const response = await memoizedUserRequest(
+          localStorage.getItem(AUTH_KEY)
+        );
         if (response instanceof AxiosError) {
           setError(response);
         } else {
