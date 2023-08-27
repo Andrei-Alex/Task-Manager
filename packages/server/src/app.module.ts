@@ -9,6 +9,8 @@ import { UserModule } from './user/user.module';
 import { AppDataModule } from './appData/appData.module';
 import { BoardModule } from './board/board.module';
 import * as dotenv from 'dotenv';
+import { APP_INTERCEPTOR } from '@nestjs/core';
+import { AppInterceptor } from './app.interceptors';
 dotenv.config();
 
 @Module({
@@ -48,6 +50,12 @@ dotenv.config();
   /**
    * Providers for services used within the AppModule.
    */
-  providers: [AppService],
+  providers: [
+    AppService,
+    {
+      provide: APP_INTERCEPTOR,
+      useClass: AppInterceptor,
+    },
+  ],
 })
 export class AppModule {}
