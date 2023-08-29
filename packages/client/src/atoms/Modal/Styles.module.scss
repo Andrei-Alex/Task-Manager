@@ -1,0 +1,23 @@
+.modal {
+  width: 90vw;
+  border-radius: 5px;
+  position: absolute;
+  top: 50px;
+  z-index: 999;
+}
+
+    @media (prefers-color-scheme: dark) {
+      .modal {
+        color: white;
+        background: blue;
+      }
+    }
+
+
+    @media (prefers-color-scheme: light) {
+      .modal {
+        color: white;
+        background: red;
+      }
+    }
+

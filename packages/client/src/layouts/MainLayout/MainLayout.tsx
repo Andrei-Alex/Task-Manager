@@ -4,6 +4,7 @@ import { IMainLayout, styles } from "./index";
 import { logo } from "@/constants";
 import { Footer, Header } from "@/layouts/LayoutParts";
 import { LayoutProvider } from "@/providers/";
+import { Modal } from "@/atoms";
 
 /**
  *
@@ -30,6 +31,7 @@ const MainLayout: React.FC<IMainLayout> = ({ children, appData }) => {
       <Header logo={logo} appData={appData} />
       <main className={styles.main}>{children}</main>
       <Footer />
+      <Modal isVisible={true} />
     </LayoutProvider>
   );
 };
