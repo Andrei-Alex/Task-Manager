@@ -1,0 +1,36 @@
+@import "../../styles/mixin";
+
+.modalContainer {
+  position: absolute;
+  z-index: 100;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .modal {
+    width: 90%;
+    height: 90%;
+    border-radius: 5px;
+    z-index: 101;
+  }
+}
+
+:global(.darkMode) .modal {
+  @include theme('dark');
+  background-color: var(--background-modal);
+}
+
+:global(.lightMode) .modal {
+  @include theme('light');
+  background-color: var(--background-modal);
+}
+
+
+
+
+

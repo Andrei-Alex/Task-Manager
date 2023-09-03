@@ -1,5 +1,5 @@
 import React from "react";
-import { IModal } from ".";
+import { IModal, styles } from ".";
 
 export const Modal: React.FC<Partial<IModal>> = ({
   isVisible,
@@ -10,18 +10,22 @@ export const Modal: React.FC<Partial<IModal>> = ({
 }) => {
   if (isVisible) {
     return (
-      <div className={"modal"}>
-        <div
-          className={"close"}
-          onClick={() => visibilityHandler && visibilityHandler()}
-        >
-          x
+      <div className={styles.modalContainer}>
+        <div className={styles.modal}>
+          <div
+            className={"close"}
+            onClick={() => visibilityHandler && visibilityHandler()}
+          >
+            x
+          </div>
+          <div className={"header"}>{headerElements}</div>
+          <div className={"body"}>{children}</div>
+          <div className={"footer"}>{footerElements}</div>
         </div>
-        <div className={"header"}>{headerElements}</div>
-        <div className={"body"}>{children}</div>
-        <div className={"footer"}>{footerElements}</div>
       </div>
     );
   }
   return null;
 };
+
+export default Modal;

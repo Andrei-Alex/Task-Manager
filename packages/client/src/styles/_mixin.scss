@@ -1,7 +1,19 @@
 @import './variables';
 
-@mixin gradientText(){
+@mixin gradientText() {
   background: $gradientPrimary;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+@mixin theme($theme) {
+  @if $theme == 'dark' {
+    @each $key, $value in $dark-mode-variables {
+      --#{$key}: #{$value};
+    }
+  } @else if $theme == 'light' {
+    @each $key, $value in $light-mode-variables {
+      --#{$key}: #{$value};
+    }
+  }
 }
