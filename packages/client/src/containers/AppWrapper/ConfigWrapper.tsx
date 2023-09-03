@@ -22,15 +22,6 @@ const ConfigWrapper: React.FC<Partial<IConfigWrapper>> = ({
   children,
 }) => {
   const isDarkMode = useSelector((state: RootState) => state.theme.isDarkMode);
-
-  useEffect(() => {
-    const htmlElement = document.documentElement;
-    htmlElement.style.setProperty(
-      "--theme-mode",
-      isDarkMode ? "darkMode" : "lightMode"
-    );
-  }, [isDarkMode]);
-
   useUser();
   return (
     <html lang={lang} className={`${isDarkMode ? "darkMode" : "lightMode"}`}>

@@ -31,7 +31,7 @@ const MainLayout: React.FC<IMainLayout> = ({ children, appData }) => {
       <Header logo={logo} appData={appData} />
       <main className={styles.main}>{children}</main>
       <Footer />
-      <Modal isVisible={true} />
+      {/*<Modal isVisible={true} />*/}
     </LayoutProvider>
   );
 };
