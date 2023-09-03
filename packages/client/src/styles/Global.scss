@@ -16,6 +16,24 @@ a {
 * {
   box-sizing: border-box;
 }
+.darkMode {
+  html {
+    color-scheme: dark;
+  }
+  body {
+    color: white;
+    background: black;
+  }
+}
+.lightMode {
+  html {
+    color-scheme: light;
+  }
+  body {
+    color: black;
+    background: white;
+  }
+}
 
 
 

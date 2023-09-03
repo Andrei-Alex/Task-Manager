@@ -10,16 +10,18 @@ export const Modal: React.FC<Partial<IModal>> = ({
 }) => {
   if (isVisible) {
     return (
-      <div className={styles.modal}>
-        <div
-          className={"close"}
-          onClick={() => visibilityHandler && visibilityHandler()}
-        >
-          x
+      <div className={styles.modalContainer}>
+        <div className={styles.modal}>
+          <div
+            className={"close"}
+            onClick={() => visibilityHandler && visibilityHandler()}
+          >
+            x
+          </div>
+          <div className={"header"}>{headerElements}</div>
+          <div className={"body"}>{children}</div>
+          <div className={"footer"}>{footerElements}</div>
         </div>
-        <div className={"header"}>{headerElements}</div>
-        <div className={"body"}>{children}</div>
-        <div className={"footer"}>{footerElements}</div>
       </div>
     );
   }

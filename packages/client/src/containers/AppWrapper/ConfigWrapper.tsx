@@ -1,8 +1,9 @@
 "use client";
-import React from "react";
+import React, { useEffect } from "react";
 import { useSelector } from "react-redux";
 import { ITheme, RootState } from "@/providers";
-import { IConfigWrapper, styles } from ".";
+import { IConfigWrapper } from ".";
+import "../../styles/Global.scss";
 import { useUser } from "@/hooks/authentication/useUser";
 
 /**
@@ -21,12 +22,18 @@ const ConfigWrapper: React.FC<Partial<IConfigWrapper>> = ({
   children,
 }) => {
   const isDarkMode = useSelector((state: RootState) => state.theme.isDarkMode);
+
+  useEffect(() => {
+    const htmlElement = document.documentElement;
+    htmlElement.style.setProperty(
+      "--theme-mode",
+      isDarkMode ? "darkMode" : "lightMode"
+    );
+  }, [isDarkMode]);
+
   useUser();
   return (
-    <html
-      lang={lang}
-      className={`${isDarkMode ? styles.darkMode : styles.lightMode}`}
-    >
+    <html lang={lang} className={`${isDarkMode ? "darkMode" : "lightMode"}`}>
       {children}
     </html>
   );
