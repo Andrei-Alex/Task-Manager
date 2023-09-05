@@ -5,6 +5,7 @@ import { ITheme, RootState } from "@/providers";
 import { IConfigWrapper } from ".";
 import "../../styles/Global.scss";
 import { useUser } from "@/hooks/authentication/useUser";
+import { useTheme } from "@/hooks";
 
 /**
  * ConfigWrapper Component
@@ -21,7 +22,7 @@ const ConfigWrapper: React.FC<Partial<IConfigWrapper>> = ({
   lang = "en",
   children,
 }) => {
-  const isDarkMode = useSelector((state: RootState) => state.theme.isDarkMode);
+  const { isDarkMode } = useTheme();
   useUser();
   return (
     <html lang={lang} className={`${isDarkMode ? "darkMode" : "lightMode"}`}>
