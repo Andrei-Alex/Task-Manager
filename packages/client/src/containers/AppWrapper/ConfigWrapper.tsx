@@ -18,7 +18,7 @@ import { useTheme } from "@/hooks";
  * @param {React.ReactNode} props.children - The child components to be wrapped.
  * @returns {React.ReactElement} A React element representing the configured HTML wrapper.
  */
-const ConfigWrapper: React.FC<Partial<IConfigWrapper>> = ({
+export const ConfigWrapper: React.FC<Partial<IConfigWrapper>> = ({
   lang = "en",
   children,
 }) => {
