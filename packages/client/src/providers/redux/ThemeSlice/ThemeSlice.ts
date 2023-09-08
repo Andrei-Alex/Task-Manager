@@ -2,7 +2,7 @@ import { createSlice } from "@reduxjs/toolkit";
 import { ITheme } from ".";
 
 const initialState: ITheme = {
-  isDarkMode: false,
+  isDarkMode: null,
 };
 export const ThemeSlice = createSlice({
   name: "Theme",

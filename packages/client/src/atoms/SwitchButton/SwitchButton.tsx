@@ -3,7 +3,7 @@ import { Switch, Group } from "@mantine/core";
 import { ISwitchButton } from "./index";
 
 export const SwitchButton: React.FC<ISwitchButton> = ({
-  checked,
+  checked = false,
   toggleHandler,
   mainIcon,
   secondaryIcon,

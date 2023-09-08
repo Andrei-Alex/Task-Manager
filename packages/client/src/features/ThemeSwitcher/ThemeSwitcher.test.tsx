@@ -23,7 +23,7 @@ describe("ThemeSwitcher", () => {
     );
     const themeSwitcher: HTMLElement = screen.getByTestId("switch-button");
     const initialState: RootState = store.getState();
-    expect(initialState.theme.isDarkMode).toBe(false);
+    expect(initialState.theme.isDarkMode).toBe(null);
 
     fireEvent.click(themeSwitcher);
     await waitFor(() => {

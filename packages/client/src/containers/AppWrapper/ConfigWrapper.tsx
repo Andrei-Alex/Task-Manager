@@ -5,6 +5,7 @@ import { ITheme, RootState } from "@/providers";
 import { IConfigWrapper } from ".";
 import "../../styles/Global.scss";
 import { useUser } from "@/hooks/authentication/useUser";
+import { useTheme } from "@/hooks";
 
 /**
  * ConfigWrapper Component
@@ -17,11 +18,11 @@ import { useUser } from "@/hooks/authentication/useUser";
  * @param {React.ReactNode} props.children - The child components to be wrapped.
  * @returns {React.ReactElement} A React element representing the configured HTML wrapper.
  */
-const ConfigWrapper: React.FC<Partial<IConfigWrapper>> = ({
+export const ConfigWrapper: React.FC<Partial<IConfigWrapper>> = ({
   lang = "en",
   children,
 }) => {
-  const isDarkMode = useSelector((state: RootState) => state.theme.isDarkMode);
+  const { isDarkMode } = useTheme();
   useUser();
   return (
     <html lang={lang} className={`${isDarkMode ? "darkMode" : "lightMode"}`}>

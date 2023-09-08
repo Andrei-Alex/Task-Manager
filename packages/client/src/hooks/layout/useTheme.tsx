@@ -3,7 +3,7 @@ import { RootState, toggleTheme } from "@/providers";
 import { useEffect } from "react";
 import { THEME } from "@/constants";
 
-const useTheme = () => {
+export const useTheme = () => {
   const isDarkMode = useSelector((state: RootState) => state.theme.isDarkMode);
   const dispatch = useDispatch();
   useEffect(() => {
@@ -11,14 +11,17 @@ const useTheme = () => {
       if (!localStorage.getItem(THEME)) {
         if (window.matchMedia("(prefers-color-scheme: dark)")) {
           dispatch(toggleTheme(true));
-        }
-        if (window.matchMedia("(prefers-color-scheme: light)")) {
+          localStorage.setItem(THEME, "dark");
+        } else if (window.matchMedia("(prefers-color-scheme: light)")) {
           dispatch(toggleTheme(false));
+          localStorage.setItem(THEME, "light");
         }
       } else {
-        localStorage.getItem(THEME) === "dark"
-          ? dispatch(toggleTheme(true))
-          : dispatch(toggleTheme(false));
+        if (localStorage.getItem(THEME) === "dark") {
+          dispatch(toggleTheme(true));
+        } else {
+          dispatch(toggleTheme(false));
+        }
       }
     }
   }, []);

@@ -8,7 +8,7 @@ export const ThemeSwitcher = () => {
   const dispatch = useDispatch();
   return (
     <SwitchButton
-      checked={isDarkMode}
+      checked={isDarkMode === null ? false : isDarkMode}
       toggleHandler={() => {
         dispatch(toggleTheme(isDarkMode));
       }}
