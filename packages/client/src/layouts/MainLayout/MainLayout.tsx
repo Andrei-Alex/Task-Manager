@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import { IMainLayout, styles } from "./index";
 import { logo } from "@/constants";
 import { Footer, Header } from "@/layouts/LayoutParts";
@@ -26,12 +26,13 @@ import { Modal } from "@/atoms";
  **/
 
 const MainLayout: React.FC<IMainLayout> = ({ children, appData }) => {
+  const [isMenuVisible, setIsMenuVisible] = useState(true);
   return (
     <LayoutProvider>
       <Header logo={logo} appData={appData} />
       <main className={styles.main}>{children}</main>
       <Footer />
-      {/*<Modal isVisible={true} />*/}
+      <Modal isVisible={isMenuVisible} visibilityHandler={setIsMenuVisible} />
     </LayoutProvider>
   );
 };

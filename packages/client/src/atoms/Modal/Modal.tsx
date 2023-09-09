@@ -1,21 +1,24 @@
-import React from "react";
+import React, { useContext } from "react";
 import { IModal, styles } from ".";
+import { LayoutContext } from "@/providers";
 
-export const Modal: React.FC<Partial<IModal>> = ({
+export const Modal: React.FC<IModal> = ({
   isVisible,
   visibilityHandler,
   children,
   headerElements,
   footerElements,
 }) => {
-  if (isVisible) {
+  const [isMobile] = useContext(LayoutContext);
+  const close = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
+    visibilityHandler(false);
+    e.stopPropagation();
+  };
+  if (isVisible && isMobile) {
     return (
-      <div className={styles.modalContainer}>
+      <div className={styles.modalContainer} onClick={(e) => close(e)}>
         <div className={styles.modal}>
-          <div
-            className={"close"}
-            onClick={() => visibilityHandler && visibilityHandler()}
-          >
+          <div className={"close"} onClick={(e) => close(e)}>
             x
           </div>
           <div className={"header"}>{headerElements}</div>

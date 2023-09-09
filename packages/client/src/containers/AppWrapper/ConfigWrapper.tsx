@@ -1,7 +1,5 @@
 "use client";
-import React, { useEffect } from "react";
-import { useSelector } from "react-redux";
-import { ITheme, RootState } from "@/providers";
+import React from "react";
 import { IConfigWrapper } from ".";
 import "../../styles/Global.scss";
 import { useUser } from "@/hooks/authentication/useUser";
