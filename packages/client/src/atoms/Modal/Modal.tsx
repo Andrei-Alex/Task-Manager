@@ -2,6 +2,7 @@ import React, { useCallback, useContext } from "react";
 import { IModal, styles } from ".";
 import { LayoutContext } from "@/providers";
 import { stopPropagation } from "@/utils";
+import { Icon } from "@/atoms";
 
 export const Modal: React.FC<IModal> = ({
   isVisible,
@@ -23,7 +24,9 @@ export const Modal: React.FC<IModal> = ({
       <div className={styles.modalContainer} onClick={close}>
         <div className={styles.modal} onClick={stopPropagation}>
           <div className={styles.close} onClick={close}>
-            <span>x</span>
+            <span>
+              <Icon iconName={"AiOutlineCloseCircle"} />
+            </span>
           </div>
           <div className={"header"}>{headerElements}</div>
           <div className={"body"}>{children}</div>
