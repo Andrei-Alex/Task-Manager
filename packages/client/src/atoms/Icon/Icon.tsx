@@ -4,6 +4,7 @@ import { MdOutlinePassword } from "react-icons/md";
 import { RxHamburgerMenu } from "react-icons/rx";
 import { IoIosArrowDown } from "react-icons/io";
 import { Icons, IIcon } from ".";
+import { AiOutlineCloseCircle } from "react-icons/ai";
 
 /**
  * The Icon component is a versatile and reusable React component designed to render different
@@ -67,6 +68,14 @@ export const Icon: React.FC<IIcon> = ({
             size={size}
             color={color}
             data-testid="IoIosArrowDown-icon"
+          />
+        );
+      case "AiOutlineCloseCircle":
+        return (
+          <AiOutlineCloseCircle
+            size={size}
+            color={color}
+            data-testid="AiOutlineCloseCircle-icon"
           />
         );
 

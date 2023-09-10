@@ -5,6 +5,7 @@ export type Icons =
   | "MdOutlinePassword"
   | "RxHamburgerMenu"
   | "IoIosArrowDown"
+  | "AiOutlineCloseCircle"
   | undefined;
 export interface IIcon {
   extraStyles?: CustomStyles;
