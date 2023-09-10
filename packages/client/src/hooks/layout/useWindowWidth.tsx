@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 
 /**
   useWindowWidth Hook
@@ -14,13 +14,17 @@ import { useEffect, useState } from "react";
 */
 export const useWindowWidth = () => {
   const [isMobile, setIsMobile] = useState(false);
+  const setMobile = useCallback(() => {
+    if (window.innerWidth > 767) {
+      setIsMobile(false);
+    } else {
+      setIsMobile(true);
+    }
+  }, [window.innerWidth]);
   useEffect(() => {
+    setMobile();
     const handleWindowResize = () => {
-      if (window.innerWidth > 767) {
-        setIsMobile(false);
-      } else {
-        setIsMobile(true);
-      }
+      setMobile();
     };
     window.addEventListener("resize", handleWindowResize);
     return () => {
