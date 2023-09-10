@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useCallback, useContext } from "react";
 import { IModal, styles } from ".";
 import { LayoutContext } from "@/providers";
 import { stopPropagation } from "@/utils";
@@ -11,10 +11,13 @@ export const Modal: React.FC<IModal> = ({
   footerElements,
 }) => {
   const [isMobile] = useContext(LayoutContext);
-  const close = (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
-    e.stopPropagation();
-    visibilityHandler(false);
-  };
+  const close = useCallback(
+    (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
+      e.stopPropagation();
+      visibilityHandler(false);
+    },
+    [visibilityHandler]
+  );
   if (isVisible && isMobile) {
     return (
       <div className={styles.modalContainer} onClick={close}>
