@@ -1,5 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/react";
-import React from "react";
+import React, { useState } from "react";
 import { Modal } from "./Modal";
 import { LayoutContext } from "@/providers";
 
@@ -11,19 +11,31 @@ const meta: Meta<typeof Modal> = {
 };
 export default meta;
 type Story = StoryObj<typeof Modal>;
-const withLayoutContext = (StoryFn: typeof Modal) => {
+const WithLayoutContext = () => {
+  const [isVisible, setVisible] = useState(true);
   const isMobile = true;
   return (
-    <div style={{ width: "250px", height: "500px" }}>
+    <div
+      style={{
+        width: "100%",
+        height: "500px",
+      }}
+    >
       <LayoutContext.Provider value={[isMobile]}>
-        <StoryFn isVisible={true} visibilityHandler={() => null} />
+        <Modal
+          isVisible={isVisible}
+          visibilityHandler={() => setVisible(false)}
+          customStyles={{
+            width: "250px",
+            height: "300px",
+          }}
+        />
       </LayoutContext.Provider>
     </div>
   );
 };
+
 export const Default: Story = {
-  args: {
-    isVisible: true,
-  },
-  decorators: [withLayoutContext],
+  name: "Default",
+  render: () => <WithLayoutContext />,
 };
