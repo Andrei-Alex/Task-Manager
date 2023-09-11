@@ -1,4 +1,5 @@
 import { children } from "../../../../libs/sharedTypes";
+import { CSSProperties } from "react";
 
 export interface IModal {
   isVisible: boolean;
@@ -6,4 +7,5 @@ export interface IModal {
   children?: children;
   headerElements?: children;
   footerElements?: children;
+  customStyles?: CSSProperties;
 }
