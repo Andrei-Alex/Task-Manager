@@ -6,9 +6,13 @@ import { Logo } from "@/atoms";
 import { AuthButtons, BurgerButton } from "@/components";
 import { LayoutContext } from "@/providers";
 
-const Header: React.FC<IHeader> = ({ logo, appData }) => {
-  const [isBurgerOpen, setIsBurgerOpen] = useState(false);
-  const [isMobile] = useContext(LayoutContext);
+const Header: React.FC<IHeader> = ({
+  logo,
+  appData,
+  mobileMenuVisibility,
+  mobileMenuVisibilityHandler,
+}) => {
+  const [isMobile, isBurgerOpen, setIsBurgerOpen] = useContext(LayoutContext);
 
   return (
     <header className={styles.header}>
@@ -20,7 +24,8 @@ const Header: React.FC<IHeader> = ({ logo, appData }) => {
           <BurgerButton
             isOpen={isBurgerOpen}
             onClickHandler={() => {
-              setIsBurgerOpen(!isBurgerOpen);
+              setIsBurgerOpen && setIsBurgerOpen(!isBurgerOpen);
+              mobileMenuVisibilityHandler(!mobileMenuVisibility);
             }}
           />
         ) : (

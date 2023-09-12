@@ -1,5 +1,6 @@
 import { children } from "../../../../libs/sharedTypes";
 import { CSSProperties } from "react";
+import { Icons } from "@/atoms/Icon";
 
 export interface IModal {
   isVisible: boolean;
@@ -7,5 +8,6 @@ export interface IModal {
   children?: children;
   headerElements?: children;
   footerElements?: children;
-  customStyles?: CSSProperties;
+  customContainerStyles?: CSSProperties;
+  closeIcon?: Icons;
 }

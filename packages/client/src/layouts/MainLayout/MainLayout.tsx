@@ -26,10 +26,15 @@ import { Modal } from "@/atoms";
  **/
 
 const MainLayout: React.FC<IMainLayout> = ({ children, appData }) => {
-  const [isMenuVisible, setIsMenuVisible] = useState(true);
+  const [isMenuVisible, setIsMenuVisible] = useState(false);
   return (
     <LayoutProvider>
-      <Header logo={logo} appData={appData} />
+      <Header
+        logo={logo}
+        appData={appData}
+        mobileMenuVisibility={isMenuVisible}
+        mobileMenuVisibilityHandler={setIsMenuVisible}
+      />
       <main className={styles.main}>{children}</main>
       <Footer />
       <Modal isVisible={isMenuVisible} visibilityHandler={setIsMenuVisible} />
