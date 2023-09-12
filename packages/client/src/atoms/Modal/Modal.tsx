@@ -15,20 +15,35 @@ import { Icon } from "@/atoms";
  *  <Modal
  *        isVisible={isModalVisible}
  *        visibilityHandler={hideModal}
- *        customStyles={{ backgroundColor: "rgba(0, 0, 0, 0.5)" }}
+ *         customContainerStyles={{ backgroundColor: "rgba(0, 0, 0, 0.5)" }}
  *        headerElements={<h2>Modal Header</h2>}
  *        footerElements={<ThemeSwitcher />}
  *       >
  * ```
+ *
  * @component Modal
- * @param {Object} props - The component's props.
- * @param {boolean} props.isVisible - Determines whether the modal is visible or not.
- * @param {Function} props.visibilityHandler - A function to handle the modal's visibility.
- * @param {React.ReactNode} props.children - The content to display within the modal's body.
- * @param {React.ReactNode} props.headerElements - Custom elements to display in the modal's header.
- * @param {React.ReactNode} props.footerElements - Custom elements to display in the modal's footer.
- * @param {Object} props.customStyles - Custom CSS styles to apply to the modal container.
- * @returns {React.ReactElement|null} The rendered Modal component.
+ *  @param {Object} props - The component's props.
+ *  @param {boolean} props.isVisible - Determines whether the modal is visible or not.
+ *  @param {Function} props.visibilityHandler - A function to handle the modal's visibility.
+ *  @param {React.ReactNode} props.children - The content to display within the modal's body.
+ *  @param {React.ReactNode} props.headerElements - Custom elements to display in the modal's header.
+ *  @param {React.ReactNode} props.footerElements - Custom elements to display in the modal's footer.
+ *  @param {Object} props.customContainerStyles - Custom CSS styles to apply to the modal container.
+ *  @param {string} props.closeIcon - The name of the icon to use for the close button.
+ *  @returns {React.ReactElement|null} The rendered Modal component.
+ *
+ *   @example
+ *
+ *  <Modal
+ *    isVisible={isModalVisible}
+ *    visibilityHandler={hideModal}
+ *    customContainerStyles={{ backgroundColor: "rgba(0, 0, 0, 0.5)" }}
+ *    headerElements={<h2>Modal Header</h2>}
+ *    footerElements={<ThemeSwitcher />}
+ *    closeIcon="AiOutlineCloseCircle"
+ *  >
+ *    {* Your content goes here *}
+ *  </Modal>
  *
  *
  *
