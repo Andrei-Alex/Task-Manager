@@ -8,6 +8,6 @@ export type LayoutContextValues = [
   isMobile: boolean,
   isBurgerOpen: boolean,
   setIsBurgerOpen: (arg: boolean) => void,
-  values: Values
+  values?: Values
 ];
 export type Values = unknown[] | [];

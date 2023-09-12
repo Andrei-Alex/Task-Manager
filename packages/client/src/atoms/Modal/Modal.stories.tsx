@@ -13,6 +13,7 @@ export default meta;
 type Story = StoryObj<typeof Modal>;
 const WithLayoutContext = () => {
   const [isVisible, setVisible] = useState(true);
+  const [isBurgerOpen, setIsBurgerOpen] = useState(false);
   const isMobile = true;
   return (
     <div
@@ -21,7 +22,7 @@ const WithLayoutContext = () => {
         height: "500px",
       }}
     >
-      <LayoutContext.Provider value={[isMobile]}>
+      <LayoutContext.Provider value={[isMobile, isBurgerOpen, setIsBurgerOpen]}>
         <Modal
           isVisible={isVisible}
           visibilityHandler={() => setVisible(false)}
