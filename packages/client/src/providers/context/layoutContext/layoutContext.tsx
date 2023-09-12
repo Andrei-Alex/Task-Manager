@@ -1,4 +1,4 @@
-import React, { createContext } from "react";
+import React, { createContext, useState } from "react";
 import { useWindowWidth } from "@/hooks";
 import type {
   ILayoutContext,
@@ -11,8 +11,11 @@ export const LayoutProvider: React.FC<ILayoutContext> = ({
   values = [],
 }) => {
   const [isMobile] = useWindowWidth();
+  const [isBurgerOpen, setIsBurgerOpen] = useState(false);
   return (
-    <LayoutContext.Provider value={[isMobile, ...values]}>
+    <LayoutContext.Provider
+      value={[isMobile, isBurgerOpen, setIsBurgerOpen, { ...values }]}
+    >
       {children}
     </LayoutContext.Provider>
   );

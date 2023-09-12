@@ -40,12 +40,14 @@ export const Modal: React.FC<IModal> = ({
   children,
   headerElements,
   footerElements,
-  customStyles = {},
+  customContainerStyles = {},
+  closeIcon = "AiOutlineCloseCircle",
 }) => {
-  const [isMobile] = useContext(LayoutContext);
+  const [isMobile, isBurgerOpen, setIsBurgerOpen] = useContext(LayoutContext);
   const close = useCallback(
     (e: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
       e.stopPropagation();
+      setIsBurgerOpen && isBurgerOpen && setIsBurgerOpen(isBurgerOpen);
       visibilityHandler(false);
     },
     [visibilityHandler]
@@ -54,13 +56,13 @@ export const Modal: React.FC<IModal> = ({
     return (
       <div
         className={styles.modalContainer}
-        style={customStyles}
+        style={customContainerStyles}
         onClick={close}
       >
         <div className={styles.modal} onClick={stopPropagation}>
           <div className={styles.close} onClick={close}>
             <span>
-              <Icon iconName={"AiOutlineCloseCircle"} />
+              <Icon iconName={closeIcon} />
             </span>
           </div>
           <div className={"header"}>{headerElements}</div>

@@ -25,7 +25,7 @@ const WithLayoutContext = () => {
         <Modal
           isVisible={isVisible}
           visibilityHandler={() => setVisible(false)}
-          customStyles={{
+          customContainerStyles={{
             width: "250px",
             height: "300px",
           }}
@@ -38,4 +38,7 @@ const WithLayoutContext = () => {
 export const Default: Story = {
   name: "Default",
   render: () => <WithLayoutContext />,
+  args: {
+    closeIcon: "AiOutlineCloseCircle",
+  },
 };

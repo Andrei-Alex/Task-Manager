@@ -5,4 +5,6 @@ export interface IHeader {
   navElements?: NavElement[];
   appData: IAppData;
   logo: Logo;
+  mobileMenuVisibility: boolean;
+  mobileMenuVisibilityHandler: (arg: boolean) => void;
 }
