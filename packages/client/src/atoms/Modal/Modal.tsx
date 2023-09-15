@@ -9,7 +9,6 @@ import { Icon } from "@/atoms";
  * The Modal component is a reusable React component for displaying modal dialogs with customizable content.
  * It provides options for controlling visibility, customizing styles, and adding header and footer elements.
  *
- *
  * ## Usage
  * ```
  *  <Modal

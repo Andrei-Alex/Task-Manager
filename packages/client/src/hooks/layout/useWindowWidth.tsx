@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useState } from "react";
-
+import { Simulate } from "react-dom/test-utils";
 /**
   useWindowWidth Hook
 
@@ -15,12 +15,16 @@ import { useCallback, useEffect, useState } from "react";
 export const useWindowWidth = () => {
   const [isMobile, setIsMobile] = useState(false);
   const setMobile = useCallback(() => {
+    if (!window) {
+      throw Error("Window is not defined !");
+    }
     if (window.innerWidth > 767) {
       setIsMobile(false);
     } else {
       setIsMobile(true);
     }
-  }, [window.innerWidth]);
+  }, []);
+
   useEffect(() => {
     setMobile();
     const handleWindowResize = () => {
