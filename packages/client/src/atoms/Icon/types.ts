@@ -1,4 +1,4 @@
-import { CustomStyles } from "../../../../libs/sharedTypes/styles";
+import { CustomStyles } from "../../utils/types/styles";
 
 export type Icons =
   | "HiMail"

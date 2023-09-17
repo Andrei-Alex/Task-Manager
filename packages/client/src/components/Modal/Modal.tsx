@@ -1,7 +1,14 @@
-import React, { useCallback, useContext } from "react";
-import { IModal, styles } from ".";
+import React, {
+  CSSProperties,
+  useCallback,
+  useContext,
+  useEffect,
+  useMemo,
+  useState,
+} from "react";
+import { IModal, styles } from "./index";
 import { LayoutContext } from "@/providers";
-import { stopPropagation } from "@/utils";
+import { setFlex, stopPropagation } from "@/utils";
 import { Icon } from "@/atoms";
 
 /**
@@ -56,6 +63,12 @@ export const Modal: React.FC<IModal> = ({
   footerElements,
   customContainerStyles = {},
   closeIcon = "AiOutlineCloseCircle",
+  bodyPositionX = "center",
+  bodyPositionY = "center",
+  bodyCustomStyles = {},
+  footerPositionX = "center",
+  footerPositionY = "end",
+  footerCustomStyles = {},
 }) => {
   const [isMobile, isBurgerOpen, setIsBurgerOpen] = useContext(LayoutContext);
   const close = useCallback(
@@ -66,6 +79,21 @@ export const Modal: React.FC<IModal> = ({
     },
     [visibilityHandler]
   );
+
+  const footerPositions = useMemo(() => {
+    let result: CSSProperties = {};
+    result = setFlex(footerPositionX, "justifyContent", result);
+    result = setFlex(footerPositionY, "alignItems", result);
+    return { ...result, ...footerCustomStyles };
+  }, [footerPositionX, footerPositionY]);
+
+  const bodyPositions = useMemo(() => {
+    let result: CSSProperties = {};
+    result = setFlex(bodyPositionX, "justifyContent", result);
+    result = setFlex(bodyPositionY, "alignItems", result);
+    return { ...result, ...bodyCustomStyles };
+  }, [footerPositionX, footerPositionY]);
+
   if (isVisible && isMobile) {
     return (
       <div
@@ -80,8 +108,12 @@ export const Modal: React.FC<IModal> = ({
             </span>
           </div>
           <div className={"header"}>{headerElements}</div>
-          <div className={"body"}>{children}</div>
-          <div className={"footer"}>{footerElements}</div>
+          <div className={styles.body} style={bodyPositions}>
+            {children}
+          </div>
+          <div className={styles.footer} style={footerPositions}>
+            {footerElements}
+          </div>
         </div>
       </div>
     );

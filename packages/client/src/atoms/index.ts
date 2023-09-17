@@ -4,4 +4,4 @@ export { default as DisplayHealth } from "./health/DisplayHealth";
 export { default as LinkList } from "./LinkList/LinkList";
 export { default as Logo } from "./Logo/Logo";
 export { default as SwitchButton } from "./SwitchButton/SwitchButton";
-export { default as Modal } from "./Modal/Modal";
+export { default as Modal } from "../components/Modal/Modal";

@@ -1,4 +1,5 @@
 import { children } from "../../../../libs/sharedTypes";
+import { Flex } from "@/utils";
 import { CSSProperties } from "react";
 import { Icons } from "@/atoms/Icon";
 
@@ -10,4 +11,10 @@ export interface IModal {
   footerElements?: children;
   customContainerStyles?: CSSProperties;
   closeIcon?: Icons;
+  bodyPositionX?: Flex;
+  bodyPositionY?: Flex;
+  bodyCustomStyles?: CSSProperties;
+  footerCustomStyles?: CSSProperties;
+  footerPositionX?: Flex;
+  footerPositionY?: Flex;
 }

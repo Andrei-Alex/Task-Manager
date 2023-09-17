@@ -1,4 +1,4 @@
-import { CustomStyles } from "../../../../libs/sharedTypes/styles";
+import { CustomStyles } from "../../utils/types/styles";
 
 export interface IButton {
   text: string;
@@ -6,12 +6,18 @@ export interface IButton {
   width?: number;
   type: "submit" | "button" | "reset" | undefined;
   containerStyle?: CustomStyles;
-  variant?: "outline" | "white" | "light" | "default" | "filled" | "gradient" | "subtle";
+  variant?:
+    | "outline"
+    | "white"
+    | "light"
+    | "default"
+    | "filled"
+    | "gradient"
+    | "subtle";
   loading?: boolean;
   disabled?: boolean;
-  size?: "xs" | "sm" | "md" | "lg" | "xl"
-  color?:  string;
-  gradient?:  {from: string, to: string};
+  size?: "xs" | "sm" | "md" | "lg" | "xl";
+  color?: string;
+  gradient?: { from: string; to: string };
   fullWidth?: boolean;
-
 }

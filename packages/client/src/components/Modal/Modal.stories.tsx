@@ -5,7 +5,7 @@ import { LayoutContext } from "@/providers";
 
 const meta: Meta<typeof Modal> = {
   component: Modal,
-  title: "Atoms/Modal",
+  title: "Components/Modal",
   tags: ["autodocs"],
   argTypes: {},
 };
