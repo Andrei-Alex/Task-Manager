@@ -1,4 +1,4 @@
-import { CustomStyles } from "../../../../libs/sharedTypes/styles";
+import { CustomStyles } from "../../utils/types/styles";
 import { UseFormRegisterReturn } from "react-hook-form";
 import type { Icons } from "../../atoms/Icon";
 export interface IInput {

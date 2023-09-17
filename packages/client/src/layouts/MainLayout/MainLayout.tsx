@@ -1,10 +1,12 @@
 "use client";
 import React, { useState } from "react";
-import { IMainLayout, styles } from "./index";
+import { footerCustomStyles, IMainLayout, styles } from "./index";
 import { logo } from "@/constants";
 import { Footer, Header } from "@/layouts/LayoutParts";
 import { LayoutProvider } from "@/providers/";
 import { Modal } from "@/atoms";
+import { ThemeSwitcher } from "@/features";
+import { AuthButtons } from "@/components";
 
 /**
  *
@@ -27,6 +29,7 @@ import { Modal } from "@/atoms";
 
 const MainLayout: React.FC<IMainLayout> = ({ children, appData }) => {
   const [isMenuVisible, setIsMenuVisible] = useState(false);
+
   return (
     <LayoutProvider>
       <Header
@@ -37,7 +40,14 @@ const MainLayout: React.FC<IMainLayout> = ({ children, appData }) => {
       />
       <main className={styles.main}>{children}</main>
       <Footer />
-      <Modal isVisible={isMenuVisible} visibilityHandler={setIsMenuVisible} />
+      <Modal
+        isVisible={isMenuVisible}
+        visibilityHandler={setIsMenuVisible}
+        footerElements={<ThemeSwitcher />}
+        footerCustomStyles={footerCustomStyles}
+      >
+        <AuthButtons />
+      </Modal>
     </LayoutProvider>
   );
 };
