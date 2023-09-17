@@ -1,15 +1,9 @@
-import React, {
-  CSSProperties,
-  useCallback,
-  useContext,
-  useEffect,
-  useMemo,
-  useState,
-} from "react";
+import React, { CSSProperties, useCallback, useContext, useMemo } from "react";
 import { IModal, styles } from "./index";
 import { LayoutContext } from "@/providers";
 import { setFlex, stopPropagation } from "@/utils";
 import { Icon } from "@/atoms";
+import { useMobileMenuModalStyles } from "@/hooks/layout/useMobileMenuModalStyles";
 
 /**
  * Modal
@@ -28,15 +22,21 @@ import { Icon } from "@/atoms";
  * ```
  *
  * @component Modal
- *  @param {Object} props - The component's props.
- *  @param {boolean} props.isVisible - Determines whether the modal is visible or not.
- *  @param {Function} props.visibilityHandler - A function to handle the modal's visibility.
- *  @param {React.ReactNode} props.children - The content to display within the modal's body.
- *  @param {React.ReactNode} props.headerElements - Custom elements to display in the modal's header.
- *  @param {React.ReactNode} props.footerElements - Custom elements to display in the modal's footer.
- *  @param {Object} props.customContainerStyles - Custom CSS styles to apply to the modal container.
- *  @param {string} props.closeIcon - The name of the icon to use for the close button.
- *  @returns {React.ReactElement|null} The rendered Modal component.
+ * @param {Object} props - The component's props.
+ * @param {boolean} props.isVisible - Determines whether the modal is visible or not.
+ * @param {Function} props.visibilityHandler - A function to handle the modal's visibility.
+ * @param {React.ReactNode} props.children - The content to display within the modal's body.
+ * @param {React.ReactNode} props.headerElements - Custom elements to display in the modal's header.
+ * @param {React.ReactNode} props.footerElements - Custom elements to display in the modal's footer.
+ * @param {Object} props.customContainerStyles - Custom CSS styles to apply to the modal container.
+ * @param {string} props.closeIcon - The name of the icon to use for the close button.
+ * @param {string} props.bodyPositionX - Horizontal alignment of the modal body (default: "center").
+ * @param {string} props.bodyPositionY - Vertical alignment of the modal body (default: "center").
+ * @param {Object} props.bodyCustomStyles - Custom CSS styles to apply to the modal body.
+ * @param {string} props.footerPositionX - Horizontal alignment of the modal footer (default: "center").
+ * @param {string} props.footerPositionY - Vertical alignment of the modal footer (default: "end").
+ * @param {Object} props.footerCustomStyles - Custom CSS styles to apply to the modal footer.
+ * @returns {React.ReactElement|null} The rendered Modal component.
  *
  *   @example
  *
@@ -50,8 +50,6 @@ import { Icon } from "@/atoms";
  *  >
  *    {* Your content goes here *}
  *  </Modal>
- *
- *
  *
  */
 
@@ -79,20 +77,14 @@ export const Modal: React.FC<IModal> = ({
     },
     [visibilityHandler]
   );
-
-  const footerPositions = useMemo(() => {
-    let result: CSSProperties = {};
-    result = setFlex(footerPositionX, "justifyContent", result);
-    result = setFlex(footerPositionY, "alignItems", result);
-    return { ...result, ...footerCustomStyles };
-  }, [footerPositionX, footerPositionY]);
-
-  const bodyPositions = useMemo(() => {
-    let result: CSSProperties = {};
-    result = setFlex(bodyPositionX, "justifyContent", result);
-    result = setFlex(bodyPositionY, "alignItems", result);
-    return { ...result, ...bodyCustomStyles };
-  }, [footerPositionX, footerPositionY]);
+  const { footerStyles, bodyStyles } = useMobileMenuModalStyles(
+    bodyPositionX,
+    bodyPositionY,
+    bodyCustomStyles,
+    footerPositionX,
+    footerPositionY,
+    footerCustomStyles
+  );
 
   if (isVisible && isMobile) {
     return (
@@ -108,10 +100,10 @@ export const Modal: React.FC<IModal> = ({
             </span>
           </div>
           <div className={"header"}>{headerElements}</div>
-          <div className={styles.body} style={bodyPositions}>
+          <div className={styles.body} style={bodyStyles}>
             {children}
           </div>
-          <div className={styles.footer} style={footerPositions}>
+          <div className={styles.footer} style={footerStyles}>
             {footerElements}
           </div>
         </div>
