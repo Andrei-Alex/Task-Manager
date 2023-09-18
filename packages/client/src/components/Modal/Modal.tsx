@@ -1,7 +1,7 @@
-import React, { CSSProperties, useCallback, useContext, useMemo } from "react";
+import React, { useCallback, useContext, useMemo } from "react";
 import { IModal, styles } from "./index";
 import { LayoutContext } from "@/providers";
-import { setFlex, stopPropagation } from "@/utils";
+import { stopPropagation } from "@/utils";
 import { Icon } from "@/atoms";
 import { useMobileMenuModalStyles } from "@/hooks/layout/useMobileMenuModalStyles";
 
