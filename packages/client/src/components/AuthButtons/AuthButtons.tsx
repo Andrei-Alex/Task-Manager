@@ -27,6 +27,8 @@ import isEqual from "lodash/isEqual";
  * @param {Function} [props.logout] - The function to execute when the Logout link is clicked.
  * @param {string} [props.registerPath="/auth/register"] - The path for the Register link.
  * @param {string} [props.loginPath="/auth/login"] - The path for the Login link.
+ * @param {Object} props.customNavStyles - Custom nav (container) styles.
+ * @param {Object} props.customListStyles - Custom list (ul) styles.
  * @returns {React.ReactElement} A navigation component displaying authentication links.
  */
 export const AuthButtons: React.FC<Partial<IAuthButtons>> = ({
@@ -34,10 +36,12 @@ export const AuthButtons: React.FC<Partial<IAuthButtons>> = ({
   logout,
   registerPath = "/auth/register",
   loginPath = "/auth/login",
+  customNavStyles = {},
+  customListStyles = {},
 }) => {
   return (
-    <nav className={styles.authNav}>
-      <ul>
+    <nav className={styles.authNav} style={customNavStyles}>
+      <ul style={customListStyles}>
         {!haveProfile ? (
           <>
             <li>
@@ -75,6 +79,7 @@ const arePropsEqual = (
 ) => {
   return (
     prevProps.haveProfile === nextProps.haveProfile &&
+    isEqual(prevProps.customNavStyles, nextProps.customNavStyles) &&
     isEqual(prevProps.logout, nextProps.logout) &&
     prevProps.registerPath === nextProps.registerPath &&
     prevProps.loginPath === nextProps.loginPath

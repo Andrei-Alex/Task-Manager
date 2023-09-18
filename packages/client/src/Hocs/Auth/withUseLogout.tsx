@@ -14,8 +14,8 @@ import { IAuthButtons } from "@/components/AuthButtons";
  * @returns {React.FC} A new component with `useLogout` functionality injected as props.
  */
 export const withUseLogout = (Component: React.FC<Partial<IAuthButtons>>) => {
-  return () => {
+  return (props: Partial<IAuthButtons>) => {
     const { haveProfile, logout } = useLogout();
-    return <Component haveProfile={haveProfile} logout={logout} />;
+    return <Component haveProfile={haveProfile} logout={logout} {...props} />;
   };
 };

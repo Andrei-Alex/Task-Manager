@@ -46,7 +46,7 @@ const MainLayout: React.FC<IMainLayout> = ({ children, appData }) => {
         footerElements={<ThemeSwitcher />}
         footerCustomStyles={footerCustomStyles}
       >
-        <AuthButtons />
+        <AuthButtons customListStyles={{ margin: 0, padding: 0 }} />
       </Modal>
     </LayoutProvider>
   );
