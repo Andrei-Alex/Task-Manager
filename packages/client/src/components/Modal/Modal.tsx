@@ -36,6 +36,7 @@ import { useMobileMenuModalStyles } from "@/hooks/layout/useMobileMenuModalStyle
  * @param {string} props.footerPositionX - Horizontal alignment of the modal footer (default: "center").
  * @param {string} props.footerPositionY - Vertical alignment of the modal footer (default: "end").
  * @param {Object} props.footerCustomStyles - Custom CSS styles to apply to the modal footer.
+ * @param {string} props.modalID - Testing for testing.
  * @returns {React.ReactElement|null} The rendered Modal component.
  *
  *   @example
@@ -67,6 +68,7 @@ export const Modal: React.FC<IModal> = ({
   footerPositionX = "center",
   footerPositionY = "end",
   footerCustomStyles = {},
+  modalID = "ModalTestID",
 }) => {
   const [isMobile, isBurgerOpen, setIsBurgerOpen] = useContext(LayoutContext);
   const close = useCallback(
@@ -90,6 +92,7 @@ export const Modal: React.FC<IModal> = ({
     return (
       <div
         className={styles.modalContainer}
+        data-testID={modalID}
         style={customContainerStyles}
         onClick={close}
       >

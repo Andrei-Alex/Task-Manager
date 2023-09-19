@@ -17,4 +17,5 @@ export interface IModal {
   footerCustomStyles?: CSSProperties;
   footerPositionX?: Flex;
   footerPositionY?: Flex;
+  modalID?: string;
 }
