@@ -1,4 +1,4 @@
-import React, { useCallback, useContext, useMemo } from "react";
+import React, { useCallback, useContext } from "react";
 import { IModal, styles } from "./index";
 import { LayoutContext } from "@/providers";
 import { stopPropagation } from "@/utils";
@@ -9,6 +9,7 @@ import { useMobileMenuModalStyles } from "@/hooks/layout/useMobileMenuModalStyle
  * Modal
  * The Modal component is a reusable React component for displaying modal dialogs with customizable content.
  * It provides options for controlling visibility, customizing styles, and adding header and footer elements.
+ * The portal will always render this modal in <body>.
  *
  * ## Usage
  * ```
@@ -49,7 +50,7 @@ import { useMobileMenuModalStyles } from "@/hooks/layout/useMobileMenuModalStyle
  *    footerElements={<ThemeSwitcher />}
  *    closeIcon="AiOutlineCloseCircle"
  *  >
- *    {* Your content goes here *}
+ *    {* Children *}
  *  </Modal>
  *
  */
@@ -90,27 +91,31 @@ export const Modal: React.FC<IModal> = ({
 
   if (isVisible && isMobile) {
     return (
-      <div
-        className={styles.modalContainer}
-        data-testID={modalID}
-        style={customContainerStyles}
-        onClick={close}
-      >
-        <div className={styles.modal} onClick={stopPropagation}>
-          <div className={styles.close} onClick={close}>
-            <span>
-              <Icon iconName={closeIcon} />
-            </span>
-          </div>
-          <div className={"header"}>{headerElements}</div>
-          <div className={styles.body} style={bodyStyles}>
-            {children}
-          </div>
-          <div className={styles.footer} style={footerStyles}>
-            {footerElements}
+      <>
+        createPortal(
+        <div
+          className={styles.modalContainer}
+          data-testID={modalID}
+          style={customContainerStyles}
+          onClick={close}
+        >
+          <div className={styles.modal} onClick={stopPropagation}>
+            <div className={styles.close} onClick={close}>
+              <span>
+                <Icon iconName={closeIcon} />
+              </span>
+            </div>
+            <div className={"header"}>{headerElements}</div>
+            <div className={styles.body} style={bodyStyles}>
+              {children}
+            </div>
+            <div className={styles.footer} style={footerStyles}>
+              {footerElements}
+            </div>
           </div>
         </div>
-      </div>
+        ,document.body)
+      </>
     );
   }
   return null;
