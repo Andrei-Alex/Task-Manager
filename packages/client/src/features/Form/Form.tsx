@@ -16,39 +16,39 @@ import Link from "next/link";
  * ## Usage
  * ```jsx
  * <Form
- *  *   inputs={[
- *  *     {
- *  *       id: "email",
- *  *       width: "100%",
- *  *       icon: <HiOutlineMail />,
- *  *       label: "Email",
- *  *       placeholder: "Enter your email",
- *  *       required: true,
- *  *     },
- *  *     {
- *  *       id: "password",
- *  *       width: "100%",
- *  *       icon: <HiOutlineKey />,
- *  *       label: "Password",
- *  *       placeholder: "Enter your password",
- *  *       required: true,
- *  *     },
- *  *   ]}
- *  *   submitHandler={(data) => {
- *  *     handler(data)
- *  *   }}
- *  *   title="Login Form"
- *  *   resolverSchema={yourResolverSchema}
- *  *   confirmMessage={{
- *  *     successMsg: "Form submitted successfully",
- *  *     errorMsg: "Error submitting form",
- *  *   }}
- *  *   confirmMessageHandler={(message) => {
- *  *     handler(message)
- *  *   }}
- *  *   linkMsg="Forgot password?"
- *  *   navigateTo="/forgot-password"
- *  * />
+ *     inputs={[
+ *       {
+ *         id: "email",
+ *         width: "100%",
+ *         icon: <HiOutlineMail />,
+ *         label: "Email",
+ *         placeholder: "Enter your email",
+ *         required: true,
+ *       },
+ *       {
+ *         id: "password",
+ *         width: "100%",
+ *         icon: <HiOutlineKey />,
+ *         label: "Password",
+ *         placeholder: "Enter your password",
+ *         required: true,
+ *       },
+ *     ]}
+ *     submitHandler={(data) => {
+ *       handler(data)
+ *     }}
+ *     title="Login Form"
+ *     resolverSchema={yourResolverSchema}
+ *     confirmMessage={{
+ *       successMsg: "Form submitted successfully",
+ *       errorMsg: "Error submitting form",
+ *     }}
+ *     confirmMessageHandler={(message) => {
+ *       handler(message)
+ *     }}
+ *     linkMsg="Forgot password?"
+ *     navigateTo="/forgot-password"
+ *   />
  * ```
  * @Example Login or register form
  * @param {array} inputs map array to display loginInputs
