@@ -8,6 +8,9 @@ import { UserRepository } from '../user/user.repository';
 import { CreateBoardDto } from './dtos/create-board.dto';
 import { BoardColumn } from '../column/column.entity';
 
+/**
+ * Service responsible for handling board related operations
+ */
 @Injectable()
 export class BoardService {
   constructor(
@@ -18,7 +21,16 @@ export class BoardService {
     private userRepo: UserRepository,
   ) {}
 
-  async createBoard(ownerId: number, createBoardDto: CreateBoardDto) {
+  /**
+   * Creates a new board with the given details.
+   * @param ownerId - The ID of the user creating the board
+   * @param createBoardDto - Data transfer object containing the details for the new board
+   * @returns The newly created board
+   */
+  async createBoard(
+    ownerId: number,
+    createBoardDto: CreateBoardDto,
+  ): Promise<Board> {
     const board = new Board();
     const usersFound = await this.userService.findById(ownerId);
     const user: User = usersFound[0];
@@ -46,11 +58,20 @@ export class BoardService {
     return board;
   }
 
+  /**
+   * Retrieves all boards.
+   * @returns An array of all boards
+   */
   async findAll(): Promise<Board[]> {
     return this.repo.find();
   }
 
-  async findAllIfMember(currentUserId): Promise<Board[]> {
+  /**
+   * Retrieves all boards that a user is a member of.
+   * @param currentUserId - The ID of the current user
+   * @returns An array of boards the user is a member of
+   */
+  async findAllIfMember(currentUserId: number): Promise<Board[]> {
     const boards = await this.repo
       .createQueryBuilder('boards')
       .leftJoinAndSelect('boards.members', 'board_members')
@@ -62,7 +83,12 @@ export class BoardService {
     return boards;
   }
 
-  async findOne(paramId): Promise<Board> {
+  /**
+   * Retrieves a single board based on the provided ID.
+   * @param paramId - The ID of the board to retrieve
+   * @returns The board if found, or null
+   */
+  async findOne(paramId: number): Promise<Board | null> {
     const board = await this.repo
       .createQueryBuilder('boards')
       .leftJoinAndSelect('boards.members', 'board_members')
