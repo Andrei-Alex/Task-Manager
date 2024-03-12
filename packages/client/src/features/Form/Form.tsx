@@ -101,6 +101,7 @@ export const Form: React.FC<IForm> = ({
                 placeholder={input.placeholder}
                 required={input.required}
                 id={input.id}
+                type={input.type}
                 containerStyle={{
                   marginTop: "20px",
                   marginBottom: "20px",
