@@ -49,6 +49,7 @@ exports[`Input renders correctly 1`] = `
         id="label"
         onKeyDown={[Function]}
         placeholder="My Placeholder"
+        type="text"
       />
     </div>
   </div>

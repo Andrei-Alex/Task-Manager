@@ -30,6 +30,7 @@ export const loginInputs: IInput[] = [
     placeholder: "username@mail.com",
     required: true,
     id: "username",
+    type: 'text',
   },
   {
     icon: "MdOutlinePassword",
@@ -38,6 +39,7 @@ export const loginInputs: IInput[] = [
     placeholder: "password",
     required: true,
     id: "password",
+    type: 'password',
   },
 ];
 export const registerInputs: IInput[] = [

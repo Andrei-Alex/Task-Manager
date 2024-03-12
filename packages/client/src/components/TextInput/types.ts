@@ -11,6 +11,7 @@ export interface IInput {
   register?: UseFormRegisterReturn<string>;
   icon?: Icons;
   onChangeHandler?: () => void;
+  type?: string,
   dataTestId?: string;
   [key: string]: (() => void) | string | boolean | CustomStyles | undefined;
 }

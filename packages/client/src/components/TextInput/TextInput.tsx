@@ -52,6 +52,7 @@ export const TextInput: React.FC<IInput> = ({
   containerStyle,
   register,
   onChangeHandler,
+    type= 'text',
 }) => {
   return (
     <div className={styles.container} style={{ ...containerStyle }}>
@@ -73,6 +74,7 @@ export const TextInput: React.FC<IInput> = ({
           style={{ width: width }}
           placeholder={placeholder}
           id={id}
+          type={ type}
           {...register}
         />
       </div>
