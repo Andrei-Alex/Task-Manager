@@ -42,4 +42,12 @@ describe("Input", () => {
     const button = screen.queryByRole("button", {name: 'Submit'}) as HTMLInputElement;
     expect(button).toBeInTheDocument();
   })
+  it('has a submit button', () => {
+    const button = screen.queryByRole("button", {name: 'Submit'}) as HTMLInputElement;
+    expect(button).toBeInTheDocument();
+  })
+  it('has a submit button', () => {
+    const button = screen.queryByRole("button", {name: 'Submit'}) as HTMLInputElement;
+    expect(button).not.toBeDisabled();
+  })
 });
